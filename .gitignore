@@ -6,3 +6,8 @@
 /.vs
 /VuePlanning/node_modules
 /VuePlanning/bin/Debug/netcoreapp2.1
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
