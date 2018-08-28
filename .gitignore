@@ -6,3 +6,4 @@
 /.vs
 /VuePlanning/node_modules
 /VuePlanning/bin/Debug/netcoreapp2.1
+VuePlanning/wwwroot

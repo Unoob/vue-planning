@@ -6,7 +6,7 @@ const bundleOutputDir = './wwwroot/dist';
 
 module.exports = {
     mode: 'development',
-    entry: { main: './ClientApp/boot.js' },
+    entry: { main: ['babel-polyfill','./ClientApp/boot.js'] },
     module: {
         rules: [
             {

@@ -1,4 +1,5 @@
-﻿import Vue from 'vue';
+﻿import 'babel-polyfill'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 import App from './components/App.vue';
