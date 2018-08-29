@@ -1,6 +1,9 @@
 ﻿import 'babel-polyfill'
 import Vue from 'vue';
 
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
 import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify' 
