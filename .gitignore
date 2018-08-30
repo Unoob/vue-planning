@@ -3,7 +3,12 @@
 ################################################################################
 
 /VuePlanning/obj
+/VuePlanning/wwwroot
 /.vs
 /VuePlanning/node_modules
 /VuePlanning/bin/Debug/netcoreapp2.1
-VuePlanning/wwwroot
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
