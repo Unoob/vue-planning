@@ -3,6 +3,7 @@
 ################################################################################
 
 /VuePlanning/obj
+/VuePlanning/wwwroot
 /.vs
 /VuePlanning/node_modules
 /VuePlanning/bin/Debug/netcoreapp2.1

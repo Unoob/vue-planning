@@ -6,7 +6,7 @@ const bundleOutputDir = './wwwroot/dist';
 
 module.exports = {
     mode: 'development',
-    entry: { main: './ClientApp/boot.js' },
+    entry: { main: ['babel-polyfill', './ClientApp/boot.js'] },
     module: {
         rules: [
             {
@@ -20,12 +20,23 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader'
             },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)(\??\#?v=[.0-9]+)?$/,
+                loader: 'file-loader?name=/fonts/[name].[ext]',
+            },
             // this will apply to both plain `.css` files
             // AND `<style>` blocks in `.vue` files
             {
                 test: /\.s[a|c]ss$/,
                 use: [
                     'vue-style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.css/,
+                use: [
+                    'style-loader',
                     'css-loader'
                 ]
             }
