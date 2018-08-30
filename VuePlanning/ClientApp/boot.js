@@ -1,12 +1,11 @@
 ﻿import 'babel-polyfill'
 import Vue from 'vue';
 
-import Vuex from 'vuex'
-Vue.use(Vuex)
+import store from './store/store';
 
-import 'material-design-icons-iconfont/dist/material-design-icons.css' 
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import 'vuetify/dist/vuetify.min.css'
-import Vuetify from 'vuetify' 
+import Vuetify from 'vuetify'
 Vue.use(Vuetify)
 
 import VueRouter from 'vue-router';
@@ -20,4 +19,4 @@ const router = new VueRouter({
     routes,
     mode: 'history'
 });
-const app = new Vue({router}).$mount('#app-root');
+const app = new Vue({ router, store }).$mount('#app-root');
