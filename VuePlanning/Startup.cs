@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VuePlanning.Hubs;
 
 namespace VuePlanning
 {
@@ -57,7 +58,9 @@ namespace VuePlanning
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseSignalR(routes => { });
+            app.UseSignalR(routes => {
+                routes.MapHub<PlanningHub>("PlanningHub");
+            });
 
             app.UseMvc(routes =>
             {
