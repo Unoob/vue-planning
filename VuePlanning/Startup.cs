@@ -59,7 +59,7 @@ namespace VuePlanning
             app.UseCookiePolicy();
 
             app.UseSignalR(routes => {
-                routes.MapHub<PlanningHub>("PlanningHub");
+                routes.MapHub<PlanningHub>("/PlanningHub");
             });
 
             app.UseMvc(routes =>
