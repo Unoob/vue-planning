@@ -6,8 +6,21 @@
 </template>
 
 <script>
+    import { HubConnectionBuilder } from '@aspnet/signalr';
+    const HUBS = {
+        PLANNING: '/PlanningHub'
+    };
 export default {
-        name: "App"
+        name: "App",
+        data:()=> {
+            return {
+                connectionHub: {}
+            };
+        },
+        mounted: function () {
+            this.connectionHub = new HubConnectionBuilder().withUrl(HUBS.PLANNING).build();
+            this.connectionHub.start();
+        }
 };
 </script>
 
