@@ -1,0 +1,2459 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Web\\External\\Node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.3.4
+3 info using node@v5.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @aspnet/signalr
+20 silly mapToRegistry name @aspnet/signalr
+21 silly mapToRegistry scope (from package name) @aspnet
+22 verbose mapToRegistry no registry URL found in name for scope @aspnet
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry http://registry.npmjs.org/
+25 silly mapToRegistry uri http://registry.npmjs.org/@aspnet%2fsignalr
+26 silly fetchNamedPackageData aspnet-webpack
+27 silly mapToRegistry name aspnet-webpack
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry http://registry.npmjs.org/
+30 silly mapToRegistry uri http://registry.npmjs.org/aspnet-webpack
+31 silly fetchNamedPackageData babel-core
+32 silly mapToRegistry name babel-core
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry http://registry.npmjs.org/
+35 silly mapToRegistry uri http://registry.npmjs.org/babel-core
+36 silly fetchNamedPackageData babel-loader
+37 silly mapToRegistry name babel-loader
+38 silly mapToRegistry using default registry
+39 silly mapToRegistry registry http://registry.npmjs.org/
+40 silly mapToRegistry uri http://registry.npmjs.org/babel-loader
+41 silly fetchNamedPackageData babel-plugin-transform-es2015-modules-commonjs
+42 silly mapToRegistry name babel-plugin-transform-es2015-modules-commonjs
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry http://registry.npmjs.org/
+45 silly mapToRegistry uri http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+46 silly fetchNamedPackageData babel-polyfill
+47 silly mapToRegistry name babel-polyfill
+48 silly mapToRegistry using default registry
+49 silly mapToRegistry registry http://registry.npmjs.org/
+50 silly mapToRegistry uri http://registry.npmjs.org/babel-polyfill
+51 silly fetchNamedPackageData css-loader
+52 silly mapToRegistry name css-loader
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry http://registry.npmjs.org/
+55 silly mapToRegistry uri http://registry.npmjs.org/css-loader
+56 silly fetchNamedPackageData file-loader
+57 silly mapToRegistry name file-loader
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry http://registry.npmjs.org/
+60 silly mapToRegistry uri http://registry.npmjs.org/file-loader
+61 silly fetchNamedPackageData material-design-icons-iconfont
+62 silly mapToRegistry name material-design-icons-iconfont
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry http://registry.npmjs.org/
+65 silly mapToRegistry uri http://registry.npmjs.org/material-design-icons-iconfont
+66 silly fetchNamedPackageData style-loader
+67 silly mapToRegistry name style-loader
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry http://registry.npmjs.org/
+70 silly mapToRegistry uri http://registry.npmjs.org/style-loader
+71 silly fetchNamedPackageData vue
+72 silly mapToRegistry name vue
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry http://registry.npmjs.org/
+75 silly mapToRegistry uri http://registry.npmjs.org/vue
+76 silly fetchNamedPackageData vue-loader
+77 silly mapToRegistry name vue-loader
+78 silly mapToRegistry using default registry
+79 silly mapToRegistry registry http://registry.npmjs.org/
+80 silly mapToRegistry uri http://registry.npmjs.org/vue-loader
+81 silly fetchNamedPackageData vue-router
+82 silly mapToRegistry name vue-router
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry http://registry.npmjs.org/
+85 silly mapToRegistry uri http://registry.npmjs.org/vue-router
+86 silly fetchNamedPackageData vue-style-loader
+87 silly mapToRegistry name vue-style-loader
+88 silly mapToRegistry using default registry
+89 silly mapToRegistry registry http://registry.npmjs.org/
+90 silly mapToRegistry uri http://registry.npmjs.org/vue-style-loader
+91 silly fetchNamedPackageData vue-template-compiler
+92 silly mapToRegistry name vue-template-compiler
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry http://registry.npmjs.org/
+95 silly mapToRegistry uri http://registry.npmjs.org/vue-template-compiler
+96 silly fetchNamedPackageData vuetify
+97 silly mapToRegistry name vuetify
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry http://registry.npmjs.org/
+100 silly mapToRegistry uri http://registry.npmjs.org/vuetify
+101 silly fetchNamedPackageData vuex
+102 silly mapToRegistry name vuex
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry http://registry.npmjs.org/
+105 silly mapToRegistry uri http://registry.npmjs.org/vuex
+106 silly fetchNamedPackageData webpack-dev-middleware
+107 silly mapToRegistry name webpack-dev-middleware
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry http://registry.npmjs.org/
+110 silly mapToRegistry uri http://registry.npmjs.org/webpack-dev-middleware
+111 verbose request uri http://registry.npmjs.org/@aspnet%2fsignalr
+112 verbose request no auth needed
+113 info attempt registry request try #1 at 12:40:34
+114 verbose request id 4963402176011104
+115 http request GET http://registry.npmjs.org/@aspnet%2fsignalr
+116 verbose request uri http://registry.npmjs.org/babel-core
+117 verbose request no auth needed
+118 info attempt registry request try #1 at 12:40:34
+119 http request GET http://registry.npmjs.org/babel-core
+120 verbose request uri http://registry.npmjs.org/babel-loader
+121 verbose request no auth needed
+122 info attempt registry request try #1 at 12:40:34
+123 http request GET http://registry.npmjs.org/babel-loader
+124 verbose request uri http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+125 verbose request no auth needed
+126 info attempt registry request try #1 at 12:40:34
+127 http request GET http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+128 verbose request uri http://registry.npmjs.org/babel-polyfill
+129 verbose request no auth needed
+130 info attempt registry request try #1 at 12:40:34
+131 http request GET http://registry.npmjs.org/babel-polyfill
+132 verbose request uri http://registry.npmjs.org/material-design-icons-iconfont
+133 verbose request no auth needed
+134 info attempt registry request try #1 at 12:40:34
+135 http request GET http://registry.npmjs.org/material-design-icons-iconfont
+136 verbose request uri http://registry.npmjs.org/vue
+137 verbose request no auth needed
+138 info attempt registry request try #1 at 12:40:34
+139 http request GET http://registry.npmjs.org/vue
+140 verbose request uri http://registry.npmjs.org/vue-loader
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 12:40:34
+143 http request GET http://registry.npmjs.org/vue-loader
+144 verbose request uri http://registry.npmjs.org/vue-router
+145 verbose request no auth needed
+146 info attempt registry request try #1 at 12:40:34
+147 http request GET http://registry.npmjs.org/vue-router
+148 verbose request uri http://registry.npmjs.org/vue-style-loader
+149 verbose request no auth needed
+150 info attempt registry request try #1 at 12:40:34
+151 http request GET http://registry.npmjs.org/vue-style-loader
+152 verbose request uri http://registry.npmjs.org/vue-template-compiler
+153 verbose request no auth needed
+154 info attempt registry request try #1 at 12:40:34
+155 http request GET http://registry.npmjs.org/vue-template-compiler
+156 verbose request uri http://registry.npmjs.org/vuetify
+157 verbose request no auth needed
+158 info attempt registry request try #1 at 12:40:34
+159 http request GET http://registry.npmjs.org/vuetify
+160 verbose request uri http://registry.npmjs.org/vuex
+161 verbose request no auth needed
+162 info attempt registry request try #1 at 12:40:34
+163 http request GET http://registry.npmjs.org/vuex
+164 verbose request uri http://registry.npmjs.org/aspnet-webpack
+165 verbose request no auth needed
+166 info attempt registry request try #1 at 12:40:34
+167 verbose etag W/"590b201c-ac49"
+168 verbose lastModified Thu, 04 May 2017 12:35:40 GMT
+169 http request GET http://registry.npmjs.org/aspnet-webpack
+170 verbose request uri http://registry.npmjs.org/css-loader
+171 verbose request no auth needed
+172 info attempt registry request try #1 at 12:40:34
+173 verbose etag W/"59c9c470-1fd64"
+174 verbose lastModified Tue, 26 Sep 2017 03:07:28 GMT
+175 http request GET http://registry.npmjs.org/css-loader
+176 verbose request uri http://registry.npmjs.org/file-loader
+177 verbose request no auth needed
+178 info attempt registry request try #1 at 12:40:34
+179 verbose etag W/"59c9c488-a441"
+180 verbose lastModified Tue, 26 Sep 2017 03:07:52 GMT
+181 http request GET http://registry.npmjs.org/file-loader
+182 verbose request uri http://registry.npmjs.org/style-loader
+183 verbose request no auth needed
+184 info attempt registry request try #1 at 12:40:34
+185 verbose etag W/"59cbfeeb-e937"
+186 verbose lastModified Wed, 27 Sep 2017 19:41:31 GMT
+187 http request GET http://registry.npmjs.org/style-loader
+188 verbose request uri http://registry.npmjs.org/webpack-dev-middleware
+189 verbose request no auth needed
+190 info attempt registry request try #1 at 12:40:34
+191 verbose etag W/"59c8fef9-11a6f"
+192 verbose lastModified Mon, 25 Sep 2017 13:04:57 GMT
+193 http request GET http://registry.npmjs.org/webpack-dev-middleware
+194 http 500 http://registry.npmjs.org/@aspnet%2fsignalr
+195 verbose bad json <html>
+195 verbose bad json <head>
+195 verbose bad json <title>Fastly error: unknown domain</title>
+195 verbose bad json </head>
+195 verbose bad json <body>
+195 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+195 verbose bad json </body>
+195 verbose bad json </html>
+196 error registry error parsing json
+197 verbose headers { server: 'Varnish',
+197 verbose headers   'retry-after': '0',
+197 verbose headers   'content-type': 'text/html',
+197 verbose headers   'content-length': '177',
+197 verbose headers   'accept-ranges': 'bytes',
+197 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+197 verbose headers   via: '1.1 varnish',
+197 verbose headers   connection: 'close',
+197 verbose headers   'x-served-by': 'cache-fra19148-FRA',
+197 verbose headers   'x-cache': 'MISS',
+197 verbose headers   'x-cache-hits': '0',
+197 verbose headers   'x-timer': 'S1535798435.924163,VS0,VE0' }
+198 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+198 info retry <html>
+198 info retry <head>
+198 info retry <title>Fastly error: unknown domain</title>
+198 info retry </head>
+198 info retry <body>
+198 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+198 info retry </body>
+198 info retry </html>
+199 http 500 http://registry.npmjs.org/babel-core
+200 verbose bad json <html>
+200 verbose bad json <head>
+200 verbose bad json <title>Fastly error: unknown domain</title>
+200 verbose bad json </head>
+200 verbose bad json <body>
+200 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+200 verbose bad json </body>
+200 verbose bad json </html>
+201 error registry error parsing json
+202 verbose headers { server: 'Varnish',
+202 verbose headers   'retry-after': '0',
+202 verbose headers   'content-type': 'text/html',
+202 verbose headers   'content-length': '177',
+202 verbose headers   'accept-ranges': 'bytes',
+202 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+202 verbose headers   via: '1.1 varnish',
+202 verbose headers   connection: 'close',
+202 verbose headers   'x-served-by': 'cache-fra19123-FRA',
+202 verbose headers   'x-cache': 'MISS',
+202 verbose headers   'x-cache-hits': '0',
+202 verbose headers   'x-timer': 'S1535798435.926709,VS0,VE0' }
+203 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+203 info retry <html>
+203 info retry <head>
+203 info retry <title>Fastly error: unknown domain</title>
+203 info retry </head>
+203 info retry <body>
+203 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+203 info retry </body>
+203 info retry </html>
+204 http 500 http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+205 verbose bad json <html>
+205 verbose bad json <head>
+205 verbose bad json <title>Fastly error: unknown domain</title>
+205 verbose bad json </head>
+205 verbose bad json <body>
+205 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+205 verbose bad json </body>
+205 verbose bad json </html>
+206 error registry error parsing json
+207 verbose headers { server: 'Varnish',
+207 verbose headers   'retry-after': '0',
+207 verbose headers   'content-type': 'text/html',
+207 verbose headers   'content-length': '177',
+207 verbose headers   'accept-ranges': 'bytes',
+207 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+207 verbose headers   via: '1.1 varnish',
+207 verbose headers   connection: 'close',
+207 verbose headers   'x-served-by': 'cache-fra19145-FRA',
+207 verbose headers   'x-cache': 'MISS',
+207 verbose headers   'x-cache-hits': '0',
+207 verbose headers   'x-timer': 'S1535798435.927312,VS0,VE0' }
+208 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+208 info retry <html>
+208 info retry <head>
+208 info retry <title>Fastly error: unknown domain</title>
+208 info retry </head>
+208 info retry <body>
+208 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+208 info retry </body>
+208 info retry </html>
+209 http 500 http://registry.npmjs.org/babel-loader
+210 verbose bad json <html>
+210 verbose bad json <head>
+210 verbose bad json <title>Fastly error: unknown domain</title>
+210 verbose bad json </head>
+210 verbose bad json <body>
+210 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+210 verbose bad json </body>
+210 verbose bad json </html>
+211 error registry error parsing json
+212 verbose headers { server: 'Varnish',
+212 verbose headers   'retry-after': '0',
+212 verbose headers   'content-type': 'text/html',
+212 verbose headers   'content-length': '177',
+212 verbose headers   'accept-ranges': 'bytes',
+212 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+212 verbose headers   via: '1.1 varnish',
+212 verbose headers   connection: 'close',
+212 verbose headers   'x-served-by': 'cache-fra19150-FRA',
+212 verbose headers   'x-cache': 'MISS',
+212 verbose headers   'x-cache-hits': '0',
+212 verbose headers   'x-timer': 'S1535798435.927135,VS0,VE0' }
+213 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+213 info retry <html>
+213 info retry <head>
+213 info retry <title>Fastly error: unknown domain</title>
+213 info retry </head>
+213 info retry <body>
+213 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+213 info retry </body>
+213 info retry </html>
+214 http 500 http://registry.npmjs.org/babel-polyfill
+215 verbose bad json <html>
+215 verbose bad json <head>
+215 verbose bad json <title>Fastly error: unknown domain</title>
+215 verbose bad json </head>
+215 verbose bad json <body>
+215 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+215 verbose bad json </body>
+215 verbose bad json </html>
+216 error registry error parsing json
+217 verbose headers { server: 'Varnish',
+217 verbose headers   'retry-after': '0',
+217 verbose headers   'content-type': 'text/html',
+217 verbose headers   'content-length': '177',
+217 verbose headers   'accept-ranges': 'bytes',
+217 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+217 verbose headers   via: '1.1 varnish',
+217 verbose headers   connection: 'close',
+217 verbose headers   'x-served-by': 'cache-fra19151-FRA',
+217 verbose headers   'x-cache': 'MISS',
+217 verbose headers   'x-cache-hits': '0',
+217 verbose headers   'x-timer': 'S1535798435.933882,VS0,VE0' }
+218 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+218 info retry <html>
+218 info retry <head>
+218 info retry <title>Fastly error: unknown domain</title>
+218 info retry </head>
+218 info retry <body>
+218 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+218 info retry </body>
+218 info retry </html>
+219 http 500 http://registry.npmjs.org/vue-router
+220 verbose bad json <html>
+220 verbose bad json <head>
+220 verbose bad json <title>Fastly error: unknown domain</title>
+220 verbose bad json </head>
+220 verbose bad json <body>
+220 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+220 verbose bad json </body>
+220 verbose bad json </html>
+221 error registry error parsing json
+222 verbose headers { server: 'Varnish',
+222 verbose headers   'retry-after': '0',
+222 verbose headers   'content-type': 'text/html',
+222 verbose headers   'content-length': '177',
+222 verbose headers   'accept-ranges': 'bytes',
+222 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+222 verbose headers   via: '1.1 varnish',
+222 verbose headers   connection: 'close',
+222 verbose headers   'x-served-by': 'cache-fra19126-FRA',
+222 verbose headers   'x-cache': 'MISS',
+222 verbose headers   'x-cache-hits': '0',
+222 verbose headers   'x-timer': 'S1535798435.934149,VS0,VE0' }
+223 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+223 info retry <html>
+223 info retry <head>
+223 info retry <title>Fastly error: unknown domain</title>
+223 info retry </head>
+223 info retry <body>
+223 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+223 info retry </body>
+223 info retry </html>
+224 http 500 http://registry.npmjs.org/material-design-icons-iconfont
+225 verbose bad json <html>
+225 verbose bad json <head>
+225 verbose bad json <title>Fastly error: unknown domain</title>
+225 verbose bad json </head>
+225 verbose bad json <body>
+225 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+225 verbose bad json </body>
+225 verbose bad json </html>
+226 error registry error parsing json
+227 verbose headers { server: 'Varnish',
+227 verbose headers   'retry-after': '0',
+227 verbose headers   'content-type': 'text/html',
+227 verbose headers   'content-length': '177',
+227 verbose headers   'accept-ranges': 'bytes',
+227 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+227 verbose headers   via: '1.1 varnish',
+227 verbose headers   connection: 'close',
+227 verbose headers   'x-served-by': 'cache-fra19129-FRA',
+227 verbose headers   'x-cache': 'MISS',
+227 verbose headers   'x-cache-hits': '0',
+227 verbose headers   'x-timer': 'S1535798435.932485,VS0,VE0' }
+228 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+228 info retry <html>
+228 info retry <head>
+228 info retry <title>Fastly error: unknown domain</title>
+228 info retry </head>
+228 info retry <body>
+228 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+228 info retry </body>
+228 info retry </html>
+229 http 500 http://registry.npmjs.org/vue
+230 verbose bad json <html>
+230 verbose bad json <head>
+230 verbose bad json <title>Fastly error: unknown domain</title>
+230 verbose bad json </head>
+230 verbose bad json <body>
+230 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+230 verbose bad json </body>
+230 verbose bad json </html>
+231 error registry error parsing json
+232 verbose headers { server: 'Varnish',
+232 verbose headers   'retry-after': '0',
+232 verbose headers   'content-type': 'text/html',
+232 verbose headers   'content-length': '177',
+232 verbose headers   'accept-ranges': 'bytes',
+232 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+232 verbose headers   via: '1.1 varnish',
+232 verbose headers   connection: 'close',
+232 verbose headers   'x-served-by': 'cache-fra19143-FRA',
+232 verbose headers   'x-cache': 'MISS',
+232 verbose headers   'x-cache-hits': '0',
+232 verbose headers   'x-timer': 'S1535798435.933004,VS0,VE0' }
+233 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+233 info retry <html>
+233 info retry <head>
+233 info retry <title>Fastly error: unknown domain</title>
+233 info retry </head>
+233 info retry <body>
+233 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+233 info retry </body>
+233 info retry </html>
+234 http 500 http://registry.npmjs.org/vue-loader
+235 verbose bad json <html>
+235 verbose bad json <head>
+235 verbose bad json <title>Fastly error: unknown domain</title>
+235 verbose bad json </head>
+235 verbose bad json <body>
+235 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+235 verbose bad json </body>
+235 verbose bad json </html>
+236 error registry error parsing json
+237 verbose headers { server: 'Varnish',
+237 verbose headers   'retry-after': '0',
+237 verbose headers   'content-type': 'text/html',
+237 verbose headers   'content-length': '177',
+237 verbose headers   'accept-ranges': 'bytes',
+237 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+237 verbose headers   via: '1.1 varnish',
+237 verbose headers   connection: 'close',
+237 verbose headers   'x-served-by': 'cache-fra19120-FRA',
+237 verbose headers   'x-cache': 'MISS',
+237 verbose headers   'x-cache-hits': '0',
+237 verbose headers   'x-timer': 'S1535798435.931360,VS0,VE0' }
+238 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+238 info retry <html>
+238 info retry <head>
+238 info retry <title>Fastly error: unknown domain</title>
+238 info retry </head>
+238 info retry <body>
+238 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+238 info retry </body>
+238 info retry </html>
+239 http 500 http://registry.npmjs.org/vue-style-loader
+240 verbose bad json <html>
+240 verbose bad json <head>
+240 verbose bad json <title>Fastly error: unknown domain</title>
+240 verbose bad json </head>
+240 verbose bad json <body>
+240 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+240 verbose bad json </body>
+240 verbose bad json </html>
+241 error registry error parsing json
+242 verbose headers { server: 'Varnish',
+242 verbose headers   'retry-after': '0',
+242 verbose headers   'content-type': 'text/html',
+242 verbose headers   'content-length': '177',
+242 verbose headers   'accept-ranges': 'bytes',
+242 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+242 verbose headers   via: '1.1 varnish',
+242 verbose headers   connection: 'close',
+242 verbose headers   'x-served-by': 'cache-fra19151-FRA',
+242 verbose headers   'x-cache': 'MISS',
+242 verbose headers   'x-cache-hits': '0',
+242 verbose headers   'x-timer': 'S1535798435.936561,VS0,VE0' }
+243 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+243 info retry <html>
+243 info retry <head>
+243 info retry <title>Fastly error: unknown domain</title>
+243 info retry </head>
+243 info retry <body>
+243 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+243 info retry </body>
+243 info retry </html>
+244 http 500 http://registry.npmjs.org/vuetify
+245 verbose bad json <html>
+245 verbose bad json <head>
+245 verbose bad json <title>Fastly error: unknown domain</title>
+245 verbose bad json </head>
+245 verbose bad json <body>
+245 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+245 verbose bad json </body>
+245 verbose bad json </html>
+246 error registry error parsing json
+247 verbose headers { server: 'Varnish',
+247 verbose headers   'retry-after': '0',
+247 verbose headers   'content-type': 'text/html',
+247 verbose headers   'content-length': '177',
+247 verbose headers   'accept-ranges': 'bytes',
+247 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+247 verbose headers   via: '1.1 varnish',
+247 verbose headers   connection: 'close',
+247 verbose headers   'x-served-by': 'cache-fra19148-FRA',
+247 verbose headers   'x-cache': 'MISS',
+247 verbose headers   'x-cache-hits': '0',
+247 verbose headers   'x-timer': 'S1535798435.936146,VS0,VE0' }
+248 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+248 info retry <html>
+248 info retry <head>
+248 info retry <title>Fastly error: unknown domain</title>
+248 info retry </head>
+248 info retry <body>
+248 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+248 info retry </body>
+248 info retry </html>
+249 http 500 http://registry.npmjs.org/vue-template-compiler
+250 verbose bad json <html>
+250 verbose bad json <head>
+250 verbose bad json <title>Fastly error: unknown domain</title>
+250 verbose bad json </head>
+250 verbose bad json <body>
+250 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+250 verbose bad json </body>
+250 verbose bad json </html>
+251 error registry error parsing json
+252 verbose headers { server: 'Varnish',
+252 verbose headers   'retry-after': '0',
+252 verbose headers   'content-type': 'text/html',
+252 verbose headers   'content-length': '177',
+252 verbose headers   'accept-ranges': 'bytes',
+252 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+252 verbose headers   via: '1.1 varnish',
+252 verbose headers   connection: 'close',
+252 verbose headers   'x-served-by': 'cache-fra19142-FRA',
+252 verbose headers   'x-cache': 'MISS',
+252 verbose headers   'x-cache-hits': '0',
+252 verbose headers   'x-timer': 'S1535798435.936330,VS0,VE0' }
+253 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+253 info retry <html>
+253 info retry <head>
+253 info retry <title>Fastly error: unknown domain</title>
+253 info retry </head>
+253 info retry <body>
+253 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+253 info retry </body>
+253 info retry </html>
+254 http 500 http://registry.npmjs.org/vuex
+255 verbose bad json <html>
+255 verbose bad json <head>
+255 verbose bad json <title>Fastly error: unknown domain</title>
+255 verbose bad json </head>
+255 verbose bad json <body>
+255 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+255 verbose bad json </body>
+255 verbose bad json </html>
+256 error registry error parsing json
+257 verbose headers { server: 'Varnish',
+257 verbose headers   'retry-after': '0',
+257 verbose headers   'content-type': 'text/html',
+257 verbose headers   'content-length': '177',
+257 verbose headers   'accept-ranges': 'bytes',
+257 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+257 verbose headers   via: '1.1 varnish',
+257 verbose headers   connection: 'close',
+257 verbose headers   'x-served-by': 'cache-fra19124-FRA',
+257 verbose headers   'x-cache': 'MISS',
+257 verbose headers   'x-cache-hits': '0',
+257 verbose headers   'x-timer': 'S1535798435.936604,VS0,VE0' }
+258 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+258 info retry <html>
+258 info retry <head>
+258 info retry <title>Fastly error: unknown domain</title>
+258 info retry </head>
+258 info retry <body>
+258 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+258 info retry </body>
+258 info retry </html>
+259 http 500 http://registry.npmjs.org/aspnet-webpack
+260 verbose bad json <html>
+260 verbose bad json <head>
+260 verbose bad json <title>Fastly error: unknown domain</title>
+260 verbose bad json </head>
+260 verbose bad json <body>
+260 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+260 verbose bad json </body>
+260 verbose bad json </html>
+261 error registry error parsing json
+262 verbose headers { server: 'Varnish',
+262 verbose headers   'retry-after': '0',
+262 verbose headers   'content-type': 'text/html',
+262 verbose headers   'content-length': '177',
+262 verbose headers   'accept-ranges': 'bytes',
+262 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+262 verbose headers   via: '1.1 varnish',
+262 verbose headers   connection: 'close',
+262 verbose headers   'x-served-by': 'cache-fra19123-FRA',
+262 verbose headers   'x-cache': 'MISS',
+262 verbose headers   'x-cache-hits': '0',
+262 verbose headers   'x-timer': 'S1535798435.946330,VS0,VE0' }
+263 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+263 info retry <html>
+263 info retry <head>
+263 info retry <title>Fastly error: unknown domain</title>
+263 info retry </head>
+263 info retry <body>
+263 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+263 info retry </body>
+263 info retry </html>
+264 http 500 http://registry.npmjs.org/style-loader
+265 verbose bad json <html>
+265 verbose bad json <head>
+265 verbose bad json <title>Fastly error: unknown domain</title>
+265 verbose bad json </head>
+265 verbose bad json <body>
+265 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+265 verbose bad json </body>
+265 verbose bad json </html>
+266 error registry error parsing json
+267 verbose headers { server: 'Varnish',
+267 verbose headers   'retry-after': '0',
+267 verbose headers   'content-type': 'text/html',
+267 verbose headers   'content-length': '177',
+267 verbose headers   'accept-ranges': 'bytes',
+267 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+267 verbose headers   via: '1.1 varnish',
+267 verbose headers   connection: 'close',
+267 verbose headers   'x-served-by': 'cache-fra19143-FRA',
+267 verbose headers   'x-cache': 'MISS',
+267 verbose headers   'x-cache-hits': '0',
+267 verbose headers   'x-timer': 'S1535798435.946314,VS0,VE0' }
+268 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+268 info retry <html>
+268 info retry <head>
+268 info retry <title>Fastly error: unknown domain</title>
+268 info retry </head>
+268 info retry <body>
+268 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+268 info retry </body>
+268 info retry </html>
+269 http 500 http://registry.npmjs.org/css-loader
+270 verbose bad json <html>
+270 verbose bad json <head>
+270 verbose bad json <title>Fastly error: unknown domain</title>
+270 verbose bad json </head>
+270 verbose bad json <body>
+270 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+270 verbose bad json </body>
+270 verbose bad json </html>
+271 error registry error parsing json
+272 verbose headers { server: 'Varnish',
+272 verbose headers   'retry-after': '0',
+272 verbose headers   'content-type': 'text/html',
+272 verbose headers   'content-length': '177',
+272 verbose headers   'accept-ranges': 'bytes',
+272 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+272 verbose headers   via: '1.1 varnish',
+272 verbose headers   connection: 'close',
+272 verbose headers   'x-served-by': 'cache-fra19133-FRA',
+272 verbose headers   'x-cache': 'MISS',
+272 verbose headers   'x-cache-hits': '0',
+272 verbose headers   'x-timer': 'S1535798435.947792,VS0,VE0' }
+273 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+273 info retry <html>
+273 info retry <head>
+273 info retry <title>Fastly error: unknown domain</title>
+273 info retry </head>
+273 info retry <body>
+273 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+273 info retry </body>
+273 info retry </html>
+274 http 500 http://registry.npmjs.org/file-loader
+275 verbose bad json <html>
+275 verbose bad json <head>
+275 verbose bad json <title>Fastly error: unknown domain</title>
+275 verbose bad json </head>
+275 verbose bad json <body>
+275 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+275 verbose bad json </body>
+275 verbose bad json </html>
+276 error registry error parsing json
+277 verbose headers { server: 'Varnish',
+277 verbose headers   'retry-after': '0',
+277 verbose headers   'content-type': 'text/html',
+277 verbose headers   'content-length': '177',
+277 verbose headers   'accept-ranges': 'bytes',
+277 verbose headers   date: 'Sat, 01 Sep 2018 10:40:34 GMT',
+277 verbose headers   via: '1.1 varnish',
+277 verbose headers   connection: 'close',
+277 verbose headers   'x-served-by': 'cache-fra19136-FRA',
+277 verbose headers   'x-cache': 'MISS',
+277 verbose headers   'x-cache-hits': '0',
+277 verbose headers   'x-timer': 'S1535798435.946213,VS0,VE0' }
+278 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+278 info retry <html>
+278 info retry <head>
+278 info retry <title>Fastly error: unknown domain</title>
+278 info retry </head>
+278 info retry <body>
+278 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+278 info retry </body>
+278 info retry </html>
+279 http 500 http://registry.npmjs.org/webpack-dev-middleware
+280 verbose bad json <html>
+280 verbose bad json <head>
+280 verbose bad json <title>Fastly error: unknown domain</title>
+280 verbose bad json </head>
+280 verbose bad json <body>
+280 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+280 verbose bad json </body>
+280 verbose bad json </html>
+281 error registry error parsing json
+282 verbose headers { server: 'Varnish',
+282 verbose headers   'retry-after': '0',
+282 verbose headers   'content-type': 'text/html',
+282 verbose headers   'content-length': '177',
+282 verbose headers   'accept-ranges': 'bytes',
+282 verbose headers   date: 'Sat, 01 Sep 2018 10:40:35 GMT',
+282 verbose headers   via: '1.1 varnish',
+282 verbose headers   connection: 'close',
+282 verbose headers   'x-served-by': 'cache-fra19128-FRA',
+282 verbose headers   'x-cache': 'MISS',
+282 verbose headers   'x-cache-hits': '0',
+282 verbose headers   'x-timer': 'S1535798435.011289,VS0,VE0' }
+283 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+283 info retry <html>
+283 info retry <head>
+283 info retry <title>Fastly error: unknown domain</title>
+283 info retry </head>
+283 info retry <body>
+283 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+283 info retry </body>
+283 info retry </html>
+284 info attempt registry request try #2 at 12:40:44
+285 http request GET http://registry.npmjs.org/@aspnet%2fsignalr
+286 info attempt registry request try #2 at 12:40:44
+287 http request GET http://registry.npmjs.org/babel-core
+288 info attempt registry request try #2 at 12:40:44
+289 http request GET http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+290 info attempt registry request try #2 at 12:40:44
+291 http request GET http://registry.npmjs.org/babel-loader
+292 info attempt registry request try #2 at 12:40:44
+293 http request GET http://registry.npmjs.org/babel-polyfill
+294 info attempt registry request try #2 at 12:40:44
+295 http request GET http://registry.npmjs.org/vue-router
+296 info attempt registry request try #2 at 12:40:44
+297 http request GET http://registry.npmjs.org/material-design-icons-iconfont
+298 info attempt registry request try #2 at 12:40:44
+299 http request GET http://registry.npmjs.org/vue
+300 info attempt registry request try #2 at 12:40:44
+301 http request GET http://registry.npmjs.org/vue-loader
+302 info attempt registry request try #2 at 12:40:44
+303 http request GET http://registry.npmjs.org/vue-style-loader
+304 info attempt registry request try #2 at 12:40:44
+305 http request GET http://registry.npmjs.org/vuetify
+306 info attempt registry request try #2 at 12:40:44
+307 http request GET http://registry.npmjs.org/vue-template-compiler
+308 info attempt registry request try #2 at 12:40:44
+309 http request GET http://registry.npmjs.org/vuex
+310 info attempt registry request try #2 at 12:40:44
+311 verbose etag W/"590b201c-ac49"
+312 verbose lastModified Thu, 04 May 2017 12:35:40 GMT
+313 http request GET http://registry.npmjs.org/aspnet-webpack
+314 info attempt registry request try #2 at 12:40:44
+315 verbose etag W/"59cbfeeb-e937"
+316 verbose lastModified Wed, 27 Sep 2017 19:41:31 GMT
+317 http request GET http://registry.npmjs.org/style-loader
+318 info attempt registry request try #2 at 12:40:44
+319 verbose etag W/"59c9c470-1fd64"
+320 verbose lastModified Tue, 26 Sep 2017 03:07:28 GMT
+321 http request GET http://registry.npmjs.org/css-loader
+322 info attempt registry request try #2 at 12:40:44
+323 verbose etag W/"59c9c488-a441"
+324 verbose lastModified Tue, 26 Sep 2017 03:07:52 GMT
+325 http request GET http://registry.npmjs.org/file-loader
+326 info attempt registry request try #2 at 12:40:44
+327 verbose etag W/"59c8fef9-11a6f"
+328 verbose lastModified Mon, 25 Sep 2017 13:04:57 GMT
+329 http request GET http://registry.npmjs.org/webpack-dev-middleware
+330 http 500 http://registry.npmjs.org/babel-core
+331 verbose bad json <html>
+331 verbose bad json <head>
+331 verbose bad json <title>Fastly error: unknown domain</title>
+331 verbose bad json </head>
+331 verbose bad json <body>
+331 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+331 verbose bad json </body>
+331 verbose bad json </html>
+332 error registry error parsing json
+333 verbose headers { server: 'Varnish',
+333 verbose headers   'retry-after': '0',
+333 verbose headers   'content-type': 'text/html',
+333 verbose headers   'content-length': '177',
+333 verbose headers   'accept-ranges': 'bytes',
+333 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+333 verbose headers   via: '1.1 varnish',
+333 verbose headers   connection: 'close',
+333 verbose headers   'x-served-by': 'cache-fra19151-FRA',
+333 verbose headers   'x-cache': 'MISS',
+333 verbose headers   'x-cache-hits': '0',
+333 verbose headers   'x-timer': 'S1535798445.058085,VS0,VE0' }
+334 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+334 info retry <html>
+334 info retry <head>
+334 info retry <title>Fastly error: unknown domain</title>
+334 info retry </head>
+334 info retry <body>
+334 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+334 info retry </body>
+334 info retry </html>
+335 http 500 http://registry.npmjs.org/babel-polyfill
+336 verbose bad json <html>
+336 verbose bad json <head>
+336 verbose bad json <title>Fastly error: unknown domain</title>
+336 verbose bad json </head>
+336 verbose bad json <body>
+336 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+336 verbose bad json </body>
+336 verbose bad json </html>
+337 error registry error parsing json
+338 verbose headers { server: 'Varnish',
+338 verbose headers   'retry-after': '0',
+338 verbose headers   'content-type': 'text/html',
+338 verbose headers   'content-length': '177',
+338 verbose headers   'accept-ranges': 'bytes',
+338 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+338 verbose headers   via: '1.1 varnish',
+338 verbose headers   connection: 'close',
+338 verbose headers   'x-served-by': 'cache-fra19125-FRA',
+338 verbose headers   'x-cache': 'MISS',
+338 verbose headers   'x-cache-hits': '0',
+338 verbose headers   'x-timer': 'S1535798445.058175,VS0,VE0' }
+339 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+339 info retry <html>
+339 info retry <head>
+339 info retry <title>Fastly error: unknown domain</title>
+339 info retry </head>
+339 info retry <body>
+339 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+339 info retry </body>
+339 info retry </html>
+340 http 500 http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+341 verbose bad json <html>
+341 verbose bad json <head>
+341 verbose bad json <title>Fastly error: unknown domain</title>
+341 verbose bad json </head>
+341 verbose bad json <body>
+341 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+341 verbose bad json </body>
+341 verbose bad json </html>
+342 error registry error parsing json
+343 verbose headers { server: 'Varnish',
+343 verbose headers   'retry-after': '0',
+343 verbose headers   'content-type': 'text/html',
+343 verbose headers   'content-length': '177',
+343 verbose headers   'accept-ranges': 'bytes',
+343 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+343 verbose headers   via: '1.1 varnish',
+343 verbose headers   connection: 'close',
+343 verbose headers   'x-served-by': 'cache-fra19130-FRA',
+343 verbose headers   'x-cache': 'MISS',
+343 verbose headers   'x-cache-hits': '0',
+343 verbose headers   'x-timer': 'S1535798445.058118,VS0,VE0' }
+344 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+344 info retry <html>
+344 info retry <head>
+344 info retry <title>Fastly error: unknown domain</title>
+344 info retry </head>
+344 info retry <body>
+344 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+344 info retry </body>
+344 info retry </html>
+345 http 500 http://registry.npmjs.org/@aspnet%2fsignalr
+346 verbose bad json <html>
+346 verbose bad json <head>
+346 verbose bad json <title>Fastly error: unknown domain</title>
+346 verbose bad json </head>
+346 verbose bad json <body>
+346 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+346 verbose bad json </body>
+346 verbose bad json </html>
+347 error registry error parsing json
+348 verbose headers { server: 'Varnish',
+348 verbose headers   'retry-after': '0',
+348 verbose headers   'content-type': 'text/html',
+348 verbose headers   'content-length': '177',
+348 verbose headers   'accept-ranges': 'bytes',
+348 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+348 verbose headers   via: '1.1 varnish',
+348 verbose headers   connection: 'close',
+348 verbose headers   'x-served-by': 'cache-fra19122-FRA',
+348 verbose headers   'x-cache': 'MISS',
+348 verbose headers   'x-cache-hits': '0',
+348 verbose headers   'x-timer': 'S1535798445.058132,VS0,VE0' }
+349 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+349 info retry <html>
+349 info retry <head>
+349 info retry <title>Fastly error: unknown domain</title>
+349 info retry </head>
+349 info retry <body>
+349 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+349 info retry </body>
+349 info retry </html>
+350 http 500 http://registry.npmjs.org/babel-loader
+351 verbose bad json <html>
+351 verbose bad json <head>
+351 verbose bad json <title>Fastly error: unknown domain</title>
+351 verbose bad json </head>
+351 verbose bad json <body>
+351 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+351 verbose bad json </body>
+351 verbose bad json </html>
+352 error registry error parsing json
+353 verbose headers { server: 'Varnish',
+353 verbose headers   'retry-after': '0',
+353 verbose headers   'content-type': 'text/html',
+353 verbose headers   'content-length': '177',
+353 verbose headers   'accept-ranges': 'bytes',
+353 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+353 verbose headers   via: '1.1 varnish',
+353 verbose headers   connection: 'close',
+353 verbose headers   'x-served-by': 'cache-fra19145-FRA',
+353 verbose headers   'x-cache': 'MISS',
+353 verbose headers   'x-cache-hits': '0',
+353 verbose headers   'x-timer': 'S1535798445.058193,VS0,VE0' }
+354 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+354 info retry <html>
+354 info retry <head>
+354 info retry <title>Fastly error: unknown domain</title>
+354 info retry </head>
+354 info retry <body>
+354 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+354 info retry </body>
+354 info retry </html>
+355 http 500 http://registry.npmjs.org/vue-loader
+356 verbose bad json <html>
+356 verbose bad json <head>
+356 verbose bad json <title>Fastly error: unknown domain</title>
+356 verbose bad json </head>
+356 verbose bad json <body>
+356 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+356 verbose bad json </body>
+356 verbose bad json </html>
+357 error registry error parsing json
+358 verbose headers { server: 'Varnish',
+358 verbose headers   'retry-after': '0',
+358 verbose headers   'content-type': 'text/html',
+358 verbose headers   'content-length': '177',
+358 verbose headers   'accept-ranges': 'bytes',
+358 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+358 verbose headers   via: '1.1 varnish',
+358 verbose headers   connection: 'close',
+358 verbose headers   'x-served-by': 'cache-fra19141-FRA',
+358 verbose headers   'x-cache': 'MISS',
+358 verbose headers   'x-cache-hits': '0',
+358 verbose headers   'x-timer': 'S1535798445.059331,VS0,VE0' }
+359 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+359 info retry <html>
+359 info retry <head>
+359 info retry <title>Fastly error: unknown domain</title>
+359 info retry </head>
+359 info retry <body>
+359 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+359 info retry </body>
+359 info retry </html>
+360 http 500 http://registry.npmjs.org/vuetify
+361 verbose bad json <html>
+361 verbose bad json <head>
+361 verbose bad json <title>Fastly error: unknown domain</title>
+361 verbose bad json </head>
+361 verbose bad json <body>
+361 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+361 verbose bad json </body>
+361 verbose bad json </html>
+362 error registry error parsing json
+363 verbose headers { server: 'Varnish',
+363 verbose headers   'retry-after': '0',
+363 verbose headers   'content-type': 'text/html',
+363 verbose headers   'content-length': '177',
+363 verbose headers   'accept-ranges': 'bytes',
+363 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+363 verbose headers   via: '1.1 varnish',
+363 verbose headers   connection: 'close',
+363 verbose headers   'x-served-by': 'cache-fra19130-FRA',
+363 verbose headers   'x-cache': 'MISS',
+363 verbose headers   'x-cache-hits': '0',
+363 verbose headers   'x-timer': 'S1535798445.060511,VS0,VE0' }
+364 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+364 info retry <html>
+364 info retry <head>
+364 info retry <title>Fastly error: unknown domain</title>
+364 info retry </head>
+364 info retry <body>
+364 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+364 info retry </body>
+364 info retry </html>
+365 http 500 http://registry.npmjs.org/vuex
+366 verbose bad json <html>
+366 verbose bad json <head>
+366 verbose bad json <title>Fastly error: unknown domain</title>
+366 verbose bad json </head>
+366 verbose bad json <body>
+366 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+366 verbose bad json </body>
+366 verbose bad json </html>
+367 error registry error parsing json
+368 verbose headers { server: 'Varnish',
+368 verbose headers   'retry-after': '0',
+368 verbose headers   'content-type': 'text/html',
+368 verbose headers   'content-length': '177',
+368 verbose headers   'accept-ranges': 'bytes',
+368 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+368 verbose headers   via: '1.1 varnish',
+368 verbose headers   connection: 'close',
+368 verbose headers   'x-served-by': 'cache-fra19149-FRA',
+368 verbose headers   'x-cache': 'MISS',
+368 verbose headers   'x-cache-hits': '0',
+368 verbose headers   'x-timer': 'S1535798445.059010,VS0,VE0' }
+369 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+369 info retry <html>
+369 info retry <head>
+369 info retry <title>Fastly error: unknown domain</title>
+369 info retry </head>
+369 info retry <body>
+369 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+369 info retry </body>
+369 info retry </html>
+370 http 500 http://registry.npmjs.org/vue
+371 verbose bad json <html>
+371 verbose bad json <head>
+371 verbose bad json <title>Fastly error: unknown domain</title>
+371 verbose bad json </head>
+371 verbose bad json <body>
+371 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+371 verbose bad json </body>
+371 verbose bad json </html>
+372 error registry error parsing json
+373 verbose headers { server: 'Varnish',
+373 verbose headers   'retry-after': '0',
+373 verbose headers   'content-type': 'text/html',
+373 verbose headers   'content-length': '177',
+373 verbose headers   'accept-ranges': 'bytes',
+373 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+373 verbose headers   via: '1.1 varnish',
+373 verbose headers   connection: 'close',
+373 verbose headers   'x-served-by': 'cache-fra19151-FRA',
+373 verbose headers   'x-cache': 'MISS',
+373 verbose headers   'x-cache-hits': '0',
+373 verbose headers   'x-timer': 'S1535798445.060492,VS0,VE0' }
+374 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+374 info retry <html>
+374 info retry <head>
+374 info retry <title>Fastly error: unknown domain</title>
+374 info retry </head>
+374 info retry <body>
+374 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+374 info retry </body>
+374 info retry </html>
+375 http 500 http://registry.npmjs.org/vue-router
+376 verbose bad json <html>
+376 verbose bad json <head>
+376 verbose bad json <title>Fastly error: unknown domain</title>
+376 verbose bad json </head>
+376 verbose bad json <body>
+376 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+376 verbose bad json </body>
+376 verbose bad json </html>
+377 error registry error parsing json
+378 verbose headers { server: 'Varnish',
+378 verbose headers   'retry-after': '0',
+378 verbose headers   'content-type': 'text/html',
+378 verbose headers   'content-length': '177',
+378 verbose headers   'accept-ranges': 'bytes',
+378 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+378 verbose headers   via: '1.1 varnish',
+378 verbose headers   connection: 'close',
+378 verbose headers   'x-served-by': 'cache-fra19148-FRA',
+378 verbose headers   'x-cache': 'MISS',
+378 verbose headers   'x-cache-hits': '0',
+378 verbose headers   'x-timer': 'S1535798445.058766,VS0,VE0' }
+379 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+379 info retry <html>
+379 info retry <head>
+379 info retry <title>Fastly error: unknown domain</title>
+379 info retry </head>
+379 info retry <body>
+379 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+379 info retry </body>
+379 info retry </html>
+380 http 500 http://registry.npmjs.org/vue-template-compiler
+381 verbose bad json <html>
+381 verbose bad json <head>
+381 verbose bad json <title>Fastly error: unknown domain</title>
+381 verbose bad json </head>
+381 verbose bad json <body>
+381 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+381 verbose bad json </body>
+381 verbose bad json </html>
+382 error registry error parsing json
+383 verbose headers { server: 'Varnish',
+383 verbose headers   'retry-after': '0',
+383 verbose headers   'content-type': 'text/html',
+383 verbose headers   'content-length': '177',
+383 verbose headers   'accept-ranges': 'bytes',
+383 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+383 verbose headers   via: '1.1 varnish',
+383 verbose headers   connection: 'close',
+383 verbose headers   'x-served-by': 'cache-fra19129-FRA',
+383 verbose headers   'x-cache': 'MISS',
+383 verbose headers   'x-cache-hits': '0',
+383 verbose headers   'x-timer': 'S1535798445.059173,VS0,VE0' }
+384 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+384 info retry <html>
+384 info retry <head>
+384 info retry <title>Fastly error: unknown domain</title>
+384 info retry </head>
+384 info retry <body>
+384 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+384 info retry </body>
+384 info retry </html>
+385 http 500 http://registry.npmjs.org/css-loader
+386 verbose bad json <html>
+386 verbose bad json <head>
+386 verbose bad json <title>Fastly error: unknown domain</title>
+386 verbose bad json </head>
+386 verbose bad json <body>
+386 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+386 verbose bad json </body>
+386 verbose bad json </html>
+387 error registry error parsing json
+388 verbose headers { server: 'Varnish',
+388 verbose headers   'retry-after': '0',
+388 verbose headers   'content-type': 'text/html',
+388 verbose headers   'content-length': '177',
+388 verbose headers   'accept-ranges': 'bytes',
+388 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+388 verbose headers   via: '1.1 varnish',
+388 verbose headers   connection: 'close',
+388 verbose headers   'x-served-by': 'cache-fra19143-FRA',
+388 verbose headers   'x-cache': 'MISS',
+388 verbose headers   'x-cache-hits': '0',
+388 verbose headers   'x-timer': 'S1535798445.059682,VS0,VE0' }
+389 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+389 info retry <html>
+389 info retry <head>
+389 info retry <title>Fastly error: unknown domain</title>
+389 info retry </head>
+389 info retry <body>
+389 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+389 info retry </body>
+389 info retry </html>
+390 http 500 http://registry.npmjs.org/material-design-icons-iconfont
+391 verbose bad json <html>
+391 verbose bad json <head>
+391 verbose bad json <title>Fastly error: unknown domain</title>
+391 verbose bad json </head>
+391 verbose bad json <body>
+391 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+391 verbose bad json </body>
+391 verbose bad json </html>
+392 error registry error parsing json
+393 verbose headers { server: 'Varnish',
+393 verbose headers   'retry-after': '0',
+393 verbose headers   'content-type': 'text/html',
+393 verbose headers   'content-length': '177',
+393 verbose headers   'accept-ranges': 'bytes',
+393 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+393 verbose headers   via: '1.1 varnish',
+393 verbose headers   connection: 'close',
+393 verbose headers   'x-served-by': 'cache-fra19120-FRA',
+393 verbose headers   'x-cache': 'MISS',
+393 verbose headers   'x-cache-hits': '0',
+393 verbose headers   'x-timer': 'S1535798445.057691,VS0,VE0' }
+394 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+394 info retry <html>
+394 info retry <head>
+394 info retry <title>Fastly error: unknown domain</title>
+394 info retry </head>
+394 info retry <body>
+394 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+394 info retry </body>
+394 info retry </html>
+395 http 500 http://registry.npmjs.org/file-loader
+396 verbose bad json <html>
+396 verbose bad json <head>
+396 verbose bad json <title>Fastly error: unknown domain</title>
+396 verbose bad json </head>
+396 verbose bad json <body>
+396 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+396 verbose bad json </body>
+396 verbose bad json </html>
+397 error registry error parsing json
+398 verbose headers { server: 'Varnish',
+398 verbose headers   'retry-after': '0',
+398 verbose headers   'content-type': 'text/html',
+398 verbose headers   'content-length': '177',
+398 verbose headers   'accept-ranges': 'bytes',
+398 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+398 verbose headers   via: '1.1 varnish',
+398 verbose headers   connection: 'close',
+398 verbose headers   'x-served-by': 'cache-fra19127-FRA',
+398 verbose headers   'x-cache': 'MISS',
+398 verbose headers   'x-cache-hits': '0',
+398 verbose headers   'x-timer': 'S1535798445.059811,VS0,VE0' }
+399 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+399 info retry <html>
+399 info retry <head>
+399 info retry <title>Fastly error: unknown domain</title>
+399 info retry </head>
+399 info retry <body>
+399 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+399 info retry </body>
+399 info retry </html>
+400 http 500 http://registry.npmjs.org/vue-style-loader
+401 verbose bad json <html>
+401 verbose bad json <head>
+401 verbose bad json <title>Fastly error: unknown domain</title>
+401 verbose bad json </head>
+401 verbose bad json <body>
+401 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+401 verbose bad json </body>
+401 verbose bad json </html>
+402 error registry error parsing json
+403 verbose headers { server: 'Varnish',
+403 verbose headers   'retry-after': '0',
+403 verbose headers   'content-type': 'text/html',
+403 verbose headers   'content-length': '177',
+403 verbose headers   'accept-ranges': 'bytes',
+403 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+403 verbose headers   via: '1.1 varnish',
+403 verbose headers   connection: 'close',
+403 verbose headers   'x-served-by': 'cache-fra19140-FRA',
+403 verbose headers   'x-cache': 'MISS',
+403 verbose headers   'x-cache-hits': '0',
+403 verbose headers   'x-timer': 'S1535798445.061310,VS0,VE0' }
+404 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+404 info retry <html>
+404 info retry <head>
+404 info retry <title>Fastly error: unknown domain</title>
+404 info retry </head>
+404 info retry <body>
+404 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+404 info retry </body>
+404 info retry </html>
+405 http 500 http://registry.npmjs.org/style-loader
+406 verbose bad json <html>
+406 verbose bad json <head>
+406 verbose bad json <title>Fastly error: unknown domain</title>
+406 verbose bad json </head>
+406 verbose bad json <body>
+406 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+406 verbose bad json </body>
+406 verbose bad json </html>
+407 error registry error parsing json
+408 verbose headers { server: 'Varnish',
+408 verbose headers   'retry-after': '0',
+408 verbose headers   'content-type': 'text/html',
+408 verbose headers   'content-length': '177',
+408 verbose headers   'accept-ranges': 'bytes',
+408 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+408 verbose headers   via: '1.1 varnish',
+408 verbose headers   connection: 'close',
+408 verbose headers   'x-served-by': 'cache-fra19122-FRA',
+408 verbose headers   'x-cache': 'MISS',
+408 verbose headers   'x-cache-hits': '0',
+408 verbose headers   'x-timer': 'S1535798445.061171,VS0,VE0' }
+409 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+409 info retry <html>
+409 info retry <head>
+409 info retry <title>Fastly error: unknown domain</title>
+409 info retry </head>
+409 info retry <body>
+409 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+409 info retry </body>
+409 info retry </html>
+410 http 500 http://registry.npmjs.org/aspnet-webpack
+411 verbose bad json <html>
+411 verbose bad json <head>
+411 verbose bad json <title>Fastly error: unknown domain</title>
+411 verbose bad json </head>
+411 verbose bad json <body>
+411 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+411 verbose bad json </body>
+411 verbose bad json </html>
+412 error registry error parsing json
+413 verbose headers { server: 'Varnish',
+413 verbose headers   'retry-after': '0',
+413 verbose headers   'content-type': 'text/html',
+413 verbose headers   'content-length': '177',
+413 verbose headers   'accept-ranges': 'bytes',
+413 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+413 verbose headers   via: '1.1 varnish',
+413 verbose headers   connection: 'close',
+413 verbose headers   'x-served-by': 'cache-fra19147-FRA',
+413 verbose headers   'x-cache': 'MISS',
+413 verbose headers   'x-cache-hits': '0',
+413 verbose headers   'x-timer': 'S1535798445.061275,VS0,VE0' }
+414 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+414 info retry <html>
+414 info retry <head>
+414 info retry <title>Fastly error: unknown domain</title>
+414 info retry </head>
+414 info retry <body>
+414 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+414 info retry </body>
+414 info retry </html>
+415 http 500 http://registry.npmjs.org/webpack-dev-middleware
+416 verbose bad json <html>
+416 verbose bad json <head>
+416 verbose bad json <title>Fastly error: unknown domain</title>
+416 verbose bad json </head>
+416 verbose bad json <body>
+416 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+416 verbose bad json </body>
+416 verbose bad json </html>
+417 error registry error parsing json
+418 verbose headers { server: 'Varnish',
+418 verbose headers   'retry-after': '0',
+418 verbose headers   'content-type': 'text/html',
+418 verbose headers   'content-length': '177',
+418 verbose headers   'accept-ranges': 'bytes',
+418 verbose headers   date: 'Sat, 01 Sep 2018 10:40:45 GMT',
+418 verbose headers   via: '1.1 varnish',
+418 verbose headers   connection: 'close',
+418 verbose headers   'x-served-by': 'cache-fra19150-FRA',
+418 verbose headers   'x-cache': 'MISS',
+418 verbose headers   'x-cache-hits': '0',
+418 verbose headers   'x-timer': 'S1535798445.061477,VS0,VE0' }
+419 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+419 info retry <html>
+419 info retry <head>
+419 info retry <title>Fastly error: unknown domain</title>
+419 info retry </head>
+419 info retry <body>
+419 info retry Fastly error: unknown domain. Please check that this domain has been added to a service.
+419 info retry </body>
+419 info retry </html>
+420 info attempt registry request try #3 at 12:41:44
+421 http request GET http://registry.npmjs.org/babel-core
+422 info attempt registry request try #3 at 12:41:44
+423 http request GET http://registry.npmjs.org/babel-polyfill
+424 info attempt registry request try #3 at 12:41:44
+425 http request GET http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+426 info attempt registry request try #3 at 12:41:44
+427 http request GET http://registry.npmjs.org/@aspnet%2fsignalr
+428 info attempt registry request try #3 at 12:41:44
+429 http request GET http://registry.npmjs.org/babel-loader
+430 info attempt registry request try #3 at 12:41:44
+431 http request GET http://registry.npmjs.org/vue-loader
+432 info attempt registry request try #3 at 12:41:44
+433 http request GET http://registry.npmjs.org/vuetify
+434 info attempt registry request try #3 at 12:41:44
+435 http request GET http://registry.npmjs.org/vuex
+436 info attempt registry request try #3 at 12:41:44
+437 http request GET http://registry.npmjs.org/vue
+438 info attempt registry request try #3 at 12:41:44
+439 http request GET http://registry.npmjs.org/vue-router
+440 info attempt registry request try #3 at 12:41:44
+441 http request GET http://registry.npmjs.org/vue-template-compiler
+442 info attempt registry request try #3 at 12:41:44
+443 verbose etag W/"59c9c470-1fd64"
+444 verbose lastModified Tue, 26 Sep 2017 03:07:28 GMT
+445 http request GET http://registry.npmjs.org/css-loader
+446 info attempt registry request try #3 at 12:41:44
+447 http request GET http://registry.npmjs.org/material-design-icons-iconfont
+448 info attempt registry request try #3 at 12:41:44
+449 verbose etag W/"59c9c488-a441"
+450 verbose lastModified Tue, 26 Sep 2017 03:07:52 GMT
+451 http request GET http://registry.npmjs.org/file-loader
+452 info attempt registry request try #3 at 12:41:44
+453 http request GET http://registry.npmjs.org/vue-style-loader
+454 info attempt registry request try #3 at 12:41:44
+455 verbose etag W/"59cbfeeb-e937"
+456 verbose lastModified Wed, 27 Sep 2017 19:41:31 GMT
+457 http request GET http://registry.npmjs.org/style-loader
+458 info attempt registry request try #3 at 12:41:44
+459 verbose etag W/"590b201c-ac49"
+460 verbose lastModified Thu, 04 May 2017 12:35:40 GMT
+461 http request GET http://registry.npmjs.org/aspnet-webpack
+462 info attempt registry request try #3 at 12:41:44
+463 verbose etag W/"59c8fef9-11a6f"
+464 verbose lastModified Mon, 25 Sep 2017 13:04:57 GMT
+465 http request GET http://registry.npmjs.org/webpack-dev-middleware
+466 http 500 http://registry.npmjs.org/babel-core
+467 verbose bad json <html>
+467 verbose bad json <head>
+467 verbose bad json <title>Fastly error: unknown domain</title>
+467 verbose bad json </head>
+467 verbose bad json <body>
+467 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+467 verbose bad json </body>
+467 verbose bad json </html>
+468 error registry error parsing json
+469 verbose headers { server: 'Varnish',
+469 verbose headers   'retry-after': '0',
+469 verbose headers   'content-type': 'text/html',
+469 verbose headers   'content-length': '177',
+469 verbose headers   'accept-ranges': 'bytes',
+469 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+469 verbose headers   via: '1.1 varnish',
+469 verbose headers   connection: 'close',
+469 verbose headers   'x-served-by': 'cache-fra19128-FRA',
+469 verbose headers   'x-cache': 'MISS',
+469 verbose headers   'x-cache-hits': '0',
+469 verbose headers   'x-timer': 'S1535798505.109180,VS0,VE0' }
+470 silly get cb [ 500,
+470 silly get   { server: 'Varnish',
+470 silly get     'retry-after': '0',
+470 silly get     'content-type': 'text/html',
+470 silly get     'content-length': '177',
+470 silly get     'accept-ranges': 'bytes',
+470 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+470 silly get     via: '1.1 varnish',
+470 silly get     connection: 'close',
+470 silly get     'x-served-by': 'cache-fra19128-FRA',
+470 silly get     'x-cache': 'MISS',
+470 silly get     'x-cache-hits': '0',
+470 silly get     'x-timer': 'S1535798505.109180,VS0,VE0' } ]
+471 silly fetchPackageMetaData SyntaxError: Unexpected token <
+471 silly fetchPackageMetaData <html>
+471 silly fetchPackageMetaData <head>
+471 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+471 silly fetchPackageMetaData </head>
+471 silly fetchPackageMetaData <body>
+471 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+471 silly fetchPackageMetaData </body>
+471 silly fetchPackageMetaData </html>
+471 silly fetchPackageMetaData     at Object.parse (native)
+471 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+471 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+471 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+471 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+471 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+471 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+471 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+471 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+471 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+471 silly fetchPackageMetaData  error for babel-core@^6.26.3 [SyntaxError: Unexpected token <
+471 silly fetchPackageMetaData <html>
+471 silly fetchPackageMetaData <head>
+471 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+471 silly fetchPackageMetaData </head>
+471 silly fetchPackageMetaData <body>
+471 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+471 silly fetchPackageMetaData </body>
+471 silly fetchPackageMetaData </html>]
+472 http 500 http://registry.npmjs.org/babel-polyfill
+473 verbose bad json <html>
+473 verbose bad json <head>
+473 verbose bad json <title>Fastly error: unknown domain</title>
+473 verbose bad json </head>
+473 verbose bad json <body>
+473 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+473 verbose bad json </body>
+473 verbose bad json </html>
+474 error registry error parsing json
+475 verbose headers { server: 'Varnish',
+475 verbose headers   'retry-after': '0',
+475 verbose headers   'content-type': 'text/html',
+475 verbose headers   'content-length': '177',
+475 verbose headers   'accept-ranges': 'bytes',
+475 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+475 verbose headers   via: '1.1 varnish',
+475 verbose headers   connection: 'close',
+475 verbose headers   'x-served-by': 'cache-fra19122-FRA',
+475 verbose headers   'x-cache': 'MISS',
+475 verbose headers   'x-cache-hits': '0',
+475 verbose headers   'x-timer': 'S1535798505.112861,VS0,VE0' }
+476 silly get cb [ 500,
+476 silly get   { server: 'Varnish',
+476 silly get     'retry-after': '0',
+476 silly get     'content-type': 'text/html',
+476 silly get     'content-length': '177',
+476 silly get     'accept-ranges': 'bytes',
+476 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+476 silly get     via: '1.1 varnish',
+476 silly get     connection: 'close',
+476 silly get     'x-served-by': 'cache-fra19122-FRA',
+476 silly get     'x-cache': 'MISS',
+476 silly get     'x-cache-hits': '0',
+476 silly get     'x-timer': 'S1535798505.112861,VS0,VE0' } ]
+477 silly fetchPackageMetaData SyntaxError: Unexpected token <
+477 silly fetchPackageMetaData <html>
+477 silly fetchPackageMetaData <head>
+477 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+477 silly fetchPackageMetaData </head>
+477 silly fetchPackageMetaData <body>
+477 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+477 silly fetchPackageMetaData </body>
+477 silly fetchPackageMetaData </html>
+477 silly fetchPackageMetaData     at Object.parse (native)
+477 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+477 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+477 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+477 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+477 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+477 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+477 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+477 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+477 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+477 silly fetchPackageMetaData  error for babel-polyfill@^6.26.0 [SyntaxError: Unexpected token <
+477 silly fetchPackageMetaData <html>
+477 silly fetchPackageMetaData <head>
+477 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+477 silly fetchPackageMetaData </head>
+477 silly fetchPackageMetaData <body>
+477 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+477 silly fetchPackageMetaData </body>
+477 silly fetchPackageMetaData </html>]
+478 http 500 http://registry.npmjs.org/@aspnet%2fsignalr
+479 verbose bad json <html>
+479 verbose bad json <head>
+479 verbose bad json <title>Fastly error: unknown domain</title>
+479 verbose bad json </head>
+479 verbose bad json <body>
+479 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+479 verbose bad json </body>
+479 verbose bad json </html>
+480 error registry error parsing json
+481 verbose headers { server: 'Varnish',
+481 verbose headers   'retry-after': '0',
+481 verbose headers   'content-type': 'text/html',
+481 verbose headers   'content-length': '177',
+481 verbose headers   'accept-ranges': 'bytes',
+481 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+481 verbose headers   via: '1.1 varnish',
+481 verbose headers   connection: 'close',
+481 verbose headers   'x-served-by': 'cache-fra19123-FRA',
+481 verbose headers   'x-cache': 'MISS',
+481 verbose headers   'x-cache-hits': '0',
+481 verbose headers   'x-timer': 'S1535798505.113132,VS0,VE0' }
+482 silly get cb [ 500,
+482 silly get   { server: 'Varnish',
+482 silly get     'retry-after': '0',
+482 silly get     'content-type': 'text/html',
+482 silly get     'content-length': '177',
+482 silly get     'accept-ranges': 'bytes',
+482 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+482 silly get     via: '1.1 varnish',
+482 silly get     connection: 'close',
+482 silly get     'x-served-by': 'cache-fra19123-FRA',
+482 silly get     'x-cache': 'MISS',
+482 silly get     'x-cache-hits': '0',
+482 silly get     'x-timer': 'S1535798505.113132,VS0,VE0' } ]
+483 silly fetchPackageMetaData SyntaxError: Unexpected token <
+483 silly fetchPackageMetaData <html>
+483 silly fetchPackageMetaData <head>
+483 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+483 silly fetchPackageMetaData </head>
+483 silly fetchPackageMetaData <body>
+483 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+483 silly fetchPackageMetaData </body>
+483 silly fetchPackageMetaData </html>
+483 silly fetchPackageMetaData     at Object.parse (native)
+483 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+483 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+483 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+483 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+483 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+483 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+483 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+483 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+483 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+483 silly fetchPackageMetaData  error for @aspnet/signalr@^1.0.3 [SyntaxError: Unexpected token <
+483 silly fetchPackageMetaData <html>
+483 silly fetchPackageMetaData <head>
+483 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+483 silly fetchPackageMetaData </head>
+483 silly fetchPackageMetaData <body>
+483 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+483 silly fetchPackageMetaData </body>
+483 silly fetchPackageMetaData </html>]
+484 http 500 http://registry.npmjs.org/babel-plugin-transform-es2015-modules-commonjs
+485 verbose bad json <html>
+485 verbose bad json <head>
+485 verbose bad json <title>Fastly error: unknown domain</title>
+485 verbose bad json </head>
+485 verbose bad json <body>
+485 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+485 verbose bad json </body>
+485 verbose bad json </html>
+486 error registry error parsing json
+487 verbose headers { server: 'Varnish',
+487 verbose headers   'retry-after': '0',
+487 verbose headers   'content-type': 'text/html',
+487 verbose headers   'content-length': '177',
+487 verbose headers   'accept-ranges': 'bytes',
+487 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+487 verbose headers   via: '1.1 varnish',
+487 verbose headers   connection: 'close',
+487 verbose headers   'x-served-by': 'cache-fra19140-FRA',
+487 verbose headers   'x-cache': 'MISS',
+487 verbose headers   'x-cache-hits': '0',
+487 verbose headers   'x-timer': 'S1535798505.112998,VS0,VE0' }
+488 silly get cb [ 500,
+488 silly get   { server: 'Varnish',
+488 silly get     'retry-after': '0',
+488 silly get     'content-type': 'text/html',
+488 silly get     'content-length': '177',
+488 silly get     'accept-ranges': 'bytes',
+488 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+488 silly get     via: '1.1 varnish',
+488 silly get     connection: 'close',
+488 silly get     'x-served-by': 'cache-fra19140-FRA',
+488 silly get     'x-cache': 'MISS',
+488 silly get     'x-cache-hits': '0',
+488 silly get     'x-timer': 'S1535798505.112998,VS0,VE0' } ]
+489 silly fetchPackageMetaData SyntaxError: Unexpected token <
+489 silly fetchPackageMetaData <html>
+489 silly fetchPackageMetaData <head>
+489 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+489 silly fetchPackageMetaData </head>
+489 silly fetchPackageMetaData <body>
+489 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+489 silly fetchPackageMetaData </body>
+489 silly fetchPackageMetaData </html>
+489 silly fetchPackageMetaData     at Object.parse (native)
+489 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+489 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+489 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+489 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+489 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+489 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+489 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+489 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+489 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+489 silly fetchPackageMetaData  error for babel-plugin-transform-es2015-modules-commonjs@^6.26.2 [SyntaxError: Unexpected token <
+489 silly fetchPackageMetaData <html>
+489 silly fetchPackageMetaData <head>
+489 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+489 silly fetchPackageMetaData </head>
+489 silly fetchPackageMetaData <body>
+489 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+489 silly fetchPackageMetaData </body>
+489 silly fetchPackageMetaData </html>]
+490 http 500 http://registry.npmjs.org/babel-loader
+491 verbose bad json <html>
+491 verbose bad json <head>
+491 verbose bad json <title>Fastly error: unknown domain</title>
+491 verbose bad json </head>
+491 verbose bad json <body>
+491 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+491 verbose bad json </body>
+491 verbose bad json </html>
+492 error registry error parsing json
+493 verbose headers { server: 'Varnish',
+493 verbose headers   'retry-after': '0',
+493 verbose headers   'content-type': 'text/html',
+493 verbose headers   'content-length': '177',
+493 verbose headers   'accept-ranges': 'bytes',
+493 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+493 verbose headers   via: '1.1 varnish',
+493 verbose headers   connection: 'close',
+493 verbose headers   'x-served-by': 'cache-fra19124-FRA',
+493 verbose headers   'x-cache': 'MISS',
+493 verbose headers   'x-cache-hits': '0',
+493 verbose headers   'x-timer': 'S1535798505.112595,VS0,VE0' }
+494 silly get cb [ 500,
+494 silly get   { server: 'Varnish',
+494 silly get     'retry-after': '0',
+494 silly get     'content-type': 'text/html',
+494 silly get     'content-length': '177',
+494 silly get     'accept-ranges': 'bytes',
+494 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+494 silly get     via: '1.1 varnish',
+494 silly get     connection: 'close',
+494 silly get     'x-served-by': 'cache-fra19124-FRA',
+494 silly get     'x-cache': 'MISS',
+494 silly get     'x-cache-hits': '0',
+494 silly get     'x-timer': 'S1535798505.112595,VS0,VE0' } ]
+495 silly fetchPackageMetaData SyntaxError: Unexpected token <
+495 silly fetchPackageMetaData <html>
+495 silly fetchPackageMetaData <head>
+495 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+495 silly fetchPackageMetaData </head>
+495 silly fetchPackageMetaData <body>
+495 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+495 silly fetchPackageMetaData </body>
+495 silly fetchPackageMetaData </html>
+495 silly fetchPackageMetaData     at Object.parse (native)
+495 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+495 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+495 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+495 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+495 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+495 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+495 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+495 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+495 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+495 silly fetchPackageMetaData  error for babel-loader@^7.1.5 [SyntaxError: Unexpected token <
+495 silly fetchPackageMetaData <html>
+495 silly fetchPackageMetaData <head>
+495 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+495 silly fetchPackageMetaData </head>
+495 silly fetchPackageMetaData <body>
+495 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+495 silly fetchPackageMetaData </body>
+495 silly fetchPackageMetaData </html>]
+496 http 500 http://registry.npmjs.org/vue-loader
+497 verbose bad json <html>
+497 verbose bad json <head>
+497 verbose bad json <title>Fastly error: unknown domain</title>
+497 verbose bad json </head>
+497 verbose bad json <body>
+497 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+497 verbose bad json </body>
+497 verbose bad json </html>
+498 error registry error parsing json
+499 verbose headers { server: 'Varnish',
+499 verbose headers   'retry-after': '0',
+499 verbose headers   'content-type': 'text/html',
+499 verbose headers   'content-length': '177',
+499 verbose headers   'accept-ranges': 'bytes',
+499 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+499 verbose headers   via: '1.1 varnish',
+499 verbose headers   connection: 'close',
+499 verbose headers   'x-served-by': 'cache-fra19147-FRA',
+499 verbose headers   'x-cache': 'MISS',
+499 verbose headers   'x-cache-hits': '0',
+499 verbose headers   'x-timer': 'S1535798505.125482,VS0,VE0' }
+500 silly get cb [ 500,
+500 silly get   { server: 'Varnish',
+500 silly get     'retry-after': '0',
+500 silly get     'content-type': 'text/html',
+500 silly get     'content-length': '177',
+500 silly get     'accept-ranges': 'bytes',
+500 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+500 silly get     via: '1.1 varnish',
+500 silly get     connection: 'close',
+500 silly get     'x-served-by': 'cache-fra19147-FRA',
+500 silly get     'x-cache': 'MISS',
+500 silly get     'x-cache-hits': '0',
+500 silly get     'x-timer': 'S1535798505.125482,VS0,VE0' } ]
+501 silly fetchPackageMetaData SyntaxError: Unexpected token <
+501 silly fetchPackageMetaData <html>
+501 silly fetchPackageMetaData <head>
+501 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+501 silly fetchPackageMetaData </head>
+501 silly fetchPackageMetaData <body>
+501 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+501 silly fetchPackageMetaData </body>
+501 silly fetchPackageMetaData </html>
+501 silly fetchPackageMetaData     at Object.parse (native)
+501 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+501 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+501 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+501 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+501 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+501 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+501 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+501 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+501 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+501 silly fetchPackageMetaData  error for vue-loader@^15.4.1 [SyntaxError: Unexpected token <
+501 silly fetchPackageMetaData <html>
+501 silly fetchPackageMetaData <head>
+501 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+501 silly fetchPackageMetaData </head>
+501 silly fetchPackageMetaData <body>
+501 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+501 silly fetchPackageMetaData </body>
+501 silly fetchPackageMetaData </html>]
+502 http 500 http://registry.npmjs.org/vue-router
+503 verbose bad json <html>
+503 verbose bad json <head>
+503 verbose bad json <title>Fastly error: unknown domain</title>
+503 verbose bad json </head>
+503 verbose bad json <body>
+503 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+503 verbose bad json </body>
+503 verbose bad json </html>
+504 error registry error parsing json
+505 verbose headers { server: 'Varnish',
+505 verbose headers   'retry-after': '0',
+505 verbose headers   'content-type': 'text/html',
+505 verbose headers   'content-length': '177',
+505 verbose headers   'accept-ranges': 'bytes',
+505 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+505 verbose headers   via: '1.1 varnish',
+505 verbose headers   connection: 'close',
+505 verbose headers   'x-served-by': 'cache-fra19137-FRA',
+505 verbose headers   'x-cache': 'MISS',
+505 verbose headers   'x-cache-hits': '0',
+505 verbose headers   'x-timer': 'S1535798505.123952,VS0,VE0' }
+506 silly get cb [ 500,
+506 silly get   { server: 'Varnish',
+506 silly get     'retry-after': '0',
+506 silly get     'content-type': 'text/html',
+506 silly get     'content-length': '177',
+506 silly get     'accept-ranges': 'bytes',
+506 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+506 silly get     via: '1.1 varnish',
+506 silly get     connection: 'close',
+506 silly get     'x-served-by': 'cache-fra19137-FRA',
+506 silly get     'x-cache': 'MISS',
+506 silly get     'x-cache-hits': '0',
+506 silly get     'x-timer': 'S1535798505.123952,VS0,VE0' } ]
+507 silly fetchPackageMetaData SyntaxError: Unexpected token <
+507 silly fetchPackageMetaData <html>
+507 silly fetchPackageMetaData <head>
+507 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+507 silly fetchPackageMetaData </head>
+507 silly fetchPackageMetaData <body>
+507 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+507 silly fetchPackageMetaData </body>
+507 silly fetchPackageMetaData </html>
+507 silly fetchPackageMetaData     at Object.parse (native)
+507 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+507 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+507 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+507 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+507 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+507 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+507 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+507 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+507 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+507 silly fetchPackageMetaData  error for vue-router@^3.0.1 [SyntaxError: Unexpected token <
+507 silly fetchPackageMetaData <html>
+507 silly fetchPackageMetaData <head>
+507 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+507 silly fetchPackageMetaData </head>
+507 silly fetchPackageMetaData <body>
+507 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+507 silly fetchPackageMetaData </body>
+507 silly fetchPackageMetaData </html>]
+508 http 500 http://registry.npmjs.org/vuetify
+509 verbose bad json <html>
+509 verbose bad json <head>
+509 verbose bad json <title>Fastly error: unknown domain</title>
+509 verbose bad json </head>
+509 verbose bad json <body>
+509 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+509 verbose bad json </body>
+509 verbose bad json </html>
+510 error registry error parsing json
+511 verbose headers { server: 'Varnish',
+511 verbose headers   'retry-after': '0',
+511 verbose headers   'content-type': 'text/html',
+511 verbose headers   'content-length': '177',
+511 verbose headers   'accept-ranges': 'bytes',
+511 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+511 verbose headers   via: '1.1 varnish',
+511 verbose headers   connection: 'close',
+511 verbose headers   'x-served-by': 'cache-fra19150-FRA',
+511 verbose headers   'x-cache': 'MISS',
+511 verbose headers   'x-cache-hits': '0',
+511 verbose headers   'x-timer': 'S1535798505.125812,VS0,VE0' }
+512 silly get cb [ 500,
+512 silly get   { server: 'Varnish',
+512 silly get     'retry-after': '0',
+512 silly get     'content-type': 'text/html',
+512 silly get     'content-length': '177',
+512 silly get     'accept-ranges': 'bytes',
+512 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+512 silly get     via: '1.1 varnish',
+512 silly get     connection: 'close',
+512 silly get     'x-served-by': 'cache-fra19150-FRA',
+512 silly get     'x-cache': 'MISS',
+512 silly get     'x-cache-hits': '0',
+512 silly get     'x-timer': 'S1535798505.125812,VS0,VE0' } ]
+513 silly fetchPackageMetaData SyntaxError: Unexpected token <
+513 silly fetchPackageMetaData <html>
+513 silly fetchPackageMetaData <head>
+513 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+513 silly fetchPackageMetaData </head>
+513 silly fetchPackageMetaData <body>
+513 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+513 silly fetchPackageMetaData </body>
+513 silly fetchPackageMetaData </html>
+513 silly fetchPackageMetaData     at Object.parse (native)
+513 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+513 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+513 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+513 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+513 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+513 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+513 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+513 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+513 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+513 silly fetchPackageMetaData  error for vuetify@^1.2.0 [SyntaxError: Unexpected token <
+513 silly fetchPackageMetaData <html>
+513 silly fetchPackageMetaData <head>
+513 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+513 silly fetchPackageMetaData </head>
+513 silly fetchPackageMetaData <body>
+513 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+513 silly fetchPackageMetaData </body>
+513 silly fetchPackageMetaData </html>]
+514 http 500 http://registry.npmjs.org/vue-template-compiler
+515 verbose bad json <html>
+515 verbose bad json <head>
+515 verbose bad json <title>Fastly error: unknown domain</title>
+515 verbose bad json </head>
+515 verbose bad json <body>
+515 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+515 verbose bad json </body>
+515 verbose bad json </html>
+516 error registry error parsing json
+517 verbose headers { server: 'Varnish',
+517 verbose headers   'retry-after': '0',
+517 verbose headers   'content-type': 'text/html',
+517 verbose headers   'content-length': '177',
+517 verbose headers   'accept-ranges': 'bytes',
+517 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+517 verbose headers   via: '1.1 varnish',
+517 verbose headers   connection: 'close',
+517 verbose headers   'x-served-by': 'cache-fra19150-FRA',
+517 verbose headers   'x-cache': 'MISS',
+517 verbose headers   'x-cache-hits': '0',
+517 verbose headers   'x-timer': 'S1535798505.125814,VS0,VE0' }
+518 silly get cb [ 500,
+518 silly get   { server: 'Varnish',
+518 silly get     'retry-after': '0',
+518 silly get     'content-type': 'text/html',
+518 silly get     'content-length': '177',
+518 silly get     'accept-ranges': 'bytes',
+518 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+518 silly get     via: '1.1 varnish',
+518 silly get     connection: 'close',
+518 silly get     'x-served-by': 'cache-fra19150-FRA',
+518 silly get     'x-cache': 'MISS',
+518 silly get     'x-cache-hits': '0',
+518 silly get     'x-timer': 'S1535798505.125814,VS0,VE0' } ]
+519 silly fetchPackageMetaData SyntaxError: Unexpected token <
+519 silly fetchPackageMetaData <html>
+519 silly fetchPackageMetaData <head>
+519 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+519 silly fetchPackageMetaData </head>
+519 silly fetchPackageMetaData <body>
+519 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+519 silly fetchPackageMetaData </body>
+519 silly fetchPackageMetaData </html>
+519 silly fetchPackageMetaData     at Object.parse (native)
+519 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+519 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+519 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+519 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+519 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+519 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+519 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+519 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+519 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+519 silly fetchPackageMetaData  error for vue-template-compiler@^2.5.17 [SyntaxError: Unexpected token <
+519 silly fetchPackageMetaData <html>
+519 silly fetchPackageMetaData <head>
+519 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+519 silly fetchPackageMetaData </head>
+519 silly fetchPackageMetaData <body>
+519 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+519 silly fetchPackageMetaData </body>
+519 silly fetchPackageMetaData </html>]
+520 http 500 http://registry.npmjs.org/vuex
+521 verbose bad json <html>
+521 verbose bad json <head>
+521 verbose bad json <title>Fastly error: unknown domain</title>
+521 verbose bad json </head>
+521 verbose bad json <body>
+521 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+521 verbose bad json </body>
+521 verbose bad json </html>
+522 error registry error parsing json
+523 verbose headers { server: 'Varnish',
+523 verbose headers   'retry-after': '0',
+523 verbose headers   'content-type': 'text/html',
+523 verbose headers   'content-length': '177',
+523 verbose headers   'accept-ranges': 'bytes',
+523 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+523 verbose headers   via: '1.1 varnish',
+523 verbose headers   connection: 'close',
+523 verbose headers   'x-served-by': 'cache-fra19130-FRA',
+523 verbose headers   'x-cache': 'MISS',
+523 verbose headers   'x-cache-hits': '0',
+523 verbose headers   'x-timer': 'S1535798505.125815,VS0,VE0' }
+524 silly get cb [ 500,
+524 silly get   { server: 'Varnish',
+524 silly get     'retry-after': '0',
+524 silly get     'content-type': 'text/html',
+524 silly get     'content-length': '177',
+524 silly get     'accept-ranges': 'bytes',
+524 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+524 silly get     via: '1.1 varnish',
+524 silly get     connection: 'close',
+524 silly get     'x-served-by': 'cache-fra19130-FRA',
+524 silly get     'x-cache': 'MISS',
+524 silly get     'x-cache-hits': '0',
+524 silly get     'x-timer': 'S1535798505.125815,VS0,VE0' } ]
+525 silly fetchPackageMetaData SyntaxError: Unexpected token <
+525 silly fetchPackageMetaData <html>
+525 silly fetchPackageMetaData <head>
+525 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+525 silly fetchPackageMetaData </head>
+525 silly fetchPackageMetaData <body>
+525 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+525 silly fetchPackageMetaData </body>
+525 silly fetchPackageMetaData </html>
+525 silly fetchPackageMetaData     at Object.parse (native)
+525 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+525 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+525 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+525 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+525 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+525 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+525 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+525 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+525 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+525 silly fetchPackageMetaData  error for vuex@^3.0.1 [SyntaxError: Unexpected token <
+525 silly fetchPackageMetaData <html>
+525 silly fetchPackageMetaData <head>
+525 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+525 silly fetchPackageMetaData </head>
+525 silly fetchPackageMetaData <body>
+525 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+525 silly fetchPackageMetaData </body>
+525 silly fetchPackageMetaData </html>]
+526 http 500 http://registry.npmjs.org/vue
+527 verbose bad json <html>
+527 verbose bad json <head>
+527 verbose bad json <title>Fastly error: unknown domain</title>
+527 verbose bad json </head>
+527 verbose bad json <body>
+527 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+527 verbose bad json </body>
+527 verbose bad json </html>
+528 error registry error parsing json
+529 verbose headers { server: 'Varnish',
+529 verbose headers   'retry-after': '0',
+529 verbose headers   'content-type': 'text/html',
+529 verbose headers   'content-length': '177',
+529 verbose headers   'accept-ranges': 'bytes',
+529 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+529 verbose headers   via: '1.1 varnish',
+529 verbose headers   connection: 'close',
+529 verbose headers   'x-served-by': 'cache-fra19149-FRA',
+529 verbose headers   'x-cache': 'MISS',
+529 verbose headers   'x-cache-hits': '0',
+529 verbose headers   'x-timer': 'S1535798505.124308,VS0,VE0' }
+530 silly get cb [ 500,
+530 silly get   { server: 'Varnish',
+530 silly get     'retry-after': '0',
+530 silly get     'content-type': 'text/html',
+530 silly get     'content-length': '177',
+530 silly get     'accept-ranges': 'bytes',
+530 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+530 silly get     via: '1.1 varnish',
+530 silly get     connection: 'close',
+530 silly get     'x-served-by': 'cache-fra19149-FRA',
+530 silly get     'x-cache': 'MISS',
+530 silly get     'x-cache-hits': '0',
+530 silly get     'x-timer': 'S1535798505.124308,VS0,VE0' } ]
+531 silly fetchPackageMetaData SyntaxError: Unexpected token <
+531 silly fetchPackageMetaData <html>
+531 silly fetchPackageMetaData <head>
+531 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+531 silly fetchPackageMetaData </head>
+531 silly fetchPackageMetaData <body>
+531 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+531 silly fetchPackageMetaData </body>
+531 silly fetchPackageMetaData </html>
+531 silly fetchPackageMetaData     at Object.parse (native)
+531 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+531 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+531 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+531 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+531 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+531 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+531 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+531 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+531 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+531 silly fetchPackageMetaData  error for vue@^2.5.17 [SyntaxError: Unexpected token <
+531 silly fetchPackageMetaData <html>
+531 silly fetchPackageMetaData <head>
+531 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+531 silly fetchPackageMetaData </head>
+531 silly fetchPackageMetaData <body>
+531 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+531 silly fetchPackageMetaData </body>
+531 silly fetchPackageMetaData </html>]
+532 http 500 http://registry.npmjs.org/css-loader
+533 verbose bad json <html>
+533 verbose bad json <head>
+533 verbose bad json <title>Fastly error: unknown domain</title>
+533 verbose bad json </head>
+533 verbose bad json <body>
+533 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+533 verbose bad json </body>
+533 verbose bad json </html>
+534 error registry error parsing json
+535 verbose headers { server: 'Varnish',
+535 verbose headers   'retry-after': '0',
+535 verbose headers   'content-type': 'text/html',
+535 verbose headers   'content-length': '177',
+535 verbose headers   'accept-ranges': 'bytes',
+535 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+535 verbose headers   via: '1.1 varnish',
+535 verbose headers   connection: 'close',
+535 verbose headers   'x-served-by': 'cache-fra19127-FRA',
+535 verbose headers   'x-cache': 'MISS',
+535 verbose headers   'x-cache-hits': '0',
+535 verbose headers   'x-timer': 'S1535798505.125581,VS0,VE0' }
+536 silly get cb [ 304, undefined ]
+537 verbose etag http://registry.npmjs.org/css-loader from cache
+538 verbose get saving css-loader to C:\Users\jarek\AppData\Roaming\npm-cache\registry.npmjs.org\css-loader\.cache.json
+539 http 500 http://registry.npmjs.org/file-loader
+540 verbose bad json <html>
+540 verbose bad json <head>
+540 verbose bad json <title>Fastly error: unknown domain</title>
+540 verbose bad json </head>
+540 verbose bad json <body>
+540 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+540 verbose bad json </body>
+540 verbose bad json </html>
+541 error registry error parsing json
+542 verbose headers { server: 'Varnish',
+542 verbose headers   'retry-after': '0',
+542 verbose headers   'content-type': 'text/html',
+542 verbose headers   'content-length': '177',
+542 verbose headers   'accept-ranges': 'bytes',
+542 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+542 verbose headers   via: '1.1 varnish',
+542 verbose headers   connection: 'close',
+542 verbose headers   'x-served-by': 'cache-fra19145-FRA',
+542 verbose headers   'x-cache': 'MISS',
+542 verbose headers   'x-cache-hits': '0',
+542 verbose headers   'x-timer': 'S1535798505.132104,VS0,VE0' }
+543 silly get cb [ 304, undefined ]
+544 verbose etag http://registry.npmjs.org/file-loader from cache
+545 verbose get saving file-loader to C:\Users\jarek\AppData\Roaming\npm-cache\registry.npmjs.org\file-loader\.cache.json
+546 http 500 http://registry.npmjs.org/vue-style-loader
+547 verbose bad json <html>
+547 verbose bad json <head>
+547 verbose bad json <title>Fastly error: unknown domain</title>
+547 verbose bad json </head>
+547 verbose bad json <body>
+547 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+547 verbose bad json </body>
+547 verbose bad json </html>
+548 error registry error parsing json
+549 verbose headers { server: 'Varnish',
+549 verbose headers   'retry-after': '0',
+549 verbose headers   'content-type': 'text/html',
+549 verbose headers   'content-length': '177',
+549 verbose headers   'accept-ranges': 'bytes',
+549 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+549 verbose headers   via: '1.1 varnish',
+549 verbose headers   connection: 'close',
+549 verbose headers   'x-served-by': 'cache-fra19142-FRA',
+549 verbose headers   'x-cache': 'MISS',
+549 verbose headers   'x-cache-hits': '0',
+549 verbose headers   'x-timer': 'S1535798505.137809,VS0,VE0' }
+550 silly get cb [ 500,
+550 silly get   { server: 'Varnish',
+550 silly get     'retry-after': '0',
+550 silly get     'content-type': 'text/html',
+550 silly get     'content-length': '177',
+550 silly get     'accept-ranges': 'bytes',
+550 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+550 silly get     via: '1.1 varnish',
+550 silly get     connection: 'close',
+550 silly get     'x-served-by': 'cache-fra19142-FRA',
+550 silly get     'x-cache': 'MISS',
+550 silly get     'x-cache-hits': '0',
+550 silly get     'x-timer': 'S1535798505.137809,VS0,VE0' } ]
+551 silly fetchPackageMetaData SyntaxError: Unexpected token <
+551 silly fetchPackageMetaData <html>
+551 silly fetchPackageMetaData <head>
+551 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+551 silly fetchPackageMetaData </head>
+551 silly fetchPackageMetaData <body>
+551 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+551 silly fetchPackageMetaData </body>
+551 silly fetchPackageMetaData </html>
+551 silly fetchPackageMetaData     at Object.parse (native)
+551 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+551 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+551 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+551 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+551 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+551 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+551 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+551 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+551 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+551 silly fetchPackageMetaData  error for vue-style-loader@^4.1.2 [SyntaxError: Unexpected token <
+551 silly fetchPackageMetaData <html>
+551 silly fetchPackageMetaData <head>
+551 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+551 silly fetchPackageMetaData </head>
+551 silly fetchPackageMetaData <body>
+551 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+551 silly fetchPackageMetaData </body>
+551 silly fetchPackageMetaData </html>]
+552 http 500 http://registry.npmjs.org/material-design-icons-iconfont
+553 verbose bad json <html>
+553 verbose bad json <head>
+553 verbose bad json <title>Fastly error: unknown domain</title>
+553 verbose bad json </head>
+553 verbose bad json <body>
+553 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+553 verbose bad json </body>
+553 verbose bad json </html>
+554 error registry error parsing json
+555 verbose headers { server: 'Varnish',
+555 verbose headers   'retry-after': '0',
+555 verbose headers   'content-type': 'text/html',
+555 verbose headers   'content-length': '177',
+555 verbose headers   'accept-ranges': 'bytes',
+555 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+555 verbose headers   via: '1.1 varnish',
+555 verbose headers   connection: 'close',
+555 verbose headers   'x-served-by': 'cache-fra19125-FRA',
+555 verbose headers   'x-cache': 'MISS',
+555 verbose headers   'x-cache-hits': '0',
+555 verbose headers   'x-timer': 'S1535798505.139244,VS0,VE0' }
+556 silly get cb [ 500,
+556 silly get   { server: 'Varnish',
+556 silly get     'retry-after': '0',
+556 silly get     'content-type': 'text/html',
+556 silly get     'content-length': '177',
+556 silly get     'accept-ranges': 'bytes',
+556 silly get     date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+556 silly get     via: '1.1 varnish',
+556 silly get     connection: 'close',
+556 silly get     'x-served-by': 'cache-fra19125-FRA',
+556 silly get     'x-cache': 'MISS',
+556 silly get     'x-cache-hits': '0',
+556 silly get     'x-timer': 'S1535798505.139244,VS0,VE0' } ]
+557 silly fetchPackageMetaData SyntaxError: Unexpected token <
+557 silly fetchPackageMetaData <html>
+557 silly fetchPackageMetaData <head>
+557 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+557 silly fetchPackageMetaData </head>
+557 silly fetchPackageMetaData <body>
+557 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+557 silly fetchPackageMetaData </body>
+557 silly fetchPackageMetaData </html>
+557 silly fetchPackageMetaData     at Object.parse (native)
+557 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+557 silly fetchPackageMetaData     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+557 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+557 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+557 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+557 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+557 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+557 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+557 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+557 silly fetchPackageMetaData  error for material-design-icons-iconfont@^3.0.3 [SyntaxError: Unexpected token <
+557 silly fetchPackageMetaData <html>
+557 silly fetchPackageMetaData <head>
+557 silly fetchPackageMetaData <title>Fastly error: unknown domain</title>
+557 silly fetchPackageMetaData </head>
+557 silly fetchPackageMetaData <body>
+557 silly fetchPackageMetaData Fastly error: unknown domain. Please check that this domain has been added to a service.
+557 silly fetchPackageMetaData </body>
+557 silly fetchPackageMetaData </html>]
+558 http 500 http://registry.npmjs.org/style-loader
+559 verbose bad json <html>
+559 verbose bad json <head>
+559 verbose bad json <title>Fastly error: unknown domain</title>
+559 verbose bad json </head>
+559 verbose bad json <body>
+559 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+559 verbose bad json </body>
+559 verbose bad json </html>
+560 error registry error parsing json
+561 verbose headers { server: 'Varnish',
+561 verbose headers   'retry-after': '0',
+561 verbose headers   'content-type': 'text/html',
+561 verbose headers   'content-length': '177',
+561 verbose headers   'accept-ranges': 'bytes',
+561 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+561 verbose headers   via: '1.1 varnish',
+561 verbose headers   connection: 'close',
+561 verbose headers   'x-served-by': 'cache-fra19120-FRA',
+561 verbose headers   'x-cache': 'MISS',
+561 verbose headers   'x-cache-hits': '0',
+561 verbose headers   'x-timer': 'S1535798505.144223,VS0,VE0' }
+562 silly get cb [ 304, undefined ]
+563 verbose etag http://registry.npmjs.org/style-loader from cache
+564 verbose get saving style-loader to C:\Users\jarek\AppData\Roaming\npm-cache\registry.npmjs.org\style-loader\.cache.json
+565 http 500 http://registry.npmjs.org/aspnet-webpack
+566 verbose bad json <html>
+566 verbose bad json <head>
+566 verbose bad json <title>Fastly error: unknown domain</title>
+566 verbose bad json </head>
+566 verbose bad json <body>
+566 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+566 verbose bad json </body>
+566 verbose bad json </html>
+567 error registry error parsing json
+568 verbose headers { server: 'Varnish',
+568 verbose headers   'retry-after': '0',
+568 verbose headers   'content-type': 'text/html',
+568 verbose headers   'content-length': '177',
+568 verbose headers   'accept-ranges': 'bytes',
+568 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+568 verbose headers   via: '1.1 varnish',
+568 verbose headers   connection: 'close',
+568 verbose headers   'x-served-by': 'cache-fra19133-FRA',
+568 verbose headers   'x-cache': 'MISS',
+568 verbose headers   'x-cache-hits': '0',
+568 verbose headers   'x-timer': 'S1535798505.148913,VS0,VE0' }
+569 silly get cb [ 304, undefined ]
+570 verbose etag http://registry.npmjs.org/aspnet-webpack from cache
+571 verbose get saving aspnet-webpack to C:\Users\jarek\AppData\Roaming\npm-cache\registry.npmjs.org\aspnet-webpack\.cache.json
+572 http 500 http://registry.npmjs.org/webpack-dev-middleware
+573 verbose bad json <html>
+573 verbose bad json <head>
+573 verbose bad json <title>Fastly error: unknown domain</title>
+573 verbose bad json </head>
+573 verbose bad json <body>
+573 verbose bad json Fastly error: unknown domain. Please check that this domain has been added to a service.
+573 verbose bad json </body>
+573 verbose bad json </html>
+574 error registry error parsing json
+575 verbose headers { server: 'Varnish',
+575 verbose headers   'retry-after': '0',
+575 verbose headers   'content-type': 'text/html',
+575 verbose headers   'content-length': '177',
+575 verbose headers   'accept-ranges': 'bytes',
+575 verbose headers   date: 'Sat, 01 Sep 2018 10:41:45 GMT',
+575 verbose headers   via: '1.1 varnish',
+575 verbose headers   connection: 'close',
+575 verbose headers   'x-served-by': 'cache-fra19124-FRA',
+575 verbose headers   'x-cache': 'MISS',
+575 verbose headers   'x-cache-hits': '0',
+575 verbose headers   'x-timer': 'S1535798505.171638,VS0,VE0' }
+576 silly get cb [ 304, undefined ]
+577 verbose etag http://registry.npmjs.org/webpack-dev-middleware from cache
+578 verbose get saving webpack-dev-middleware to C:\Users\jarek\AppData\Roaming\npm-cache\registry.npmjs.org\webpack-dev-middleware\.cache.json
+579 silly fetchPackageMetaData Error: No compatible version found: file-loader@^2.0.0
+579 silly fetchPackageMetaData Valid install targets:
+579 silly fetchPackageMetaData ["1.0.0","1.0.0-rc.0","1.0.0-beta.1","1.0.0-beta.0","0.11.2","0.11.1","0.11.0","0.10.1","0.10.0","0.9.0","0.8.5","0.8.4","0.8.3","0.8.2","0.8.1","0.8.0","0.7.2","0.7.1","0.7.0","0.6.1","0.5.1","0.5.0","0.1.2","0.1.1","0.1.0"]
+579 silly fetchPackageMetaData
+579 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+579 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\iferr\index.js:13:50
+579 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+579 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+579 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+579 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+579 silly fetchPackageMetaData  error for file-loader@^2.0.0 [Error: No compatible version found: file-loader@^2.0.0
+579 silly fetchPackageMetaData Valid install targets:
+579 silly fetchPackageMetaData ["1.0.0","1.0.0-rc.0","1.0.0-beta.1","1.0.0-beta.0","0.11.2","0.11.1","0.11.0","0.10.1","0.10.0","0.9.0","0.8.5","0.8.4","0.8.3","0.8.2","0.8.1","0.8.0","0.7.2","0.7.1","0.7.0","0.6.1","0.5.1","0.5.0","0.1.2","0.1.1","0.1.0"]
+579 silly fetchPackageMetaData ]
+580 silly fetchPackageMetaData Error: No compatible version found: aspnet-webpack@3.0.0
+580 silly fetchPackageMetaData Valid install targets:
+580 silly fetchPackageMetaData ["1.0.29","1.0.28","1.0.27","1.0.26","1.0.25","1.0.24","1.0.23","1.0.22","1.0.21","1.0.20","1.0.19","1.0.18","1.0.17","1.0.16","1.0.14","1.0.13","1.0.12","1.0.11","1.0.10","1.0.9","1.0.8","1.0.7","1.0.6","1.0.5","1.0.4","1.0.3","1.0.2","1.0.1","1.0.0"]
+580 silly fetchPackageMetaData
+580 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+580 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\iferr\index.js:13:50
+580 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+580 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+580 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+580 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+580 silly fetchPackageMetaData  error for aspnet-webpack@3.0.0 [Error: No compatible version found: aspnet-webpack@3.0.0
+580 silly fetchPackageMetaData Valid install targets:
+580 silly fetchPackageMetaData ["1.0.29","1.0.28","1.0.27","1.0.26","1.0.25","1.0.24","1.0.23","1.0.22","1.0.21","1.0.20","1.0.19","1.0.18","1.0.17","1.0.16","1.0.14","1.0.13","1.0.12","1.0.11","1.0.10","1.0.9","1.0.8","1.0.7","1.0.6","1.0.5","1.0.4","1.0.3","1.0.2","1.0.1","1.0.0"]
+580 silly fetchPackageMetaData ]
+581 silly fetchPackageMetaData Error: No compatible version found: style-loader@^0.23.0
+581 silly fetchPackageMetaData Valid install targets:
+581 silly fetchPackageMetaData ["0.18.2","0.18.1","0.18.0","0.17.0","0.16.1","0.16.0","0.15.0","0.14.1","0.14.0","0.13.2","0.13.1","0.13.0","0.12.4","0.12.3","0.12.2","0.12.1","0.12.0","0.11.0","0.10.2","0.10.1","0.10.0","0.9.0","0.8.3","0.8.2","0.8.1","0.8.0","0.7.1","0.7.0","0.6.5","0.6.4","0.6.3","0.6.2","0.6.1","0.6.0","0.5.2","0.5.1","0.5.0","0.2.1","0.2.0","0.1.3","0.1.2","0.1.1","0.1.0"]
+581 silly fetchPackageMetaData
+581 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+581 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\iferr\index.js:13:50
+581 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+581 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+581 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+581 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+581 silly fetchPackageMetaData  error for style-loader@^0.23.0 [Error: No compatible version found: style-loader@^0.23.0
+581 silly fetchPackageMetaData Valid install targets:
+581 silly fetchPackageMetaData ["0.18.2","0.18.1","0.18.0","0.17.0","0.16.1","0.16.0","0.15.0","0.14.1","0.14.0","0.13.2","0.13.1","0.13.0","0.12.4","0.12.3","0.12.2","0.12.1","0.12.0","0.11.0","0.10.2","0.10.1","0.10.0","0.9.0","0.8.3","0.8.2","0.8.1","0.8.0","0.7.1","0.7.0","0.6.5","0.6.4","0.6.3","0.6.2","0.6.1","0.6.0","0.5.2","0.5.1","0.5.0","0.2.1","0.2.0","0.1.3","0.1.2","0.1.1","0.1.0"]
+581 silly fetchPackageMetaData ]
+582 silly fetchPackageMetaData Error: No compatible version found: css-loader@^1.0.0
+582 silly fetchPackageMetaData Valid install targets:
+582 silly fetchPackageMetaData ["0.28.7","0.28.6","0.28.5","0.28.4","0.28.3","0.28.2","0.28.1","0.28.0","0.27.3","0.27.2","0.27.1","0.27.0","0.26.4","0.26.2","0.26.1","0.26.0","0.25.0","0.24.0","0.23.1","0.23.0","0.22.0","0.21.0","0.20.2","0.20.1","0.20.0","0.19.0","0.18.0","0.17.0","0.16.0","0.15.6","0.15.5","0.15.4","0.15.3","0.15.2","0.15.1","0.15.0","0.14.5","0.14.4","0.14.3","0.14.2","0.14.1","0.14.0","0.13.1","0.13.0","0.12.1","0.12.0","0.11.2","0.11.1","0.11.0","0.10.1","0.10.0","0.9.1","0.9.0","0.8.0","0.7.1","0.7.0","0.6.12","0.6.11","0.6.10","0.6.9","0.6.8","0.6.7","0.6.6","0.6.5","0.6.4","0.6.3","0.6.2","0.6.1","0.6.0","0.5.2","0.5.1","0.5.0","0.2.4","0.2.3","0.2.2","0.2.1","0.2.0","0.1.2","0.1.1","0.1.0"]
+582 silly fetchPackageMetaData
+582 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+582 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\iferr\index.js:13:50
+582 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+582 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+582 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+582 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+582 silly fetchPackageMetaData  error for css-loader@^1.0.0 [Error: No compatible version found: css-loader@^1.0.0
+582 silly fetchPackageMetaData Valid install targets:
+582 silly fetchPackageMetaData ["0.28.7","0.28.6","0.28.5","0.28.4","0.28.3","0.28.2","0.28.1","0.28.0","0.27.3","0.27.2","0.27.1","0.27.0","0.26.4","0.26.2","0.26.1","0.26.0","0.25.0","0.24.0","0.23.1","0.23.0","0.22.0","0.21.0","0.20.2","0.20.1","0.20.0","0.19.0","0.18.0","0.17.0","0.16.0","0.15.6","0.15.5","0.15.4","0.15.3","0.15.2","0.15.1","0.15.0","0.14.5","0.14.4","0.14.3","0.14.2","0.14.1","0.14.0","0.13.1","0.13.0","0.12.1","0.12.0","0.11.2","0.11.1","0.11.0","0.10.1","0.10.0","0.9.1","0.9.0","0.8.0","0.7.1","0.7.0","0.6.12","0.6.11","0.6.10","0.6.9","0.6.8","0.6.7","0.6.6","0.6.5","0.6.4","0.6.3","0.6.2","0.6.1","0.6.0","0.5.2","0.5.1","0.5.0","0.2.4","0.2.3","0.2.2","0.2.1","0.2.0","0.1.2","0.1.1","0.1.0"]
+582 silly fetchPackageMetaData ]
+583 silly fetchPackageMetaData Error: No compatible version found: webpack-dev-middleware@3.2.0
+583 silly fetchPackageMetaData Valid install targets:
+583 silly fetchPackageMetaData ["1.12.0","1.11.0","1.10.2","1.10.1","1.10.0","1.9.0","1.8.4","1.8.3","1.8.2","1.8.1","1.8.0","1.7.0","1.6.1","1.6.0","1.5.1","1.5.0","1.4.0","1.3.0","1.2.0","1.1.0","1.0.11","1.0.10","1.0.9","1.0.8","1.0.7","1.0.6","1.0.5","1.0.4","1.0.3","1.0.2","1.0.1","1.0.0","0.11.0","0.10.2","0.10.1","0.10.0","0.9.1","0.9.0","0.8.2","0.8.1","0.8.0","0.7.4","0.7.3","0.7.2","0.7.1","0.7.0","0.6.2","0.6.1","0.6.0","0.5.1","0.5.0"]
+583 silly fetchPackageMetaData
+583 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\fetch-package-metadata.js:146:16)
+583 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\iferr\index.js:13:50
+583 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+583 silly fetchPackageMetaData     at saved (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\lib\cache\caching-client.js:168:7)
+583 silly fetchPackageMetaData     at C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+583 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+583 silly fetchPackageMetaData  error for webpack-dev-middleware@3.2.0 [Error: No compatible version found: webpack-dev-middleware@3.2.0
+583 silly fetchPackageMetaData Valid install targets:
+583 silly fetchPackageMetaData ["1.12.0","1.11.0","1.10.2","1.10.1","1.10.0","1.9.0","1.8.4","1.8.3","1.8.2","1.8.1","1.8.0","1.7.0","1.6.1","1.6.0","1.5.1","1.5.0","1.4.0","1.3.0","1.2.0","1.1.0","1.0.11","1.0.10","1.0.9","1.0.8","1.0.7","1.0.6","1.0.5","1.0.4","1.0.3","1.0.2","1.0.1","1.0.0","0.11.0","0.10.2","0.10.1","0.10.0","0.9.1","0.9.0","0.8.2","0.8.1","0.8.0","0.7.4","0.7.3","0.7.2","0.7.1","0.7.0","0.6.2","0.6.1","0.6.0","0.5.1","0.5.0"]
+583 silly fetchPackageMetaData ]
+584 silly rollbackFailedOptional Starting
+585 silly rollbackFailedOptional Finishing
+586 silly runTopLevelLifecycles Starting
+587 silly runTopLevelLifecycles Finishing
+588 silly install printInstalled
+589 verbose stack SyntaxError: Unexpected token <
+589 verbose stack <html>
+589 verbose stack <head>
+589 verbose stack <title>Fastly error: unknown domain</title>
+589 verbose stack </head>
+589 verbose stack <body>
+589 verbose stack Fastly error: unknown domain. Please check that this domain has been added to a service.
+589 verbose stack </body>
+589 verbose stack </html>
+589 verbose stack     at Object.parse (native)
+589 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:199:23)
+589 verbose stack     at Request._callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\npm-registry-client\lib\request.js:172:14)
+589 verbose stack     at Request.self.callback (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:344:22)
+589 verbose stack     at emitTwo (events.js:87:13)
+589 verbose stack     at Request.emit (events.js:172:7)
+589 verbose stack     at Request.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1239:14)
+589 verbose stack     at emitOne (events.js:82:20)
+589 verbose stack     at Request.emit (events.js:169:7)
+589 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Web\External\node_modules\request\request.js:1187:12)
+590 verbose cwd D:\GitLab\PlanningPoker\vue-planning\VuePlanning
+591 error Windows_NT 10.0.17134
+592 error argv "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Web\\External\\Node.exe" "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js" "install"
+593 error node v5.4.1
+594 error npm  v3.3.4
+595 error Unexpected token <
+595 error <html>
+595 error <head>
+595 error <title>Fastly error: unknown domain</title>
+595 error </head>
+595 error <body>
+595 error Fastly error: unknown domain. Please check that this domain has been added to a service.
+595 error </body>
+595 error </html>
+596 error If you need help, you may report this error at:
+596 error     <https://github.com/npm/npm/issues>
+597 verbose exit [ 1, true ]

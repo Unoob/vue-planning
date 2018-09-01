@@ -1,51 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
-using System.Collections.Concurrent;
+using VuePlanning.Models;
 
 namespace VuePlanning.Hubs
-{
-    public class UserDetail
-    {
-        string ConnetionId { get; set; }
-        string Nick { get; set; }
-        int ChannelId { get; set; } // kanal do ktorego dolaczyl - kilka zespolow moze planować równoczesnie. Pytanie czy skorzystać tu z SIgnalRowego GroupId ??
-        //string Email { get; set; } - dla potrzeb ankiety na KGD.
-    }
-
-    /// <summary>
-    /// Klasa bazowa dla hubow, gdzie bedziemy obslugiwać polaczenia i rozlaczenia z listy uzytkownikow i przylaczenia do kanalow.
-    /// </summary>
-    public class BaseHub : Hub
-    {
-        // Dictionary< connectionId, Uzytkownik >
-        ConcurrentDictionary<string, UserDetail> memoryUserOnline;
-
-        public IEnumerable<UserDetail> GetAllUsers()
-        {
-            return memoryUserOnline.Values;
-        }
-
-        public override Task OnConnectedAsync()
-        {
-            // dodanie do slownika uzytkownika i powiadomienie wszystkich, że nowy się pojawił. (toster?)
-            Clients.All.SendAsync("onConnectNewUser", Context.UserIdentifier);
-            return base.OnConnectedAsync();            
-        }
-
-        public override Task OnDisconnectedAsync(Exception exception)
-        {
-            //TODO: wykreślenie z kolekcji memoryUserList uzytkownika oraz rozeslanie nowej listy do wszystkich.
-            return base.OnDisconnectedAsync(exception);
-        }
-    }
-
-
-    public class PlanningHub : BaseHub
+{    
+    public class PlanningHub : HubWithPresence
     {
         // tutaj będą metody typowo związane z glosowaniem w planning pokera
+        public PlanningHub(IUserTracker<PlanningHub> userTracker) : base(userTracker)
+        {
+        }
+
+        public override async Task OnConnectedAsync()
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            var usersOnline = await GetUsersOnline();
+            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+
+            await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.Connected, groupUsersOnline);
+
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnUsersLeft(UserDetails[] users)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            var usersOnline = await GetUsersOnline();
+            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.Disconnected, groupUsersOnline);
+
+            await base.OnUsersLeft(users);
+        }
+
+        public async Task Send(string message)
+        {
+            var pokerMessage = new PokerMessage(Context.ConnectionId, message);
+
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.Send, pokerMessage);
+        }
+
+        public async Task JoinUser(string userName)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            user.Name = userName;
+
+            await _userTracker.UpdateUser(Context.ConnectionId, user);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.JoinUser, user);
+        }
+
+        public async Task NewGame()
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame);
+        }
+
+        public async Task ShowCards()
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.ShowCards);
+        }
+
+        public async Task JoinGroup(GroupMessage groupMessage)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            user.Name = groupMessage.PlayerName;
+
+            var groupId = groupMessage?.GroupId ?? user.GroupId;
+            user.GroupId = groupId;
+
+            var usersOnline = await GetUsersOnline();
+            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+
+            await _userTracker.UpdateUser(Context.ConnectionId, user);
+            await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
+            await Clients.Group(groupId).SendAsync(HubEvents.JoinGroup, groupUsersOnline);
+            await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
+        }
+
+        public async Task LeaveGroup(string groupName)
+        {
+            await Clients.Group(groupName).SendAsync(HubEvents.LeaveGroup, groupName);
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
+        }
     }
 
     //public class AnkietaHub : BaseHub
