@@ -52,6 +52,7 @@ module.exports = {
             vue: 'vue/dist/vue.esm.js'
         }
     },
+    devtool: 'inline-source-map',
     plugins: [
         // make sure to include the plugin for the magic
         new VueLoaderPlugin()
