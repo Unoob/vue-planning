@@ -2,10 +2,10 @@
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import Home from './components/Home.vue';
+import Vote from './components/NewVote.vue';
 
 const routes = [
-    { path: '/', component: Home }
+    { path: '/', component: Vote }
 ];
 const router = new VueRouter({
     routes,

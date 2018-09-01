@@ -1,7 +1,9 @@
 ﻿<template>
     <div id="app-root">
         <v-app>
-            <MasterPage></MasterPage>
+            <Login v-if="logged"></Login>
+            <MasterPage v-else></MasterPage>
+            <v-btn @click="logged=!logged">Toggle</v-btn>
         </v-app>
     </div>
 
@@ -10,6 +12,7 @@
 <script>
     import { HubConnectionBuilder } from '@aspnet/signalr';
     import MasterPage from './MasterPage.vue';
+    import Login from './Home.vue';
     import HubEvents from '../store/HubEvents';
     const HUBS = {
         PLANNING: '/PlanningHub'
@@ -17,10 +20,12 @@
 export default {
         name: "App",
         components: {
-            MasterPage
+            MasterPage,
+            Login
         },
         data:()=> {
             return {
+                logged: false,
                 pokerHub: {}
                 
             };
@@ -67,8 +72,6 @@ export default {
                 this.$store.commit("setlogged", true);
             }
         }
-        
-
 };
 </script>
 
