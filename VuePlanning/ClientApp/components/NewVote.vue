@@ -15,22 +15,27 @@
                        @click="confirm" color="success">Zatwierdź</v-btn>
             </v-flex>
         </v-layout>
-        {{title}}
+        {{users}}
     </v-container>
 </template>
 <script>
-    export default {
-        name: "NewVote",
-        data: () => {
-            return {
-                title: "",
-                answers: []
-            };
-        },
-        methods: {
-            confirm: function () {
-                console.log('click');
-            }
-        }
+export default {
+  name: "NewVote",
+  data: () => {
+    return {
+      title: "",
+      answers: []
+    };
+  },
+  computed: {
+    users: function() {
+      return JSON.stringify(this.$store.state.users);
     }
+  },
+  methods: {
+    confirm: function() {
+      console.log("click");
+    }
+  }
+};
 </script>

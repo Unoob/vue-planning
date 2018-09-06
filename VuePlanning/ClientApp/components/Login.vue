@@ -22,21 +22,24 @@
 </template>
  
 <script>
-    export default {
-        name: "Home",
-        data: function() {
-            return {
-                login: "",
-                roomCode: ""
-            };
-        },
-        methods: {
-            onCreateRoom: function () {
-                console.log('onCreateRoom');
-            },
-            onJoinRoom: function () {
-                console.log('onJoinRoom');
-            }
-        }
+import { join } from "../services/HubService.js";
+export default {
+  name: "Login",
+  data: function() {
+    return {
+      login: "",
+      roomCode: ""
     };
+  },
+  methods: {
+    onCreateRoom: function() {
+      console.log("onCreateRoom");
+    },
+    onJoinRoom: function() {
+      if (!(this.login || this.roomCode)) return;
+      join(this.login, this.roomCode);
+      console.log("onJoinRoom");
+    }
+  }
+};
 </script>

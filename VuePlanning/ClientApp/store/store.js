@@ -7,6 +7,7 @@ const store = new Vuex.Store({
     state: {
         count: 0,
         users: [],
+        user: {},
         isLogged: false
     },
     mutations: {
@@ -18,12 +19,17 @@ const store = new Vuex.Store({
             state.count--;
         },
         setlogged(state, isLog) {
-            console.log(isLog);
             state.isLogged = isLog;
         },
-        updateusers(state, users) {
+        updateUser(state, user) {
+            state.user = user;
+        },
+        updateUsers(state, users) {
             console.log(users);
             state.users = users;
+        },
+        userJoined(state, user) {
+            state.users.push(user);
         }
     }
 });
