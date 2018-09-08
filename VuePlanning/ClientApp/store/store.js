@@ -3,12 +3,17 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 import { INCREMENT } from './MutationTypes';
 
-const store = new Vuex.Store({
+export const store = new Vuex.Store({
     state: {
         count: 0,
         users: [],
         user: {},
         isLogged: false
+    },
+    getters: {
+        isLogged(state) {
+            return state.isLogged;
+        }
     },
     mutations: {
         [INCREMENT](state, n) {
@@ -33,5 +38,3 @@ const store = new Vuex.Store({
         }
     }
 });
-
-export default store;

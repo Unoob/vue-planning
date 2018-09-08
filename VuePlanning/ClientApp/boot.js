@@ -1,7 +1,7 @@
 ﻿import 'babel-polyfill';
 import Vue from 'vue';
 
-import store from './store/Store';
+import { store } from './store/Store';
 import router from './router';
 
 import 'material-design-icons-iconfont/dist/material-design-icons.css';

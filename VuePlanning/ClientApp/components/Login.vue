@@ -22,7 +22,8 @@
 </template>
  
 <script>
-import { join } from "../services/HubService.js";
+import router from "vue-router";
+import { createGroup, join } from "../services/HubService.js";
 export default {
   name: "Login",
   data: function() {
@@ -33,6 +34,9 @@ export default {
   },
   methods: {
     onCreateRoom: function() {
+      createGroup(this.login, this.roomCode)
+        this.$router.push("question");
+      
       console.log("onCreateRoom");
     },
     onJoinRoom: function() {

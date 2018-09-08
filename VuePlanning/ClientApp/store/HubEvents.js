@@ -8,5 +8,6 @@
     Send: 'Send',
     ShowCards: 'ShowCards',
     UpdateUser: 'UpdateUser',
-    UsersJoined: 'UsersJoined'
+    UsersJoined: 'UsersJoined',
+    CreateGroup: 'CreateGroup'
 };
