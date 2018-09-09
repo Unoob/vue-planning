@@ -12,8 +12,9 @@ namespace VuePlanning.Models
             ConnectionId = connectionId;
             Name = name;
             GroupId = groupId;
+            Host = false;
         }
-
+        public bool Host { get; set; }
         public string ConnectionId { get; set; }
         public string Name { get; set; }
         public string GroupId { get; set; }

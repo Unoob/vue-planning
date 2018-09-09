@@ -23,7 +23,7 @@
  
 <script>
 import router from "vue-router";
-import { createGroup, join } from "../services/HubService.js";
+import { createGroup, joinGroup } from "../services/HubService.js";
 export default {
   name: "Login",
   data: function() {
@@ -34,14 +34,16 @@ export default {
   },
   methods: {
     onCreateRoom: function() {
-      createGroup(this.login, this.roomCode)
-        this.$router.push("question");
-      
+      if (!(this.login || this.roomCode)) return;
+      createGroup(this.login, this.roomCode);
+      this.$router.push("question");
+
       console.log("onCreateRoom");
     },
     onJoinRoom: function() {
       if (!(this.login || this.roomCode)) return;
-      join(this.login, this.roomCode);
+      joinGroup(this.login, this.roomCode);
+      this.$router.push("group");
       console.log("onJoinRoom");
     }
   }

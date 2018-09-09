@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 import { INCREMENT } from './MutationTypes';
 
-export const store = new Vuex.Store({
+export default new Vuex.Store({
     state: {
         count: 0,
         users: [],

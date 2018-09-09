@@ -21,6 +21,11 @@ namespace VuePlanning.Hubs
             return Task.FromResult (_usersOnline.Values.Where (u => u.GroupId == groupId).AsEnumerable ());
         }
 
+        public Task<UserDetails> GetGroupHost(string groupId)
+        {
+            var user = _usersOnline.Values.SingleOrDefault(s=>s.GroupId==groupId && s.Host);
+            return Task.FromResult(user);
+        }
         public Task<UserDetails> GetUser (string connectionId) {
             var user = _usersOnline.Values.FirstOrDefault (u => u.ConnectionId == connectionId);
 
@@ -51,5 +56,6 @@ namespace VuePlanning.Hubs
 
             return Task.CompletedTask;
         }
+
     }
 }

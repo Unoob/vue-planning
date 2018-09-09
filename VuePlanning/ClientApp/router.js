@@ -6,7 +6,7 @@ import Login from './components/Login.vue';
 import MasterPage from './components/MasterPage.vue';
 import NewVote from './components/NewVote.vue';
 import Answer from './components/Answer.vue';
-import { store } from './store/Store';
+import  store  from './store/index';
 
 const routes = [
     { path: '/login', component: Login },
@@ -21,7 +21,7 @@ const routes = [
         },
         children: [
             { path: 'question', component: NewVote },
-            { path: 'group/:id', component: Answer },
+            { path: 'group', component: Answer },
         ]
     },
     { path: '*', redirect: '/login' }

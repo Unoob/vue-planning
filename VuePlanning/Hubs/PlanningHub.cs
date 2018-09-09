@@ -37,7 +37,7 @@ namespace VuePlanning.Hubs
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
             user.Name = groupMessage.PlayerName;
-
+            user.Host = true;
             var groupId = groupMessage?.GroupId ?? user.GroupId;
             user.GroupId = groupId;
 
@@ -73,22 +73,25 @@ namespace VuePlanning.Hubs
         //     await Clients.Group(user.GroupId).SendAsync(HubEvents.ShowCards);
         // }
 
-        // public async Task JoinGroup(GroupMessage groupMessage)
-        // {
-        //     var user = await _userTracker.GetUser(Context.ConnectionId);
-        //     user.Name = groupMessage.PlayerName;
+        public async Task JoinGroup(GroupMessage groupMessage)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            user.Name = groupMessage.PlayerName;
 
-        //     var groupId = groupMessage?.GroupId ?? user.GroupId;
-        //     user.GroupId = groupId;
+            var groupId = groupMessage?.GroupId ?? user.GroupId;
+            user.GroupId = groupId;
 
-        //     var usersOnline = await GetUsersOnline();
-        //     var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+            await _userTracker.UpdateUser(Context.ConnectionId, user);
+            await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
 
-        //     await _userTracker.UpdateUser(Context.ConnectionId, user);
-        //     await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
-        //     await Clients.Group(groupId).SendAsync(HubEvents.JoinGroup, groupUsersOnline);
-        //     await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
-        // }
+            await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
+
+            var host = await _userTracker.GetGroupHost(groupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.UsersJoined, user);
+            }
+        }
 
         // public async Task LeaveGroup(string groupName)
         // {
