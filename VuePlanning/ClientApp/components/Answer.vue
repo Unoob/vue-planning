@@ -9,8 +9,8 @@
                 ></v-text-field>
             </v-flex>
         </v-layout>
-        <v-layout row wrap>
-            <v-flex v-for="card in answers" :key="card.text">
+        <v-layout justify-start row wrap>
+            <v-flex v-for="card in answers" :key="card.text" xs6 md4 lg3>
                 <ValueCardComponent :card="card" @onValueCardClicked="onValueCardClicked"></ValueCardComponent>
             </v-flex>
         </v-layout>

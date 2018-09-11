@@ -1,8 +1,11 @@
 ﻿<template>
-        <v-card @click.native="onValueCardClicked" :class="{'selected-class' : card.selected, 'card' : true}">
+        <v-card 
+        @click.native="onValueCardClicked" 
+        :class="{'selected-class' : card.selected, 'card' : true}"
+        >
             <v-card-text>
-                <v-layout align-center>
-                    <v-flex text-xs-center>
+                <v-layout>
+                    <v-flex text-xs-center class="display-2">
                         {{card.text}}
                     </v-flex>
                 </v-layout>
@@ -47,16 +50,12 @@
 
     .card {
         background: linear-gradient(to bottom right, #CCC, #AAA);
-        padding: 110px 5px;
-        color: white;
-        width: 200px;
-        font-size: 40px;
         cursor: pointer;
                
         }
 
     .selected-class {
-        background: green !important;
+        background: #4caf50 !important;
     }
 
 </style>
