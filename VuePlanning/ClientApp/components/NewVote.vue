@@ -26,11 +26,11 @@
     </v-container>
 </template>
 <script>
-import UserCard from './UserCard.vue';
-
+import UserCard from "./UserCard.vue";
+import { sendQuestion } from "../services/HubService.js";
 export default {
   name: "NewVote",
-  components:{
+  components: {
     UserCard
   },
   data: () => {
@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     confirm: function() {
+      sendQuestion(this.title);
       console.log("click");
     }
   }

@@ -11,7 +11,7 @@ namespace VuePlanning.Hubs
         public PlanningHub(IUserTracker<PlanningHub> userTracker) : base(userTracker)
         {
         }
-
+        
         public override async Task OnConnectedAsync()
         {
             //var user = await _userTracker.GetUser(Context.ConnectionId);
@@ -25,11 +25,13 @@ namespace VuePlanning.Hubs
 
         public override async Task OnUsersLeft(UserDetails[] users)
         {
-            // var user = await _userTracker.GetUser(Context.ConnectionId);
-            // var usersOnline = await GetUsersOnline();
-            // var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+            var user = await _userTracker.GetUser(Context.ConnectionId);
 
-            // await Clients.Group(user.GroupId).SendAsync(HubEvents.Disconnected, groupUsersOnline);
+            var host = await _userTracker.GetGroupHost(user.GroupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.Disconnected, user);
+            }
 
             await base.OnUsersLeft(users);
         }
@@ -61,11 +63,11 @@ namespace VuePlanning.Hubs
         //     await Clients.Group(user.GroupId).SendAsync(HubEvents.JoinUser, user);
         // }
 
-        // public async Task NewGame()
-        // {
-        //     var user = await _userTracker.GetUser(Context.ConnectionId);
-        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame);
-        // }
+        public async Task NewGame(string question)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame, question);
+        }
 
         // public async Task ShowCards()
         // {

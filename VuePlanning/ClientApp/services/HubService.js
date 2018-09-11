@@ -1,6 +1,6 @@
 import { HubConnectionBuilder } from '@aspnet/signalr';
 import HubEvents from '../store/HubEvents';
-import  store  from '../store/index';
+import store from '../store/index';
 
 const HUBS = {
     PLANNING: '/PlanningHub'
@@ -15,14 +15,19 @@ export function start() {
         return console.error(err.toString());
     });
     // pokerHub.on(HubEvents.Connected, handleConnected);
-    // pokerHub.on(HubEvents.Disconnected, handleDisconnected);
+    pokerHub.on(HubEvents.Disconnected, handleDisconnected);
     pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
     // pokerHub.on(HubEvents.Send, handleSend);
     pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
-    // pokerHub.on(HubEvents.NewGame, handleNewGame);
+    pokerHub.on(HubEvents.NewGame, handleNewGame);
     // pokerHub.on(HubEvents.ShowCards, handleShowCards);
     // pokerHub.on(HubEvents.JoinGroup, handleConnected);
 }
+
+export function sendQuestion(question) {
+    pokerHub.invoke(HubEvents.NewGame, question);
+}
+
 export function joinGroup(playerName, groupId) {
     const message = { playerName, groupId };
     pokerHub.invoke(HubEvents.JoinGroup, message);
@@ -36,13 +41,15 @@ export function createGroup(playerName, groupId) {
     store.commit("setlogged", true);
 }
 
+function handleNewGame(question) {
+    store.commit('newGame', question);
+}
 
 function handleConnected(usersOnline) {
     store.commit("updateUsers", usersOnline);
 }
 function handleDisconnected(usersOnline) {
-    store.commit("updateUsers", []);
-    store.commit("setlogged", false);
+    console.log(usersOnline);
 }
 
 function handleUserJoined(user) {
