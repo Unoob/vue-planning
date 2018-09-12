@@ -19,7 +19,7 @@
           <v-layout row wrap>
               <v-flex xs12 sm6 md3 v-for="user in users" :key="user.connectionId">
                   <!--<user-card :user="user"></user-card>-->
-                  <FlippedCard :card="user"></FlippedCard>
+                  <FlippedCard :card="user" @onFlipCardClicked="onFlipCardClicked"></FlippedCard>
               </v-flex>
           </v-layout>
         </v-container>
@@ -58,6 +58,10 @@ export default {
     confirm: function() {
       sendQuestion(this.title);
       console.log("click");
+    },
+    onFlipCardClicked: function (user) {
+        console.log("clicked parent!");
+        this.$store.commit("updateUser", user);
     }
   }
 };

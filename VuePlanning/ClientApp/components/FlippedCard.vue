@@ -1,8 +1,8 @@
 <template>
     <div class="scene scene--card">
-        <div class="card" v-bind:class="{'is-flipped': isFlippedComp}">
+        <div :class="{'is-flipped': isFlippedComp, 'card': true}">
             <div @click="onFlipCardClicked" class="card__face card__face--front">{{card.selectValue || ""}}</div>
-            <div class="card__face card__face--back" v-bind:class="{'is-voted': isVoted}">{{card.name}}</div>
+            <div :class="{'is-voted': isVotedComp, 'card__face--back': true, 'card__face': true}">{{card.name}}</div>
         </div>
     </div>
 </template>
@@ -12,7 +12,6 @@
         name: "FlippedCard",
         data() {
             return {
-                isFlipped: false
             };
         },
         props: {
@@ -31,14 +30,17 @@
         },
         methods: {
             onFlipCardClicked: function () {
-                //this.$emit("onValueCardClicked", this.card);
                 this.card.isFlipped = !this.card.isFlipped;
-                console.log('isFlipped: ' +this.card.isFlipped);
+                console.log('isFlipped: ' + this.card.isFlipped);
+                this.$emit("onFlipCardClicked", this.card); // tymczasowo chcia³em zobaczyæ jak siê odwracaj¹ na ¿¹danie... ale coœ nie dzia³a :(
             }
         },
         computed: {
             isFlippedComp: function () {
-                return this.card.isFlipped || false;
+                return !this.card.isFlipped || true;
+            },
+            isVotedComp: function () {
+                return this.card.isVoted || false;
             }
         }
     };
@@ -47,8 +49,8 @@
 <style>
 
     .scene {
-        width: 200px;
-        height: 260px;
+        width: 170pt;
+        height: 230pt;
         margin: 40px 0;
         perspective: 600px;
     }
@@ -61,19 +63,22 @@
         cursor: pointer;
         justify-content: center;
         position: relative;
+        border-radius: 9px;
+        float: left;
     }
 
     .card.is-flipped {
         transform: rotateY(180deg);
     }
-       
+
     .card__face {
         position: absolute;
         width: 100%;
         height: 100%;
-        line-height: 260px;
         color: black;
         text-align: center;
+        justify-content: center;
+        display: grid;
         font-weight: bold;
         font-size: 40px;
         border-radius: 9px;
@@ -86,7 +91,7 @@
     }
 
     .card__face--front {
-        background: #AAA;
+        background: #dbfed6;
     }
 
     .card__face--back {
