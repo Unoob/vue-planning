@@ -44,13 +44,23 @@ namespace VuePlanning.Hubs
             await _userTracker.UpdateUser(Context.ConnectionId, user);
             await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
         }
-        // public async Task Send(string message)
-        // {
-        //     var pokerMessage = new PokerMessage(Context.ConnectionId, message);
+        public async Task SendAnswer(string message)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+            user.IsVoted = true;
+            user.SelectValue = message;
+            await _userTracker.UpdateUser(Context.ConnectionId, user);
 
-        //     var user = await _userTracker.GetUser(Context.ConnectionId);
-        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.Send, pokerMessage);
-        // }
+            var users = await _userTracker.UsersOnline();
+
+            var groupId = user.GroupId;
+
+            var host = await _userTracker.GetGroupHost(groupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, users);
+            }
+        }
 
         // public async Task JoinUser(string userName)
         // {

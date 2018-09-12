@@ -1,5 +1,5 @@
 ﻿<template>
-        <v-card @click.native="onValueCardClicked" :class="{'selected-class' : card.selected, 'card' : true}">
+        <v-card @click.native="onValueCardClicked" :class="{'selected-class' : card.selected, 'card' : true}" active-class="card">
             <v-card-text>
                 <v-layout align-center>
                     <v-flex text-xs-center>
@@ -42,21 +42,25 @@
     };
 </script>
 
-<style lang="scss"> 
+<style> 
     /*TODO: dostosować graficznie, narazie wygląda jeszcze przeciętnie*/
 
     .card {
+        align-items: center;
         background: linear-gradient(to bottom right, #CCC, #AAA);
         padding: 110px 5px;
         color: white;
-        width: 200px;
-        font-size: 40px;
+        width: 150pt;
+        font-size: 40pt;
         cursor: pointer;
-               
-        }
+        border-radius: 9px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        display: flex;
+    }
 
     .selected-class {
-        background: green !important;
+        background: #068d00 !important;
     }
 
 </style>

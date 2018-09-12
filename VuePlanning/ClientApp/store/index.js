@@ -30,6 +30,7 @@ export default new Vuex.Store({
             state.user = user;
         },
         updateUsers(state, users) {
+            debugger;
             console.log(users);
             state.users = users;
         },

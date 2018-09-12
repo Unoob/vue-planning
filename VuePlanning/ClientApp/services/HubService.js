@@ -17,7 +17,7 @@ export function start() {
     // pokerHub.on(HubEvents.Connected, handleConnected);
     // pokerHub.on(HubEvents.Disconnected, handleDisconnected);
     pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
-    // pokerHub.on(HubEvents.Send, handleSend);
+    pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
     pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
     // pokerHub.on(HubEvents.NewGame, handleNewGame);
     // pokerHub.on(HubEvents.ShowCards, handleShowCards);
@@ -31,7 +31,7 @@ export function joinGroup(playerName, groupId) {
 
 export function createGroup(playerName, groupId) {
     const message = { playerName, groupId };
-    console.log('before invoke')
+    console.log('before invoke');
     pokerHub.invoke(HubEvents.CreateGroup, message);
     store.commit("setlogged", true);
 }
@@ -45,11 +45,15 @@ function handleDisconnected(usersOnline) {
     store.commit("setlogged", false);
 }
 
+function handleSendAnswer(usersOnline) {
+    store.commit("updateUsers", usersOnline);
+}
+
 function handleUserJoined(user) {
     store.commit("userJoined", user);
 }
 
 function handleUpdateUser(user) {
     store.commit("updateUser", user);
-    console.log('after update')
+    console.log('after update');
 }

@@ -2,7 +2,7 @@ namespace VuePlanning.Hubs
 {
     public static class HubEvents
     {
-        public const string Send = "Send";
+        public const string SendAnswer = "SendAnswer";
         public const string UsersJoined = "UsersJoined";
         public const string Disconnected = "Disconnected";
         public const string Connected = "Connected";

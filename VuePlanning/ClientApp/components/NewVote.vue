@@ -17,21 +17,22 @@
         <!-- {{users}} -->
         <v-container grid-list-lg fluid>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md3 v-for="user in users" :key="user.connectionId">
-              <user-card :user="user"></user-card>
-
-            </v-flex>
+              <v-flex xs12 sm6 md3 v-for="user in users" :key="user.connectionId">
+                  <!--<user-card :user="user"></user-card>-->
+                  <FlippedCard :card="user"></FlippedCard>
+              </v-flex>
           </v-layout>
         </v-container>
     </v-container>
 </template>
 <script>
-import UserCard from './UserCard.vue';
+    import UserCard from './UserCard.vue';
+    import FlippedCard from "../components/FlippedCard.vue";
 
 export default {
   name: "NewVote",
   components:{
-    UserCard
+      UserCard, FlippedCard
   },
   data: () => {
     return {

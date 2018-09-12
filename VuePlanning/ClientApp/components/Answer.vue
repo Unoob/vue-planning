@@ -4,16 +4,20 @@
             <v-flex v-for="card in answers" :key="card.text">
                 <ValueCardComponent :card="card" @onValueCardClicked="onValueCardClicked"></ValueCardComponent>
             </v-flex>
+            <!--<v-flex v-for="card in answers" :key="card.text">
+                <FlippedCard :card="card"></FlippedCard>
+            </v-flex>-->
         </v-layout>
     </v-container>
 </template>
 
 <script>
     import ValueCardComponent from "../components/ValueCard.vue";
+    import FlippedCard from "../components/FlippedCard.vue";
 
     export default {
         name: "Answer",
-        components: { ValueCardComponent },
+        components: { ValueCardComponent, FlippedCard },
         data() {
             return {
                 //TODO: dodaæ id do obiektu, ¿eby w przypadku powielenia tekstu prawid³owo znajdowaæ elementy (unikalnoœc id)
