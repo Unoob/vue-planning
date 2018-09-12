@@ -8,7 +8,8 @@ export default new Vuex.Store({
         count: 0,
         users: [],
         user: {},
-        isLogged: false
+        isLogged: false,
+        question: ""
     },
     getters: {
         isLogged(state) {
@@ -36,6 +37,9 @@ export default new Vuex.Store({
         },
         userJoined(state, user) {
             state.users.push(user);
+        },
+        newGame(state, question) {
+            state.question = question;
         }
     }
 });

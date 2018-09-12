@@ -26,8 +26,9 @@
     </v-container>
 </template>
 <script>
-    import UserCard from './UserCard.vue';
-    import FlippedCard from "../components/FlippedCard.vue";
+import UserCard from "./UserCard.vue";
+import { sendQuestion } from "../services/HubService.js";
+import FlippedCard from "../components/FlippedCard.vue";
 
 export default {
   name: "NewVote",
@@ -55,6 +56,7 @@ export default {
   },
   methods: {
     confirm: function() {
+      sendQuestion(this.title);
       console.log("click");
     }
   }
