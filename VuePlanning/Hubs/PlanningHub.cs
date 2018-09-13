@@ -105,11 +105,18 @@ namespace VuePlanning.Hubs
             }
         }
 
-        // public async Task LeaveGroup(string groupName)
-        // {
-        //     await Clients.Group(groupName).SendAsync(HubEvents.LeaveGroup, groupName);
-        //     await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
-        // }
+        public async Task LeaveGroup()
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, user.GroupId);
+
+            var host = await _userTracker.GetGroupHost(user.GroupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
+            }
+        }
     }
 
     //public class AnkietaHub : BaseHub

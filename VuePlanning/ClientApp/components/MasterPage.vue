@@ -45,8 +45,8 @@
             <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
             <v-toolbar-title>Vue Planning</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn icon>
-                <v-icon>favorite</v-icon>
+            <v-btn icon v-on:click="onLogoutClick" class="logoutButton">
+                <v-icon>close</v-icon>
             </v-btn>
         </v-toolbar>
         <v-content>
@@ -59,26 +59,39 @@
     </div>
 </template>
 <script>
-export default {
-  name: "MasterPage",
-  data: () => {
-    return {
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ],
-      drawer: null
+import { leaveGroup } from "../services/HubService.js";
+    export default {
+        name: "MasterPage",
+        data: () => {
+            return {
+                items: [
+                    { title: "Home", icon: "dashboard" },
+                    { title: "About", icon: "question_answer" }
+                ],
+                drawer: null
+            };
+        },
+        methods: {
+            onLogoutClick: function () {
+                console.log("logout click");
+                leaveGroup();
+                this.$router.push("login");
+            }
+        },
+        computed: {
+            user: function () {
+                return this.$store.state.user;
+            },
+            avatar: function () {
+                return (
+                    "https://api.adorable.io/avatars/80/" + (this.user.connectionId || '').substring(0, 8) + ".png"
+                );
+            }
+        }
     };
-  },
-  computed: {
-    user: function() {
-      return this.$store.state.user;
-    },
-    avatar: function() {
-      return (
-        "https://api.adorable.io/avatars/80/" + (this.user.connectionId||'').substring(0,8) + ".png"
-      );
-    }
-  }
-};
 </script>
+<style>
+    .logoutButton:hover {
+        transform: rotate(360deg);
+    }
+</style>

@@ -20,6 +20,7 @@ export function start() {
     pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
     pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
     pokerHub.on(HubEvents.NewGame, handleNewGame);
+    pokerHub.on(HubEvents.LeaveGroup, handleUserLeaved);
     // pokerHub.on(HubEvents.ShowCards, handleShowCards);
     // pokerHub.on(HubEvents.JoinGroup, handleConnected);
 }
@@ -41,6 +42,12 @@ export function createGroup(playerName, groupId) {
     store.commit("setlogged", true);
 }
 
+export function leaveGroup() {
+    console.log('before invoke');
+    pokerHub.invoke(HubEvents.LeaveGroup);
+    store.commit("setlogged", false);
+}
+
 function handleNewGame(question) {
     store.commit('newGame', question);
 }
@@ -58,6 +65,11 @@ function handleSendAnswer(usersOnline) {
 
 function handleUserJoined(user) {
     store.commit("userJoined", user);
+}
+
+function handleUserLeaved(user) {
+    store.commit("userLeaved", user);
+    console.log("after leave");
 }
 
 function handleUpdateUser(user) {
