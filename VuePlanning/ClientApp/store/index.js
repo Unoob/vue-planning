@@ -31,12 +31,16 @@ export default new Vuex.Store({
             state.user = user;
         },
         updateUsers(state, users) {
-            debugger;
             console.log(users);
             state.users = users;
         },
         userJoined(state, user) {
             state.users.push(user);
+        },
+        userLeaved(state, user) {
+            state.users = state.users.filter(function (usr) {
+                return usr.connectionId !== user.connectionId;
+            });
         },
         newGame(state, question) {
             state.question = question;
