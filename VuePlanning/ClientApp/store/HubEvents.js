@@ -5,8 +5,9 @@
     JoinUser: 'JoinUser',
     LeaveGroup: 'LeaveGroup',
     NewGame: 'NewGame',
-    Send: 'Send',
+    SendAnswer: 'SendAnswer',
     ShowCards: 'ShowCards',
     UpdateUser: 'UpdateUser',
-    UsersJoined: 'UsersJoined'
+    UsersJoined: 'UsersJoined',
+    CreateGroup: 'CreateGroup'
 };

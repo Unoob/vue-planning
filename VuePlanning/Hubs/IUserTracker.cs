@@ -13,6 +13,7 @@ namespace VuePlanning.Hubs
         Task AddUser(string connectionId, UserDetails userDetails);
         Task UpdateUser(string connectionId, UserDetails userDetails);
         Task RemoveUser(string connectionId);
+        Task<UserDetails> GetGroupHost(string groupId);
 
         event Action<UserDetails[]> UsersJoined;
         event Action<UserDetails[]> UsersLeft;

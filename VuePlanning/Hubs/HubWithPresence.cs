@@ -13,7 +13,10 @@ namespace VuePlanning.Hubs
         {
             _userTracker = userTracker;
         }
-
+        public Task<UserDetails> GetGroupHost(string groupId)
+        {
+            return _userTracker.GetGroupHost(groupId);
+        }
         public Task<IEnumerable<UserDetails>> GetUsersOnline()
         {
             return _userTracker.UsersOnline();

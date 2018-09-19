@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.SignalR;
 using VuePlanning.Models;
 
 namespace VuePlanning.Hubs
-{    
+{
     public class PlanningHub : HubWithPresence
     {
         // tutaj będą metody typowo związane z glosowaniem w planning pokera
         public PlanningHub(IUserTracker<PlanningHub> userTracker) : base(userTracker)
         {
         }
-
+        
         public override async Task OnConnectedAsync()
         {
-            var user = await _userTracker.GetUser(Context.ConnectionId);
-            var usersOnline = await GetUsersOnline();
-            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
+            //var user = await _userTracker.GetUser(Context.ConnectionId);
+            //var usersOnline = await GetUsersOnline();
+            //var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
 
-            await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.Connected, groupUsersOnline);
+            //await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.Connected, groupUsersOnline);
 
             await base.OnConnectedAsync();
         }
@@ -26,42 +26,64 @@ namespace VuePlanning.Hubs
         public override async Task OnUsersLeft(UserDetails[] users)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            var usersOnline = await GetUsersOnline();
-            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
 
-            await Clients.Group(user.GroupId).SendAsync(HubEvents.Disconnected, groupUsersOnline);
+            var host = await _userTracker.GetGroupHost(user.GroupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.Disconnected, user);
+            }
 
             await base.OnUsersLeft(users);
         }
-
-        public async Task Send(string message)
-        {
-            var pokerMessage = new PokerMessage(Context.ConnectionId, message);
-
-            var user = await _userTracker.GetUser(Context.ConnectionId);
-            await Clients.Group(user.GroupId).SendAsync(HubEvents.Send, pokerMessage);
-        }
-
-        public async Task JoinUser(string userName)
+        public async Task CreateGroup(GroupMessage groupMessage)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            user.Name = userName;
+            user.Name = groupMessage.PlayerName;
+            user.Host = true;
+            var groupId = groupMessage?.GroupId ?? user.GroupId;
+            user.GroupId = groupId;
 
             await _userTracker.UpdateUser(Context.ConnectionId, user);
-            await Clients.Group(user.GroupId).SendAsync(HubEvents.JoinUser, user);
+            await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
         }
-
-        public async Task NewGame()
+        public async Task SendAnswer(string message)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame);
+            user.IsVoted = true;
+            user.SelectValue = message;
+            await _userTracker.UpdateUser(Context.ConnectionId, user);
+
+            var users = await _userTracker.UsersOnline();
+
+            var groupId = user.GroupId;
+
+            var host = await _userTracker.GetGroupHost(groupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, users);
+            }
         }
 
-        public async Task ShowCards()
+        // public async Task JoinUser(string userName)
+        // {
+        //     var user = await _userTracker.GetUser(Context.ConnectionId);
+        //     user.Name = userName;
+
+        //     await _userTracker.UpdateUser(Context.ConnectionId, user);
+        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.JoinUser, user);
+        // }
+
+        public async Task NewGame(string question)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            await Clients.Group(user.GroupId).SendAsync(HubEvents.ShowCards);
+            await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame, question);
         }
+
+        // public async Task ShowCards()
+        // {
+        //     var user = await _userTracker.GetUser(Context.ConnectionId);
+        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.ShowCards);
+        // }
 
         public async Task JoinGroup(GroupMessage groupMessage)
         {
@@ -71,19 +93,29 @@ namespace VuePlanning.Hubs
             var groupId = groupMessage?.GroupId ?? user.GroupId;
             user.GroupId = groupId;
 
-            var usersOnline = await GetUsersOnline();
-            var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
-
             await _userTracker.UpdateUser(Context.ConnectionId, user);
             await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
-            await Clients.Group(groupId).SendAsync(HubEvents.JoinGroup, groupUsersOnline);
+
             await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
+
+            var host = await _userTracker.GetGroupHost(groupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.UsersJoined, user);
+            }
         }
 
-        public async Task LeaveGroup(string groupName)
+        public async Task LeaveGroup()
         {
-            await Clients.Group(groupName).SendAsync(HubEvents.LeaveGroup, groupName);
-            await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, user.GroupId);
+
+            var host = await _userTracker.GetGroupHost(user.GroupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
+            }
         }
     }
 

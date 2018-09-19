@@ -2,10 +2,12 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/VuePlanning/obj
-/VuePlanning/wwwroot
-/.vs
-/VuePlanning/node_modules
+/VuePlanning/obj/
+/VuePlanning/wwwroot/
+/wwwroot/
+/.vs/
+/VuePlanning/node_modules/
+node_modules/
 /VuePlanning/bin/Debug/netcoreapp2.1
 # User-specific files
 *.suo
@@ -13,3 +15,4 @@
 *.userosscache
 *.sln.docstates
 /VuePlanning/Hubs/.vs
+bin/
