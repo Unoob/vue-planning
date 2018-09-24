@@ -29,6 +29,10 @@ export function sendQuestion(question) {
     pokerHub.invoke(HubEvents.NewGame, question);
 }
 
+export function sendAnswer(value){
+    pokerHub.invoke(HubEvents.SendAnswer, value);
+}
+
 export function joinGroup(playerName, groupId) {
     const message = { playerName, groupId };
     pokerHub.invoke(HubEvents.JoinGroup, message);

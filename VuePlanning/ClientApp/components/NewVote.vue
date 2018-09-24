@@ -26,14 +26,13 @@
     </v-container>
 </template>
 <script>
-import UserCard from "./UserCard.vue";
 import { sendQuestion } from "../services/HubService.js";
 import FlippedCard from "../components/FlippedCard.vue";
 
 export default {
   name: "NewVote",
   components:{
-      UserCard, FlippedCard
+      FlippedCard
   },
   data: () => {
     return {
@@ -61,7 +60,6 @@ export default {
     },
     onFlipCardClicked: function (user) {
         console.log("clicked parent!");
-        this.$store.commit("updateUser", user);
     }
   }
 };

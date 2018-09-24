@@ -1,7 +1,7 @@
 ﻿<template>
-        <v-card 
+        <v-card
         @click.native="onValueCardClicked" 
-        :class="{'selected-class' : card.selected, 'card' : true}"
+        class="card elevation-4"
         >
             <v-card-text>
                 <v-layout>
@@ -14,48 +14,30 @@
 </template>
 
 <script>
-    export default {
-        name: "ValueCard",
-        data() {
-            return {
-                
-            };
-        },
-        props: {
-            card: {
-                type: Object,
-                required: true,
-                validator: function (object) {
-                    if (!object.text)
-                        return false;
-                    if (typeof object.selected !== "boolean")
-                        return false;
-                    if (typeof object.text !== "string" || object.text.length < 0 || object.text.length > 4)
-                        return false;
+export default {
+  name: "ValueCard",
+  props: {
+    card: {
+      type: Object,
+      required: true,
+      validator: function(object) {
+        if (!object.text) return false;
 
-                    return true;
-                }
-            }
-        },
-        methods: {
-            onValueCardClicked: function () {
-                this.$emit("onValueCardClicked", this.card);
-            } 
-        }
-    };
+        return true;
+      }
+    }
+  },
+  methods: {
+    onValueCardClicked: function() {
+      this.$emit("onValueCardClicked", this.card);
+    }
+  }
+};
 </script>
 
-<style lang="scss"> 
-    /*TODO: dostosować graficznie, narazie wygląda jeszcze przeciętnie*/
-
-    .card {
-        background: linear-gradient(to bottom right, #CCC, #AAA);
-        cursor: pointer;
-               
-        }
-
-    .selected-class {
-        background: #4caf50 !important;
-    }
-
+<style scoped>
+.card {
+  background: linear-gradient(to bottom right, #e0e0e0, #bdbdbd);
+  cursor: pointer;
+}
 </style>

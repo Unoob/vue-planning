@@ -32,7 +32,7 @@
             onFlipCardClicked: function () {
                 this.card.isFlipped = !this.card.isFlipped;
                 console.log('isFlipped: ' + this.card.isFlipped);
-                this.$emit("onFlipCardClicked", this.card); // tymczasowo chcia³em zobaczyæ jak siê odwracaj¹ na ¿¹danie... ale coœ nie dzia³a :(
+                this.$emit("onFlipCardClicked", this.card); // tymczasowo chciaï¿½em zobaczyï¿½ jak siï¿½ odwracajï¿½ na ï¿½ï¿½danie... ale coï¿½ nie dziaï¿½a :(
             }
         },
         computed: {
@@ -46,7 +46,7 @@
     };
 </script>
 
-<style>
+<style scoped>
 
     .scene {
         width: 170pt;

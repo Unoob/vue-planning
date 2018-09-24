@@ -11,7 +11,10 @@
         </v-layout>
         <v-layout justify-start row wrap>
             <v-flex v-for="card in answers" :key="card.text" xs6 md4 lg3>
-                <ValueCardComponent :card="card" @onValueCardClicked="onValueCardClicked"></ValueCardComponent>
+                <ValueCardComponent 
+                :card="card" 
+                :class="{'selected-class': selected===card}"
+                @onValueCardClicked="onValueCardClicked"></ValueCardComponent>
             </v-flex>
         </v-layout>
     </v-container>
@@ -19,7 +22,7 @@
 
 <script>
 import ValueCardComponent from "../components/ValueCard.vue";
-
+import { sendAnswer } from "../services/HubService.js";
 export default {
   name: "Answer",
   components: { ValueCardComponent },
@@ -37,7 +40,8 @@ export default {
         new CardViewModel("21"),
         new CardViewModel("34"),
         new CardViewModel("55")
-      ]
+      ],
+      selected: {}
     };
   },
   computed: {
@@ -46,26 +50,20 @@ export default {
     }
   },
   methods: {
-    onValueCardClicked: function(object) {
+    onValueCardClicked: function(card) {
       console.log("clicked parent!");
-      var arrayElement = this.answers.find(function(item) {
-        return item === object;
-      });
-      this.clearSelectedValue();
-      arrayElement.selected = !arrayElement.selected;
-    },
-    clearSelectedValue: function() {
-      var arrayElement = this.answers.find(function(item) {
-        return item.selected === true;
-      });
-      arrayElement = arrayElement || {};
-      arrayElement.selected = !arrayElement.selected;
+      this.selected = card;
+      sendAnswer(card.text);
     }
   }
 };
 
 function CardViewModel(text) {
   this.text = text;
-  this.selected = false;
 }
 </script>
+<style>
+.selected-class {
+  background: #4caf50 !important;
+}
+</style>
