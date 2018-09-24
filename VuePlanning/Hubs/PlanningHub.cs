@@ -49,18 +49,16 @@ namespace VuePlanning.Hubs
         public async Task SendAnswer(string message)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            user.IsVoted = true;
-            user.SelectValue = message;
-            await _userTracker.UpdateUser(Context.ConnectionId, user);
-
-            var users = await _userTracker.UsersOnline();
-
+            
             var groupId = user.GroupId;
 
             var host = await _userTracker.GetGroupHost(groupId);
             if (host != null)
             {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, users);
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, new UserAnswer{
+                    ConnectionId = user.ConnectionId,
+                    Answer = message
+                });
             }
         }
 

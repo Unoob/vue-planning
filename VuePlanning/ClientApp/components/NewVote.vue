@@ -10,16 +10,23 @@
                 
             </v-flex>
             <v-flex text-xs-center>
-                <v-btn @click="confirm" 
-                       color="success">Zatwierdź</v-btn>
+                <v-btn 
+                  v-if="newGame"
+                  @click="confirm" 
+                  color="success">Zatwierdź</v-btn>
+                <v-btn 
+                v-else 
+                @click="flipCard=true, newGame=true"
+                color="info">Sprawdź</v-btn>
             </v-flex>
         </v-layout>
-        <!-- {{users}} -->
         <v-container grid-list-lg fluid>
           <v-layout row wrap>
               <v-flex xs12 sm6 md3 v-for="user in users" :key="user.connectionId">
-                  <!--<user-card :user="user"></user-card>-->
-                  <FlippedCard :card="user" @onFlipCardClicked="onFlipCardClicked"></FlippedCard>
+                  <FlippedCard 
+                    :card="user"
+                    :flipCard="!flipCard"
+                  ></FlippedCard>
               </v-flex>
           </v-layout>
         </v-container>
@@ -31,13 +38,15 @@ import FlippedCard from "../components/FlippedCard.vue";
 
 export default {
   name: "NewVote",
-  components:{
-      FlippedCard
+  components: {
+    FlippedCard
   },
   data: () => {
     return {
       title: "",
-      answers: []
+      answers: [],
+      newGame: true,
+      flipCard: false
     };
   },
   computed: {
@@ -57,9 +66,8 @@ export default {
     confirm: function() {
       sendQuestion(this.title);
       console.log("click");
-    },
-    onFlipCardClicked: function (user) {
-        console.log("clicked parent!");
+      this.newGame = false;
+      this.flipCard = false;
     }
   }
 };

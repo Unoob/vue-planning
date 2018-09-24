@@ -14,15 +14,13 @@ export function start() {
     pokerHub.start().catch(function (err) {
         return console.error(err.toString());
     });
-    // pokerHub.on(HubEvents.Connected, handleConnected);
+    
     pokerHub.on(HubEvents.Disconnected, handleDisconnected);
     pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
     pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
     pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
     pokerHub.on(HubEvents.NewGame, handleNewGame);
     pokerHub.on(HubEvents.LeaveGroup, handleUserLeaved);
-    // pokerHub.on(HubEvents.ShowCards, handleShowCards);
-    // pokerHub.on(HubEvents.JoinGroup, handleConnected);
 }
 
 export function sendQuestion(question) {
@@ -63,8 +61,8 @@ function handleDisconnected(usersOnline) {
     console.log(usersOnline);
 }
 
-function handleSendAnswer(usersOnline) {
-    store.commit("updateUsers", usersOnline);
+function handleSendAnswer(userAnswer) {
+    store.commit("userAnswer", userAnswer);
 }
 
 function handleUserJoined(user) {

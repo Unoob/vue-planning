@@ -27,6 +27,12 @@ export default new Vuex.Store({
         setlogged(state, isLog) {
             state.isLogged = isLog;
         },
+        userAnswer(state, userAnswer) {
+            let user = state.users.find((u) => u.connectionId === userAnswer.connectionId);
+            if (user) {
+                user.selectValue = userAnswer.answer;
+            }
+        },
         updateUser(state, user) {
             state.user = user;
         },
@@ -35,6 +41,7 @@ export default new Vuex.Store({
             state.users = users;
         },
         userJoined(state, user) {
+            user.selectValue = '';
             state.users.push(user);
         },
         userLeaved(state, user) {
@@ -43,6 +50,7 @@ export default new Vuex.Store({
             });
         },
         newGame(state, question) {
+            state.users.forEach((u) => u.selectValue = '');
             state.question = question;
         }
     }

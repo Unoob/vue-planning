@@ -46,6 +46,7 @@ export default {
   },
   computed: {
     question: function() {
+      this.selected = {};
       return this.$store.state.question;
     }
   },
