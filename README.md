@@ -19,7 +19,7 @@ Widoczne pole, w którym będzie wyświetlany opis zadania i karty ze zdefiniowa
 - [ ] Dodać wybór możliwych odpowiedzi z predefiniowanej listy, np. "A,B,C", ranking, różne ciągi liczbowe
 - [ ] Dodać możliwość definicji własnych odpowiedzi
 - [ ] Dodać możliwość definicji kolekcji jednoczesnych pytań
-- [ ] Prezentacja uzyskanych odpowiedzi. Pojedynczo na każdego użytkownika lub grupować względem odpowiedzi.
+- [ ] Prezentacja uzyskanych odpowiedzi. Pojedynczo dla każdego użytkownika lub grupować względem odpowiedzi.
 - [ ] Zablokowanie zmiany wyboru, gdy karty zostały odkryte
 - [ ] Opuszczenie kanału przez gospodarza zamyka kanał
 - [ ] Dodanie routingu dla linku z numerem kanału
