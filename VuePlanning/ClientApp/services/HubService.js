@@ -51,30 +51,26 @@ export function leaveGroup() {
 }
 
 function handleNewGame(question) {
-    store.commit('newGame', question);
+    store.dispatch('setQuestion', question);
 }
 
-function handleConnected(usersOnline) {
-    store.commit("updateUsers", usersOnline);
-}
 function handleDisconnected(usersOnline) {
     console.log(usersOnline);
 }
 
 function handleSendAnswer(userAnswer) {
-    store.commit("userAnswer", userAnswer);
+    store.dispatch("setUserAnswer", userAnswer);
 }
 
 function handleUserJoined(user) {
-    store.commit("userJoined", user);
+    store.dispatch("userJoin", user);
 }
 
 function handleUserLeaved(user) {
-    store.commit("userLeaved", user);
+    store.dispatch("userLeave", user);
     console.log("after leave");
 }
 
 function handleUpdateUser(user) {
-    store.commit("updateUser", user);
-    console.log('after update');
+    store.dispatch("userUpdate", user);
 }
