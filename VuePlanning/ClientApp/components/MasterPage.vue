@@ -64,10 +64,7 @@ import { leaveGroup } from "../services/HubService.js";
         name: "MasterPage",
         data: () => {
             return {
-                items: [
-                    { title: "Home", icon: "dashboard" },
-                    { title: "About", icon: "question_answer" }
-                ],
+                items: [],
                 drawer: null
             };
         },

@@ -15,7 +15,7 @@ Widoczne pole, w którym będzie wyświetlany opis zadania i karty ze zdefiniowa
 ### TODO
 - [ ] Uniemożliwić stworzenie kanału, który już istnieje
 - [ ] Usunięcie użytkownika z kanału przez gospodarza
-- [ ] Usunięcie użytkownika z kanału, gdy ten zamknie/odświeży kartę przeglądarki
+- [x] Usunięcie użytkownika z kanału, gdy ten zamknie/odświeży kartę przeglądarki
 - [ ] Dodać wybór możliwych odpowiedzi z predefiniowanej listy, np. "A,B,C", ranking, różne ciągi liczbowe
 - [ ] Dodać możliwość definicji własnych odpowiedzi
 - [ ] Dodać możliwość definicji kolekcji jednoczesnych pytań

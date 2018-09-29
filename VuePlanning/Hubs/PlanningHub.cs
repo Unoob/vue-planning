@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using VuePlanning.Models;
@@ -11,15 +12,23 @@ namespace VuePlanning.Hubs
         public PlanningHub(IUserTracker<PlanningHub> userTracker) : base(userTracker)
         {
         }
-        
+
+        public override async Task OnDisconnectedAsync(Exception exception)
+        {
+            var user = await _userTracker.GetUser(Context.ConnectionId);
+
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, user.GroupId);
+
+            var host = await _userTracker.GetGroupHost(user.GroupId);
+            if (host != null)
+            {
+                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
+            }
+            await base.OnDisconnectedAsync(exception);
+        }
+
         public override async Task OnConnectedAsync()
         {
-            //var user = await _userTracker.GetUser(Context.ConnectionId);
-            //var usersOnline = await GetUsersOnline();
-            //var groupUsersOnline = usersOnline.Where(u => u.GroupId == user.GroupId);
-
-            //await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.Connected, groupUsersOnline);
-
             await base.OnConnectedAsync();
         }
 
@@ -62,26 +71,11 @@ namespace VuePlanning.Hubs
             }
         }
 
-        // public async Task JoinUser(string userName)
-        // {
-        //     var user = await _userTracker.GetUser(Context.ConnectionId);
-        //     user.Name = userName;
-
-        //     await _userTracker.UpdateUser(Context.ConnectionId, user);
-        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.JoinUser, user);
-        // }
-
         public async Task NewGame(string question)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
             await Clients.Group(user.GroupId).SendAsync(HubEvents.NewGame, question);
         }
-
-        // public async Task ShowCards()
-        // {
-        //     var user = await _userTracker.GetUser(Context.ConnectionId);
-        //     await Clients.Group(user.GroupId).SendAsync(HubEvents.ShowCards);
-        // }
 
         public async Task JoinGroup(GroupMessage groupMessage)
         {
@@ -116,6 +110,4 @@ namespace VuePlanning.Hubs
             }
         }
     }
-
-    //public class AnkietaHub : BaseHub
 }

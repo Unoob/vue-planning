@@ -11,16 +11,17 @@ let pokerHub;
 
 export function start() {
     pokerHub = new HubConnectionBuilder().withUrl(HUBS.PLANNING).build();
-    pokerHub.start().catch(function (err) {
-        return console.error(err.toString());
-    });
-    
+        
     pokerHub.on(HubEvents.Disconnected, handleDisconnected);
     pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
     pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
     pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
     pokerHub.on(HubEvents.NewGame, handleNewGame);
     pokerHub.on(HubEvents.LeaveGroup, handleUserLeaved);
+
+    pokerHub.start().catch(function (err) {
+        return console.error(err.toString());
+    });
 }
 
 export function sendQuestion(question) {
@@ -54,8 +55,9 @@ function handleNewGame(question) {
     store.dispatch('setQuestion', question);
 }
 
-function handleDisconnected(usersOnline) {
-    console.log(usersOnline);
+function handleDisconnected(user) {
+    handleUserLeaved(user);
+    console.log(user);
 }
 
 function handleSendAnswer(userAnswer) {
