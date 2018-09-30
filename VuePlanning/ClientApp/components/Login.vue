@@ -13,8 +13,8 @@
         <v-layout row justify-center>
             <v-flex xs12 sm6 lg4>
                 <v-layout row justify-space-around>
-                        <v-btn v-on:click="onCreateRoom">Stwórz</v-btn>                    
-                        <v-btn v-on:click="onJoinRoom">Dołącz</v-btn>
+                        <v-btn @click="onCreateRoom" color="primary">Stwórz</v-btn>                    
+                        <v-btn @click="onJoinRoom" color="secondary">Dołącz</v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>
@@ -26,10 +26,11 @@ import router from "vue-router";
 import { createGroup, joinGroup } from "../services/HubService.js";
 export default {
   name: "Login",
+  props: ["room"],
   data: function() {
     return {
       login: "",
-      roomCode: ""
+      roomCode: this.room || ""
     };
   },
   methods: {

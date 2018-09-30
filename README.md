@@ -22,7 +22,7 @@ Widoczne pole, w którym będzie wyświetlany opis zadania i karty ze zdefiniowa
 - [ ] Prezentacja uzyskanych odpowiedzi. Pojedynczo dla każdego użytkownika lub grupować względem odpowiedzi.
 - [ ] Zablokowanie zmiany wyboru, gdy karty zostały odkryte
 - [ ] Opuszczenie kanału przez gospodarza zamyka kanał
-- [ ] Dodanie routingu dla linku z numerem kanału
+- [x] Dodanie routingu dla linku z numerem kanału
 - [ ] Wyświetlenie nazwy/nr kanału na belce
 - [ ] QR Code z linkiem do kanału
 - [ ] Oczekiwanie przez użytkownika przed "stworzeniem" kanału

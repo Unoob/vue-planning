@@ -2,16 +2,16 @@
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import Login from './components/Login.vue';
-import MasterPage from './components/MasterPage.vue';
-import NewVote from './components/NewVote.vue';
-import Answer from './components/Answer.vue';
-import  store  from './store/index';
+import store from './store/index';
+
+function load(name) {
+    return () => import(/* webpackChunkName: "view-[request]" */`./components/${name}.vue`);
+}
 
 const routes = [
-    { path: '/login', component: Login },
+    { path: '/login', component: load('Login')},
     {
-        path: '/', component: MasterPage,
+        path: '/', component: load('MasterPage'),
         beforeEnter: (to, from, next) => {
             if (store.getters.isLogged) {
                 next();
@@ -20,15 +20,17 @@ const routes = [
             }
         },
         children: [
-            { path: 'question', component: NewVote },
-            { path: 'group', component: Answer },
+            { path: 'question', component: load('NewVote') },
+            { path: 'group', component: load('Answer') },
         ]
     },
-    { path: '*', redirect: '/login' }
+    { path: '/:room', component: load('Login'), props: true },
+    { path: '/*', redirect: '/login' }
 ];
 const router = new VueRouter({
-    routes,
-    mode: 'history'
+    mode: 'history',
+    base: __dirname,
+    routes
 });
 
 export default router;
