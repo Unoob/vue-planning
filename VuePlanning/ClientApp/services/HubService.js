@@ -25,6 +25,7 @@ export function start() {
 }
 
 export function sendQuestion(question) {
+    store.dispatch('newGame');
     pokerHub.invoke(HubEvents.NewGame, question);
 }
 

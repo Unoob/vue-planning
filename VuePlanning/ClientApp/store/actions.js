@@ -14,5 +14,8 @@ export const actions = {
     },
     setQuestion({ commit }, question) {
         commit('newGame', question);
+    },
+    newGame({commit}){
+        commit('resetSelect');
     }
 }
