@@ -43,9 +43,10 @@
                   :clipped-left="$vuetify.breakpoint.mdAndUp"
                   fixed>
             <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
-            <v-toolbar-title>Vue Planning w grupie: {{user.groupId}}</v-toolbar-title>
+                    
+            <v-toolbar-title>Vue Planning w grupie: <QRCode :value="user.groupId"></QRCode></v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn icon v-on:click="onLogoutClick" class="logoutButton">
+            <v-btn icon v-on:click="onLogoutClick">
                 <v-icon>close</v-icon>
             </v-btn>
         </v-toolbar>
@@ -60,9 +61,12 @@
 </template>
 <script>
 import { leaveGroup } from "../services/HubService.js";
+import QRCode from './QrCode.vue';
+
     export default {
         name: "MasterPage",
-        data: () => {
+        components:{QRCode},
+        data() {
             return {
                 items: [],
                 drawer: null
@@ -88,7 +92,4 @@ import { leaveGroup } from "../services/HubService.js";
     };
 </script>
 <style>
-    .logoutButton:hover {
-        transform: rotate(360deg);
-    }
 </style>

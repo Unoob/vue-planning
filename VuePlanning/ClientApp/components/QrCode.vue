@@ -1,0 +1,46 @@
+<template>
+    <v-dialog
+        v-model="dialog"
+        fullscreen>
+        <v-btn slot="activator" color="info">{{value}}</v-btn>
+        <v-card>
+            <v-card-title primary-title class="primary">
+                <label class="display-2">Adres pokoju</label>
+            </v-card-title>
+            <v-card-text>
+                <v-layout row wrap justify-center align-center>
+                    <VueQrcode :value="url" :options={size:480}></VueQrcode>
+                </v-layout>                                
+            </v-card-text>
+            <v-card-actions>
+                <v-btn block color="primary" @click="dialog=false" dark>Zamknij</v-btn>
+            </v-card-actions>
+        </v-card>
+    </v-dialog>
+</template>
+<script>
+import VueQrcode from '@xkeshi/vue-qrcode'
+export default {
+    name: 'QrCode',
+    props: ['value'],
+    data() {
+        return {
+            dialog: false
+        }
+    },
+    computed:{
+        url(){
+            return `${window.location.host}/${this.value}`;
+        }
+    },
+    mounted() {
+        console.log(this.value)
+    },
+    components: { VueQrcode },
+}
+</script>
+<style scoped>
+.v-card__title label{
+    color:white;
+}
+</style>

@@ -24,7 +24,7 @@ Widoczne pole, w którym będzie wyświetlany opis zadania i karty ze zdefiniowa
 - [ ] Opuszczenie kanału przez gospodarza zamyka kanał
 - [x] Dodanie routingu dla linku z numerem kanału
 - [x] Wyświetlenie nazwy/nr kanału na belce
-- [ ] QR Code z linkiem do kanału
+- [x] QR Code z linkiem do kanału
 - [ ] Oczekiwanie przez użytkownika przed "stworzeniem" kanału
 - [ ] Prezentacja średnich z wyników
 - [ ] Oznaczenie skrajnych wyników w przypadku odchyłów większych niż sąsiadujące wartości

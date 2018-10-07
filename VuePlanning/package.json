@@ -14,6 +14,7 @@
   "dependencies": {
     "@aspnet/signalr": "^1.0.3",
     "@babel/polyfill": "^7.0.0",
+    "@xkeshi/vue-qrcode": "^1.0.0",
     "aspnet-webpack": "3.0.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
