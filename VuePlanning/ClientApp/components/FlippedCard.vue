@@ -74,7 +74,9 @@
     }
 
     .card__face--front {
-        background: #dbfed6;
+        background: #b4f1ab;
+        align-items: center;
+        font-size: 12em;
     }
 
     .card__face--back {
