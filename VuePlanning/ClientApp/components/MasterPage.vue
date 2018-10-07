@@ -43,7 +43,7 @@
                   :clipped-left="$vuetify.breakpoint.mdAndUp"
                   fixed>
             <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
-            <v-toolbar-title>Vue Planning</v-toolbar-title>
+            <v-toolbar-title>Vue Planning w grupie: {{user.groupId}}</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn icon v-on:click="onLogoutClick" class="logoutButton">
                 <v-icon>close</v-icon>

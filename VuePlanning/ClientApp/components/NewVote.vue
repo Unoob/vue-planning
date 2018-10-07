@@ -52,14 +52,6 @@ export default {
   computed: {
     users: function() {
       return this.$store.state.users;
-      // return [
-      //   { connectionId: 0, name: "Konrad" },
-      //   { connectionId: 1, name: "Paweł" },
-      //   { connectionId: 2, name: "Jarek" },
-      //   { connectionId: 3, name: "Piotrek" },
-      //   { connectionId: 4, name: "Łukasz" },
-      //   { connectionId: 5, name: "Arek" }
-      // ];
     }
   },
   methods: {
