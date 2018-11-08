@@ -42,12 +42,14 @@
                   app
                   :clipped-left="$vuetify.breakpoint.mdAndUp"
                   fixed>
-            <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
+            <v-btn icon @click.stop="drawer=!drawer">
+                <fa icon="bars" ></fa>
+            </v-btn>
                     
             <v-toolbar-title>Vue Planning w grupie: <QRCode :value="user.groupId"></QRCode></v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn icon v-on:click="onLogoutClick">
-                <v-icon>close</v-icon>
+            <v-btn icon @click="onLogoutClick">
+                <fa icon="sign-out-alt"></fa>
             </v-btn>
         </v-toolbar>
         <v-content>
