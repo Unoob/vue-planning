@@ -2,11 +2,13 @@
     <v-container>
         <v-layout column>
             <v-flex>
-                <v-text-field autofocus
+                <v-textarea autofocus
                               clearable
                               label="Temat"
                               v-model="title"
-                              @keyup.enter="confirm"></v-text-field>
+                              rows="1"
+                              auto-grow
+                              @keyup.enter="confirm"></v-textarea>
                 
             </v-flex>
             <v-flex text-xs-center>

@@ -1,5 +1,6 @@
 ﻿import Vue from 'vue'
 
+import '@fortawesome/fontawesome-free/css/all.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -13,7 +14,14 @@ import router from './router'
 
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify'
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+    iconfont: 'fa',
+    icons: {
+        cancel: 'fas fa-ban',
+        menu: 'fas fa-ellipsis-v',
+        clear: 'fas fa-times',
+    },
+})
 
 import App from './components/App.vue'
 

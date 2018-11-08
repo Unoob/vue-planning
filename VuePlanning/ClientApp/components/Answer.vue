@@ -2,11 +2,13 @@
     <v-container grid-list-lg>
         <v-layout>
             <v-flex>
-                <v-text-field
-                    :value="question"
-                    label="Pytanie na dziś"
-                    readonly
-                ></v-text-field>
+              <v-textarea
+              :value="question"
+              label="Pytanie na dziś"
+              rows="1"
+              readonly
+              auto-grow>
+              </v-textarea>
             </v-flex>
         </v-layout>
         <v-layout justify-start row wrap>
@@ -63,8 +65,8 @@ function CardViewModel(text) {
   this.text = text;
 }
 </script>
-<style>
-.selected-class {
+<style lang="scss" scoped>
+/deep/ .selected-class {
   background: #4caf50 !important;
 }
 </style>

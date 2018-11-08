@@ -46,7 +46,7 @@
                 <fa icon="bars" ></fa>
             </v-btn>
                     
-            <v-toolbar-title>Vue Planning w grupie: <QRCode :value="user.groupId"></QRCode></v-toolbar-title>
+            <v-toolbar-title>Vue Planning</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn icon @click="onLogoutClick">
                 <fa icon="sign-out-alt"></fa>
