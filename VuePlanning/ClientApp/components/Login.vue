@@ -1,13 +1,23 @@
 ﻿<template>
     <v-container fluid>
-        <v-layout row justify-space-around>
+        <v-layout row justify-center>
             <v-flex xs12 sm6 lg4>
-                <v-text-field v-model="login" label="Login" placeholder="Login" solo></v-text-field>
+                <v-text-field 
+                v-model="login" 
+                label="Login"
+                :rules="[rules.required]"
+                required>
+                </v-text-field>
             </v-flex>
         </v-layout>
-        <v-layout row justify-space-around>
+        <v-layout row justify-center>
             <v-flex xs12 sm6 lg4>
-                <v-text-field v-model="roomCode" label="RoomCode" placeholder="Nr pokoju" solo></v-text-field>
+                <v-text-field 
+                v-model="roomCode" 
+                label="Nr pokoju"
+                :rules="[rules.required]"
+                required>
+                </v-text-field>
             </v-flex>
         </v-layout>
         <v-layout row justify-center>
@@ -32,6 +42,9 @@ export default {
             login: '',
             roomCode: this.room || '',
             action: '',
+            rules:{
+                required: value => !!value || 'Pole jest wymagane.',
+            }
         };
     },
     computed: {
