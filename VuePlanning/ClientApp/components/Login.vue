@@ -22,31 +22,45 @@
 </template>
  
 <script>
-import router from "vue-router";
-import { createGroup, joinGroup } from "../services/HubService.js";
+import router from 'vue-router';
+import { createGroup, joinGroup } from '../services/HubService.js';
 export default {
-  name: "Login",
-  props: ["room"],
-  data: function() {
-    return {
-      login: "",
-      roomCode: this.room || ""
-    };
-  },
-  methods: {
-    onCreateRoom: function() {
-      if (!(this.login || this.roomCode)) return;
-      createGroup(this.login, this.roomCode);
-      this.$router.push("question");
-
-      console.log("onCreateRoom");
+    name: 'Login',
+    props: ['room'],
+    data: function() {
+        return {
+            login: '',
+            roomCode: this.room || '',
+            action: '',
+        };
     },
-    onJoinRoom: function() {
-      if (!(this.login || this.roomCode)) return;
-      joinGroup(this.login, this.roomCode);
-      this.$router.push("group");
-      console.log("onJoinRoom");
-    }
-  }
+    computed: {
+        isLogged() {
+            return this.$store.getters.isLogged;
+        },
+    },
+    watch: {
+        isLogged(val) {
+            if (!val) return;
+            this.action === 'CREATE'
+                ? this.$router.push('question')
+                : this.$router.push('group');
+        },
+    },
+    methods: {
+        onCreateRoom: function() {
+            if (!(this.login || this.roomCode)) return;
+            createGroup(this.login, this.roomCode);
+            this.action = 'CREATE';
+
+            console.log('onCreateRoom');
+        },
+        onJoinRoom: function() {
+            if (!(this.login || this.roomCode)) return;
+            joinGroup(this.login, this.roomCode);
+            this.action = 'JOIN';
+            console.log('onJoinRoom');
+        },
+    },
 };
 </script>
