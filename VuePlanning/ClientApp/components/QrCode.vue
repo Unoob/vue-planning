@@ -2,10 +2,10 @@
     <v-dialog
         v-model="dialog"
         fullscreen>
-        <v-btn slot="activator" color="info">{{value}}</v-btn>
+        <slot name="activator" slot="activator"></slot>
         <v-card>
             <v-card-title primary-title class="primary">
-                <label class="display-2">Adres pokoju</label>
+                <label class="display-2">Adres pokoju: {{value}}</label>
             </v-card-title>
             <v-card-text>
                 <v-layout row wrap justify-center align-center>
