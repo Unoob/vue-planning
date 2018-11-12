@@ -1,30 +1,24 @@
 ﻿<template>
     <v-container fluid>
-        <v-layout row justify-center>
-            <v-flex xs12 sm6 lg4>
-                <v-text-field 
-                v-model="login" 
-                label="Login"
-                :rules="[rules.required]"
-                required>
-                </v-text-field>
-            </v-flex>
-        </v-layout>
-        <v-layout row justify-center>
-            <v-flex xs12 sm6 lg4>
-                <v-text-field 
-                v-model="roomCode" 
-                label="Nr pokoju"
-                :rules="[rules.required]"
-                required>
-                </v-text-field>
-            </v-flex>
-        </v-layout>
-        <v-layout row justify-center>
-            <v-flex xs12 sm6 lg4>
-                <v-layout row justify-space-around>
-                        <v-btn @click="onCreateRoom" color="primary">Stwórz</v-btn>                    
-                        <v-btn @click="onJoinRoom" color="secondary">Dołącz</v-btn>
+        <v-layout row wrap justify-center>
+            <v-flex xs12 sm8 md6 lg4>
+                <v-layout column>
+                    <v-text-field 
+                        v-model="login" 
+                        label="Login"
+                        :rules="[rules.required]"
+                        required>
+                    </v-text-field>
+                    <v-text-field 
+                        v-model="roomCode" 
+                        label="Nr pokoju"
+                        :rules="[rules.required]"
+                        required>
+                    </v-text-field>
+                    <v-layout row justify-space-around>
+                            <v-btn @click="onCreateRoom" color="primary">Stwórz</v-btn>                    
+                            <v-btn @click="onJoinRoom" color="secondary">Dołącz</v-btn>
+                    </v-layout>
                 </v-layout>
             </v-flex>
         </v-layout>
@@ -33,6 +27,7 @@
  
 <script>
 import router from 'vue-router';
+import { mapGetters } from 'vuex';
 import { createGroup, joinGroup } from '../services/HubService.js';
 export default {
     name: 'Login',
@@ -42,15 +37,13 @@ export default {
             login: '',
             roomCode: this.room || '',
             action: '',
-            rules:{
+            rules: {
                 required: value => !!value || 'Pole jest wymagane.',
-            }
+            },
         };
     },
     computed: {
-        isLogged() {
-            return this.$store.getters.isLogged;
-        },
+        ...mapGetters(['isLogged']),
     },
     watch: {
         isLogged(val) {

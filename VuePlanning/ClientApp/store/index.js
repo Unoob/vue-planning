@@ -3,19 +3,16 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 import { mutations } from './mutations';
 import { actions } from './actions';
+import { getters } from './getters';
 
 export default new Vuex.Store({
     state: {
         users: [],
         user: {},
         isLogged: false,
-        question: ""
+        question: '',
     },
     mutations,
     actions,
-    getters: {
-        isLogged(state) {
-            return state.isLogged;
-        }
-    },
+    getters,
 });

@@ -11,7 +11,7 @@ function load(name) {
 const routes = [
     { path: '/login', component: load('Login')},
     {
-        path: '/', component: load('MasterPage'),
+        path: '/', component: load('Home/MasterPage'),
         beforeEnter: (to, from, next) => {
             if (store.getters.isLogged) {
                 next();
@@ -20,12 +20,12 @@ const routes = [
             }
         },
         children: [
-            { path: 'question', component: load('NewVote') },
-            { path: 'group', component: load('Answer') },
+            { path: 'question', component: load('Request/NewVote') },
+            { path: 'group', component: load('Response/Answer') },
         ]
     },
     { path: '/:room', component: load('Login'), props: true },
-    { path: '/*', redirect: '/login' }
+    { path: '*', redirect: '/login' }
 ];
 const router = new VueRouter({
     mode: 'history',

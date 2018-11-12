@@ -5,7 +5,7 @@
         <slot name="activator" slot="activator"></slot>
         <v-card>
             <v-card-title primary-title class="primary">
-                <label class="display-2">Adres pokoju: {{value}}</label>
+                <label class="display-2 white--text">Nazwa pokoju: {{value}}</label>
             </v-card-title>
             <v-card-text>
                 <v-layout row wrap justify-center align-center>
@@ -19,28 +19,20 @@
     </v-dialog>
 </template>
 <script>
-import VueQrcode from '@xkeshi/vue-qrcode'
+import VueQrcode from '@xkeshi/vue-qrcode';
 export default {
     name: 'QrCode',
     props: ['value'],
+    components: { VueQrcode },
     data() {
         return {
-            dialog: false
-        }
+            dialog: false,
+        };
     },
-    computed:{
-        url(){
+    computed: {
+        url() {
             return `${window.location.host}/${this.value}`;
-        }
+        },
     },
-    mounted() {
-        console.log(this.value)
-    },
-    components: { VueQrcode },
-}
+};
 </script>
-<style scoped>
-.v-card__title label{
-    color:white;
-}
-</style>

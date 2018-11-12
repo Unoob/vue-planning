@@ -2,6 +2,7 @@
         <v-card
         @click.native="onValueCardClicked" 
         class="card elevation-4"
+        :class="{'selected-class':isActive}"
         >
             <v-card-text>
                 <v-layout>
@@ -21,18 +22,22 @@ export default {
             type: Object,
             required: true,
             validator: function(object) {
-                if (!object.text) return false
+                if (!object.text) return false;
 
-                return true
+                return true;
             },
+        },
+        isActive: {
+            type: Boolean,
+            default: false,
         },
     },
     methods: {
         onValueCardClicked: function() {
-            this.$emit('onValueCardClicked', this.card)
+            this.$emit('onValueCardClicked', this.card);
         },
     },
-}
+};
 </script>
 
 <style scoped>
@@ -46,5 +51,8 @@ export default {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+.selected-class {
+    background: #4caf50 !important;
 }
 </style>

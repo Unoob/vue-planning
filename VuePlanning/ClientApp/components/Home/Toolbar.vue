@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div>
         <v-navigation-drawer 
             absolute
@@ -52,31 +52,25 @@
                   app
                   :clipped-left="$vuetify.breakpoint.mdAndUp"
                   fixed>
-            <v-btn icon @click.stop="drawer=!drawer">
+                  <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
+            <!-- <v-btn icon @click.stop="drawer=!drawer">
                 <fa icon="bars" ></fa>
-            </v-btn>
-                    
+            </v-btn> -->
             <v-toolbar-title>Vue Planning</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn icon @click="onLogoutClick">
                 <fa icon="sign-out-alt"></fa>
             </v-btn>
         </v-toolbar>
-        <v-content>
-            <v-container fluid fill-height>
-                <v-layout justify-center align-center>
-                    <router-view />
-                </v-layout>
-            </v-container>
-        </v-content>
     </div>
 </template>
 <script>
-import { leaveGroup } from '../services/HubService.js';
-import QRCode from './QrCode.vue';
+import { mapGetters } from 'vuex';
+import { leaveGroup } from '../../services/HubService.js';
+import QRCode from '../QrCode.vue';
 
 export default {
-    name: 'MasterPage',
+    name: 'Toolbar',
     components: { QRCode },
     data() {
         return {
@@ -92,9 +86,7 @@ export default {
         },
     },
     computed: {
-        user: function() {
-            return this.$store.state.user;
-        },
+        ...mapGetters({ user: 'currentUser' }),
         avatar: function() {
             return (
                 'https://api.adorable.io/avatars/80/' +
@@ -105,5 +97,3 @@ export default {
     },
 };
 </script>
-<style>
-</style>

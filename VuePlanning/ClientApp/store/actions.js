@@ -13,7 +13,6 @@ export const actions = {
     },
     userLeave({ commit }, user) {
         commit('userLeaved', user);
-        commit('setlogged', false);
     },
     setQuestion({ commit }, question) {
         commit('newGame', question);

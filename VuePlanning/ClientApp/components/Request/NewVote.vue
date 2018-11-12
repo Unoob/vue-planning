@@ -12,7 +12,7 @@
                 
             </v-flex>
             <v-flex text-xs-center>
-                <v-btn 
+                <v-btn
                   v-if="newGame"
                   @click="confirm" 
                   color="success">Zatwierdź</v-btn>
@@ -22,6 +22,7 @@
                 color="info">Sprawdź</v-btn>
             </v-flex>
         </v-layout>
+        <!-- {{avg}} -->
         <v-container grid-list-lg fluid>
           <v-layout row wrap>
               <v-flex xs12 sm6 md3 v-for="user in users" :key="user.connectionId">
@@ -35,34 +36,33 @@
     </v-container>
 </template>
 <script>
-import { sendQuestion } from "../services/HubService.js";
-import FlippedCard from "../components/FlippedCard.vue";
+import { mapGetters } from 'vuex';
+import { sendQuestion } from '../../services/HubService.js';
+import FlippedCard from './FlippedCard.vue';
 
 export default {
-  name: "NewVote",
-  components: {
-    FlippedCard
-  },
-  data: () => {
-    return {
-      title: "",
-      answers: [],
-      newGame: true,
-      flipCard: false
-    };
-  },
-  computed: {
-    users: function() {
-      return this.$store.state.users;
-    }
-  },
-  methods: {
-    confirm: function() {
-      sendQuestion(this.title);
-      console.log("click");
-      this.newGame = false;
-      this.flipCard = false;
-    }
-  }
+    name: 'NewVote',
+    components: {
+        FlippedCard,
+    },
+    data: () => {
+        return {
+            title: '',
+            answers: [],
+            newGame: true,
+            flipCard: false,
+        };
+    },
+    computed: {
+        ...mapGetters(['avg', 'users']),
+    },
+    methods: {
+        confirm: function() {
+            sendQuestion(this.title);
+            console.log('click');
+            this.newGame = false;
+            this.flipCard = false;
+        },
+    },
 };
 </script>

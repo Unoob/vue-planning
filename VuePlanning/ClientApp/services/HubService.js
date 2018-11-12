@@ -46,6 +46,7 @@ export function createGroup(playerName, groupId) {
 export function leaveGroup() {
     console.log('before invoke');
     pokerHub.invoke(HubEvents.LeaveGroup);
+    store.commit('setlogged', false);
 }
 
 function handleNewGame(question) {
