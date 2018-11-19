@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 import store from './store/index';
 
 function load(name) {
-    return () => import(/* webpackChunkName: "view-[request]" */`./components/${name}.vue`);
+    return () => import(/* webpackChunkName: "v-[request]" */`./components/${name}.vue`);
 }
 
 const routes = [

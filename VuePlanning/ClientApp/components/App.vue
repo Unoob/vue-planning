@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import { start } from '../services/HubService.js'
+import { start } from '../services/HubService.js';
 
 export default {
     name: 'App',
     mounted: function() {
-        start()
-    }
-}
+        start();
+    },
+};
 </script>
 
 <style lang="scss">

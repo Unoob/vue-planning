@@ -47,6 +47,11 @@ export default {
             selected: {},
         };
     },
+    watch: {
+        question() {
+            this.selected = {};
+        },
+    },
     computed: {
         ...mapState(['question']),
     },

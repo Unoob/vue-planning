@@ -6,22 +6,27 @@ const HUBS = {
     PLANNING: '/PlanningHub',
 };
 
-let pokerHub;
+const pokerHub = new HubConnectionBuilder().withUrl(HUBS.PLANNING).build();
+pokerHub.on(HubEvents.Disconnected, handleDisconnected);
+pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
+pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
+pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
+pokerHub.on(HubEvents.NewGame, handleNewGame);
+pokerHub.on(HubEvents.LeaveGroup, handleUserLeaved);
 
-export function start() {
-    pokerHub = new HubConnectionBuilder().withUrl(HUBS.PLANNING).build();
-
-    pokerHub.on(HubEvents.Disconnected, handleDisconnected);
-    pokerHub.on(HubEvents.UpdateUser, handleUpdateUser);
-    pokerHub.on(HubEvents.SendAnswer, handleSendAnswer);
-    pokerHub.on(HubEvents.UsersJoined, handleUserJoined);
-    pokerHub.on(HubEvents.NewGame, handleNewGame);
-    pokerHub.on(HubEvents.LeaveGroup, handleUserLeaved);
-
-    pokerHub.start().catch(function(err) {
-        return console.error(err.toString());
-    });
+export async function start() {
+    try {
+        await pokerHub.start();
+        console.log('connected');
+    } catch (err) {
+        console.log(err);
+        setTimeout(() => start(), 5000);
+    }
 }
+
+pokerHub.onclose(async () => {
+    await start();
+});
 
 export function sendQuestion(question) {
     store.dispatch('newGame');

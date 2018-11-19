@@ -16,8 +16,8 @@
                         required>
                     </v-text-field>
                     <v-layout row justify-space-around>
-                            <v-btn @click="onCreateRoom" color="primary">Stwórz</v-btn>                    
-                            <v-btn @click="onJoinRoom" color="secondary">Dołącz</v-btn>
+                            <v-btn @click="onCreateRoom" color="primary" :disabled="loading">Stwórz</v-btn>                    
+                            <v-btn @click="onJoinRoom" color="secondary" :disabled="loading">Dołącz</v-btn>
                     </v-layout>
                 </v-layout>
             </v-flex>
@@ -34,12 +34,13 @@ export default {
     props: ['room'],
     data: function() {
         return {
-            login: '',
+            login: '', 
             roomCode: this.room || '',
             action: '',
             rules: {
                 required: value => !!value || 'Pole jest wymagane.',
             },
+            loading: false,
         };
     },
     computed: {
@@ -56,6 +57,7 @@ export default {
     methods: {
         onCreateRoom: function() {
             if (!(this.login || this.roomCode)) return;
+            this.loading = true;
             createGroup(this.login, this.roomCode);
             this.action = 'CREATE';
 
@@ -63,6 +65,7 @@ export default {
         },
         onJoinRoom: function() {
             if (!(this.login || this.roomCode)) return;
+            this.loading = true;
             joinGroup(this.login, this.roomCode);
             this.action = 'JOIN';
             console.log('onJoinRoom');
