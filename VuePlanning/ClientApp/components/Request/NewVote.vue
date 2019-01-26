@@ -15,11 +15,11 @@
                 <v-btn
                   v-if="newGame"
                   @click="confirm" 
-                  color="success">Zatwierdź</v-btn>
+                  color="success">Wyślij pytanie</v-btn>
                 <v-btn 
                 v-else 
                 @click="flipCard=true, newGame=true"
-                color="info">Sprawdź</v-btn>
+                color="info">Sprawdź wyniki</v-btn>
             </v-flex>
         </v-layout>
         <!-- {{avg}} -->

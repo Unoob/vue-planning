@@ -82,7 +82,7 @@
     .card__face--back {
         color: yellow;
         align-items: center;
-        background: linear-gradient(to bottom right, #0b6ff8, #002385);
+        background: linear-gradient(to bottom right, #1565c0, #1976d2);
         transform: rotateY(180deg);
     }
 
