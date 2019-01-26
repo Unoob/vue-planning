@@ -20,10 +20,9 @@ namespace VuePlanning.Hubs
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, user.GroupId);
 
             var host = await _userTracker.GetGroupHost(user.GroupId);
-            if (host != null)
-            {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
-            }
+
+            await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
+
             await base.OnDisconnectedAsync(exception);
         }
 
@@ -37,10 +36,8 @@ namespace VuePlanning.Hubs
             var user = await _userTracker.GetUser(Context.ConnectionId);
 
             var host = await _userTracker.GetGroupHost(user.GroupId);
-            if (host != null)
-            {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.Disconnected, user);
-            }
+
+            await Clients.Client(host.ConnectionId).SendAsync(HubEvents.Disconnected, user);
 
             await base.OnUsersLeft(users);
         }
@@ -58,17 +55,16 @@ namespace VuePlanning.Hubs
         public async Task SendAnswer(string message)
         {
             var user = await _userTracker.GetUser(Context.ConnectionId);
-            
+
             var groupId = user.GroupId;
 
             var host = await _userTracker.GetGroupHost(groupId);
-            if (host != null)
+
+            await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, new UserAnswer
             {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.SendAnswer, new UserAnswer{
-                    ConnectionId = user.ConnectionId,
-                    Answer = message
-                });
-            }
+                ConnectionId = user.ConnectionId,
+                Answer = message
+            });
         }
 
         public async Task NewGame(string question)
@@ -91,10 +87,8 @@ namespace VuePlanning.Hubs
             await Clients.Client(Context.ConnectionId).SendAsync(HubEvents.UpdateUser, user);
 
             var host = await _userTracker.GetGroupHost(groupId);
-            if (host != null)
-            {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.UsersJoined, user);
-            }
+
+            await Clients.Client(host.ConnectionId).SendAsync(HubEvents.UsersJoined, user);
         }
 
         public async Task LeaveGroup()
@@ -104,10 +98,10 @@ namespace VuePlanning.Hubs
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, user.GroupId);
 
             var host = await _userTracker.GetGroupHost(user.GroupId);
-            if (host != null)
-            {
-                await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
-            }
+
+            await Clients.Client(host.ConnectionId).SendAsync(HubEvents.LeaveGroup, user);
+
+            await _userTracker.RemoveUser(Context.ConnectionId);
         }
     }
 }

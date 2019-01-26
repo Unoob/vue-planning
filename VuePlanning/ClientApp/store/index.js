@@ -5,7 +5,7 @@ import { mutations } from './mutations';
 import { actions } from './actions';
 import { getters } from './getters';
 
-export default new Vuex.Store({
+let store = new Vuex.Store({
     state: {
         users: [],
         user: {},
@@ -16,3 +16,9 @@ export default new Vuex.Store({
     actions,
     getters,
 });
+
+store.subscribe((m, state) => {
+    
+});
+
+export default store;

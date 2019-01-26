@@ -1,19 +1,23 @@
 ﻿<template>
-    <div id="app-root">
-        <v-app>
-            <router-view></router-view>
-        </v-app>
-    </div>
-
+  <div id="app-root">
+    <v-app>
+      <router-view></router-view>
+    </v-app>
+  </div>
 </template>
 
 <script>
-import { start } from '../services/HubService.js';
+import { start, joinGroup } from '../services/HubService.js';
 
 export default {
     name: 'App',
     mounted: function() {
-        start();
+        start().then(() => {
+            let user = JSON.parse(localStorage.getItem('user'));
+            if (user) {
+                joinGroup(user.name, user.groupId);
+            }
+        });
     },
 };
 </script>
