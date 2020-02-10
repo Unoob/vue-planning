@@ -1,8 +1,8 @@
 <template>
     <div class="scene scene--card">
-        <div :class="{'is-flipped': isFlippedComp, 'card': true}">
-            <div @click="onFlipCardClicked" class="card__face card__face--front">{{card.selectValue || ""}}</div>
-            <div :class="{'is-voted': isVotedComp, 'card__face--back': true, 'card__face': true}">{{card.name}}</div>
+        <div :class="{'is-flipped': flipCard}" class="card">
+            <div class="card__face card__face--front">{{card.selectValue}}</div>
+            <div :class="{'is-voted': isVotedComp}" class="card__face--back card__face">{{card.name}}</div>
         </div>
     </div>
 </template>
@@ -10,48 +10,31 @@
 <script>
     export default {
         name: "FlippedCard",
-        data() {
-            return {
-            };
-        },
         props: {
             card: {
                 type: Object,
                 required: true,
                 validator: function (object) {
                     if (!object.name) return false;
-                    if (typeof object.isVoted !== "boolean") return false;
-                    //if (typeof object.isFlipped !== "boolean") return false;
-                    //if (typeof object.text !== "string" || object.text.length < 0 || object.text.length > 4) return false;
-
                     return true;
                 }
-            }
-        },
-        methods: {
-            onFlipCardClicked: function () {
-                this.card.isFlipped = !this.card.isFlipped;
-                console.log('isFlipped: ' + this.card.isFlipped);
-                this.$emit("onFlipCardClicked", this.card); // tymczasowo chcia³em zobaczyæ jak siê odwracaj¹ na ¿¹danie... ale coœ nie dzia³a :(
+            },
+            flipCard:{
+                type:Boolean
             }
         },
         computed: {
-            isFlippedComp: function () {
-                return !this.card.isFlipped || true;
-            },
             isVotedComp: function () {
-                return this.card.isVoted || false;
+                return this.card.selectValue;
             }
         }
     };
 </script>
 
-<style>
+<style scoped>
 
     .scene {
-        width: 170pt;
-        height: 230pt;
-        margin: 40px 0;
+        height: 256pt;
         perspective: 600px;
     }
 
@@ -91,13 +74,15 @@
     }
 
     .card__face--front {
-        background: #dbfed6;
+        background: #b4f1ab;
+        align-items: center;
+        font-size: 12em;
     }
 
     .card__face--back {
         color: yellow;
         align-items: center;
-        background: linear-gradient(to bottom right, #0b6ff8, #002385);
+        background: linear-gradient(to bottom right, #1565c0, #1976d2);
         transform: rotateY(180deg);
     }
 

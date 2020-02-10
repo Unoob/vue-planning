@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div>
         <v-navigation-drawer 
             absolute
@@ -23,11 +23,21 @@
             <v-divider></v-divider>
 
             <v-list dense class="pt-0">
+                <QRCode :value="user.groupId">
+                <v-list-tile slot="activator">
+                    <v-list-tile-action>
+                        <fa icon="qrcode"></fa>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title>Link do pokoju</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+                </QRCode>
                 <v-list-tile v-for="item in items"
                              :key="item.title"
                              @click="false">
                     <v-list-tile-action>
-                        <v-icon>{{ item.icon }}</v-icon>
+                        <fa :icon="item.icon"></fa>
                     </v-list-tile-action>
 
                     <v-list-tile-content>
@@ -42,56 +52,48 @@
                   app
                   :clipped-left="$vuetify.breakpoint.mdAndUp"
                   fixed>
-            <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
+                  <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
+            <!-- <v-btn icon @click.stop="drawer=!drawer">
+                <fa icon="bars" ></fa>
+            </v-btn> -->
             <v-toolbar-title>Vue Planning</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn icon v-on:click="onLogoutClick" class="logoutButton">
-                <v-icon>close</v-icon>
+            <v-btn icon @click="onLogoutClick">
+                <fa icon="sign-out-alt"></fa>
             </v-btn>
         </v-toolbar>
-        <v-content>
-            <v-container fluid fill-height>
-                <v-layout justify-center align-center>
-                    <router-view />
-                </v-layout>
-            </v-container>
-        </v-content>
     </div>
 </template>
 <script>
-import { leaveGroup } from "../services/HubService.js";
-    export default {
-        name: "MasterPage",
-        data: () => {
-            return {
-                items: [
-                    { title: "Home", icon: "dashboard" },
-                    { title: "About", icon: "question_answer" }
-                ],
-                drawer: null
-            };
+import { mapGetters } from 'vuex';
+import { leaveGroup } from '../../services/HubService.js';
+import QRCode from '../QrCode.vue';
+
+export default {
+    name: 'Toolbar',
+    components: { QRCode },
+    data() {
+        return {
+            items: [],
+            drawer: null,
+        };
+    },
+    methods: {
+        onLogoutClick: function() {
+            console.log('logout click');
+            leaveGroup();
+            this.$router.push('login');
         },
-        methods: {
-            onLogoutClick: function () {
-                console.log("logout click");
-                leaveGroup();
-                this.$router.push("login");
-            }
+    },
+    computed: {
+        ...mapGetters({ user: 'currentUser' }),
+        avatar: function() {
+            return (
+                'https://api.adorable.io/avatars/80/' +
+                (this.user.connectionId || '').substring(0, 8) +
+                '.png'
+            );
         },
-        computed: {
-            user: function () {
-                return this.$store.state.user;
-            },
-            avatar: function () {
-                return (
-                    "https://api.adorable.io/avatars/80/" + (this.user.connectionId || '').substring(0, 8) + ".png"
-                );
-            }
-        }
-    };
+    },
+};
 </script>
-<style>
-    .logoutButton:hover {
-        transform: rotate(360deg);
-    }
-</style>

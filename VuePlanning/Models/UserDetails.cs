@@ -13,14 +13,16 @@ namespace VuePlanning.Models
             Name = name;
             GroupId = groupId;
             Host = false;
-            IsVoted = false;
-            SelectValue = string.Empty;
         }
         public bool Host { get; set; }
         public string ConnectionId { get; set; }
         public string Name { get; set; }
         public string GroupId { get; set; }
-        public bool IsVoted { get; set; }
-        public string SelectValue { get; set; }
+    }
+
+    public class UserAnswer
+    {
+        public string ConnectionId { get; set; }
+        public string Answer { get; set; }
     }
 }

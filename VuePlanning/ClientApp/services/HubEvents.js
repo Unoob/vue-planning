@@ -9,5 +9,5 @@
     ShowCards: 'ShowCards',
     UpdateUser: 'UpdateUser',
     UsersJoined: 'UsersJoined',
-    CreateGroup: 'CreateGroup'
+    CreateGroup: 'CreateGroup',
 };

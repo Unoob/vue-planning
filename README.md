@@ -2,24 +2,29 @@
 Planning poker in Vue
 
 Pierwsze okno składa się z:
-- wprowdzeniu loginu (zbudowaniu modelu UserDetails)
+- wprowadzeniu loginu (zbudowaniu modelu UserDetails)
 - wprowadzeniu identyfikatora kanału
+- przyciski stwórz kanał i dołącz
 
-U góry w prawym górnym roku - jest HamburgerMenu, w którym są dwie opcje - stwórz ankiete, stwórz planowanie.
+### Stworzony kanał
+Widoczne pole do wpisania opisu zadania oraz zasłonięte karty wszystkich użytkowników, którzy dołączyli do kanału.
 
-Po wprowadzeniu loginu i identyfikatora kanału - trafiamy do odpowiedniego kanału, który jest ankietą lub planowaniem.
-Dla planowania:
- - widzimy treść story (opis) 
- - widzimy wszystkie możliwe odpowiedzi (w tym wypadku karty z numerami fibo..)
+### Dołączenie do kanału
+Widoczne pole, w którym będzie wyświetlany opis zadania i karty ze zdefiniowanymi wartościami.
 
-Dla ankiety:
- - widzimy długii ekran - na którym jest treść pytania i możliwe odpowiedzi i następne pytanie i następne odpowiedzi.
-
-
-Po wybraniu TWORZENIA PLANOWANIA:
- - widać miejsce na wprowadzenie loginu (ewentualnie dodatkowych pól z modelu UserDetail)
- - nazwe grupy/kanału - która będzie dostępna pod linkiem i wyświetlimy QRCode - by uczestnicy mogli się zalogować (takie ułatwienie)
-Po wybraniu - start planowania:
- - Po lewej panel z listą zalogowanych, a na środku Pole do wpisania treści STORY - opisu oraz zakryte karty z nickami pod nimi - podobnie jak w tej wersji, którą testowaliśmy
- 
-
+### TODO
+- [ ] Uniemożliwić stworzenie kanału, który już istnieje
+- [ ] Usunięcie użytkownika z kanału przez gospodarza
+- [x] Usunięcie użytkownika z kanału, gdy ten zamknie/odświeży kartę przeglądarki
+- [ ] Dodać wybór możliwych odpowiedzi z predefiniowanej listy, np. "A,B,C", ranking, różne ciągi liczbowe
+- [ ] Dodać możliwość definicji własnych odpowiedzi
+- [ ] Dodać możliwość definicji kolekcji jednoczesnych pytań
+- [ ] Prezentacja uzyskanych odpowiedzi. Pojedynczo dla każdego użytkownika lub grupować względem odpowiedzi.
+- [ ] Zablokowanie zmiany wyboru, gdy karty zostały odkryte
+- [ ] Opuszczenie kanału przez gospodarza zamyka kanał
+- [x] Dodanie routingu dla linku z numerem kanału
+- [x] Wyświetlenie nazwy/nr kanału na belce
+- [x] QR Code z linkiem do kanału
+- [ ] Oczekiwanie przez użytkownika przed "stworzeniem" kanału
+- [ ] Prezentacja średnich z wyników
+- [ ] Oznaczenie skrajnych wyników w przypadku odchyłów większych niż sąsiadujące wartości
