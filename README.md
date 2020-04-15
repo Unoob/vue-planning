@@ -1,4 +1,4 @@
-# vue-planning
+# vue-planning - nie rozwijane
 Planning poker in Vue
 
 Pierwsze okno składa się z:
